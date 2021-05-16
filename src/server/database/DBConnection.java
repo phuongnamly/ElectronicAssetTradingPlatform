@@ -55,6 +55,4 @@ public class DBConnection {
       }
       return instance;
    }
-
-   public
 }
