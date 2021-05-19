@@ -1,6 +1,6 @@
-package server.database.JBDCDataSource.dataSource;
+package server.database.JBDCDataSource.Entity;
 
-import java.io.Serializable;
+import server.database.JBDCDataSource.Entity.Enum.AccountType;
 
 /**
  * Stores address details for a person.
@@ -8,18 +8,19 @@ import java.io.Serializable;
  * @author Malcolm Corney
  * @version $Id: Exp $
  */
-public class User implements Comparable<User>, Serializable {
+public class User implements Comparable<User> {
 
-   private static final long serialVersionUID = 332082608397623483L;
-
+   private Integer organisationID;
    private String username;
    private String password;
+   private String salt;
+   private String email;
+   private Integer phoneNum;
+   private String address;
    private AccountType accountType;
 
-   /**
-    * No args constructor.
-    */
-   public User() {
+   public User(){
+
    }
 
    /**
@@ -28,12 +29,27 @@ public class User implements Comparable<User>, Serializable {
     * @param password
     * @param accountType
     */
-   public User(String username, String password,  AccountType accountType) {
+   public User(Integer organisationID, String username, String password, String salt, String email, Integer phoneNum, String address, AccountType accountType) {
+      this.organisationID = organisationID;
       this.username = username;
       this.password = password;
 //      this.accountType = accountType.values()[accountTypeIndex];
+      this.salt = salt;
+      this.email = email;
+      this.phoneNum = phoneNum;
+      this.address = address;
       this.accountType = accountType;
    }
+
+   /**
+    * @return the organisation ID
+    */
+   public Integer getOrganisationID() { return organisationID; }
+
+   /**
+    * @param organisationID the organisation ID to set
+    */
+   public void setOrganisationID(Integer organisationID) { this.organisationID = organisationID; }
 
    /**
     * @return the username
@@ -64,6 +80,20 @@ public class User implements Comparable<User>, Serializable {
    }
 
    /**
+    * @return the salt
+    */
+   public String getSalt() {
+      return salt;
+   }
+
+   /**
+    * @param salt the salt to set
+    */
+   public void setSalt(String salt) {
+      this.salt = salt;
+   }
+
+   /**
     * @return the account type
     */
    public AccountType getAccountType() {
@@ -75,6 +105,46 @@ public class User implements Comparable<User>, Serializable {
     */
    public void setAccountType(AccountType accountType) {
       this.accountType = accountType;
+   }
+
+   /**
+    * @return the email
+    */
+   public String getEmail() {
+      return email;
+   }
+
+   /**
+    * @param email the email  to set
+    */
+   public void setEmail(String email) {
+      this.email = email;
+   }
+
+   /**
+    * @return the phone number
+    */
+   public int getPhoneNum() {
+      return phoneNum;
+   }
+
+   /**
+    * @param phoneNum the phone number to set
+    */
+   public void setPhoneNum(int phoneNum) { this.phoneNum = phoneNum; }
+
+   /**
+    * @return the address type
+    */
+   public String getAddress() {
+      return address;
+   }
+
+   /**
+    * @param address the address to set
+    */
+   public void setAddress(String address) {
+      this.password = address;
    }
 
    /**

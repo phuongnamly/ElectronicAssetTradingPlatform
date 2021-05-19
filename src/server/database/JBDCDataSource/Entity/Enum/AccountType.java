@@ -1,4 +1,4 @@
-package server.database.JBDCDataSource.dataSource;
+package server.database.JBDCDataSource.Entity.Enum;
 
 public enum AccountType {
     admin,
