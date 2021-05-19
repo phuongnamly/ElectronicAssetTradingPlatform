@@ -21,7 +21,6 @@ public class JBDCUserDataSource {
                     "  `phone` INT(10) NOT NULL,\n" +
                     "  `address` VARCHAR(255) NOT NULL,\n" +
                     "  PRIMARY KEY (`user_id`) NOT NULL,\n" +
-                    "  UNIQUE KEY (user_name) NOT NULL,\n" +
                     "  FOREIGN KEY (organisation_id) REFERENCES organisation(organisation_id))\n" +
                     ");";
 

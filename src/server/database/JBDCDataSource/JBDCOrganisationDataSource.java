@@ -1,141 +1,131 @@
 package server.database.JBDCDataSource;
 
 import server.database.DBConnection;
-import server.database.JBDCDataSource.Entity.Enum.AccountType;
-import server.database.JBDCDataSource.Entity.User;
+import server.database.JBDCDataSource.Entity.Organisation;
 
 import java.sql.*;
 import java.util.ArrayList;
 
 public class JBDCOrganisationDataSource {
 
-    public static final String CREATE_TABLE_ORGANISATION =
+    public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `organisation` (\n" +
-                    "  `organisation_id` INTEGER PRIMARY KEY /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
+                    "  `organisation_id` INTEGER  /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
                     "  `organisation_name` VARCHAR(100),\n" +
                     "  `credits` INT(MAXINT),\n" +
                     "  PRIMARY KEY (`organisation_id`)\n" +
                     ");";
 
 
-    private static final String CREATE_USER = "REPLACE INTO user (username, password, account_type) VALUES (?, ?, ?);";
+    private static final String CREATE_ORGANISATION = "REPLACE INTO organisation (organisation_id, organisation_name, credits) VALUES (?, ?, ?);";
 
-    private static final String EDIT_USER = "UPDATE user SET username = ?, password = ?, account_type = ? WHERE user_id = ?";
+    private static final String EDIT_ORGANISATION = "UPDATE organisation SET organisation_name = ?, credits = ? WHERE organisation_id=? = ?";
 
-    private static final String DELETE_USER = "DELETE FROM user WHERE user_id=?";
+    private static final String DELETE_ORGANISATION = "DELETE FROM organisation WHERE organisation_id=?";
 
-    private static final String GET_USER = "SELECT * FROM address WHERE user_id=?";
+    private static final String GET_ORGANISATION = "SELECT * FROM organisation WHERE organisation_id=?";
 
-    private static final String GET_ALL_USERS = "SELECT * FROM address user";
+    private static final String GET_ALL_ORGANISATIONS = "SELECT * FROM organisation";
 
     private Connection connection;
 
-    private PreparedStatement createUser;
+    private PreparedStatement createOrganisation;
 
-    private PreparedStatement editUser;
+    private PreparedStatement editOrganisation;
 
-    private PreparedStatement deleteUser;
+    private PreparedStatement deleteOrganisation;
 
-    private PreparedStatement getUser;
+    private PreparedStatement getOrganisation;
 
-    private PreparedStatement getAllUsers;
+    private PreparedStatement getAllOrganisations;
 
 
-    public JBDCUserDataSource() {
+    public JBDCOrganisationDataSource() {
         connection = DBConnection.getInstance();
         try {
             Statement st = connection.createStatement();
-            st.execute(CREATE_TABLE_USER);
-            st.execute(CREATE_TABLE_ORGANISATION);
-            st.execute(CREATE_TABLE_LISTING);
-            st.execute(CREATE_TABLE_TRADE);
-            st.execute(CREATE_TABLE_ASSET);
 
-            createUser = connection.prepareStatement(CREATE_USER);
-            editUser = connection.prepareStatement(EDIT_USER);
-            deleteUser = connection.prepareStatement(DELETE_USER);
-            getUser = connection.prepareStatement(GET_USER);
-            getAllUsers = connection.prepareStatement(GET_ALL_USERS);
+            createOrganisation = connection.prepareStatement(CREATE_ORGANISATION);
+            editOrganisation = connection.prepareStatement(EDIT_ORGANISATION);
+            deleteOrganisation = connection.prepareStatement(DELETE_ORGANISATION);
+            getOrganisation = connection.prepareStatement(GET_ORGANISATION);
+            getAllOrganisations = connection.prepareStatement(GET_ALL_ORGANISATIONS);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    @Override
-    public void create(User user) {
+    public void create(Organisation organisation) {
         try {
-            createUser.setString(1, user.getUsername());
-            createUser.setString(2, user.getPassword());
-            createUser.setString(3, user.getAccountType().name());
-            createUser.execute();
+            createOrganisation.setInt(1, organisation.getOrganisationID());
+            createOrganisation.setString(2, organisation.getOrganisationName());
+            createOrganisation.setInt(3, organisation.getCredits());
+            createOrganisation.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    @Override
-    public void edit(int user_id, User user) {
+    public void edit(int organisation_id, Organisation organisation) {
         try {
-            editUser.setString(1, user.getUsername());
-            editUser.setString(2, user.getPassword());
-            editUser.setString(3, user.getAccountType().name());
-            editUser.setInt(4, user_id);
-            editUser.execute();
+            editOrganisation.setString(1, organisation.getOrganisationName());
+            editOrganisation.setInt(2, organisation.getCredits());
+            editOrganisation.setInt(3, organisation_id);
+            editOrganisation.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    @Override
-    public void delete(int user_id) {
+    public void delete(int organisation_id) {
         try {
-            getUser.setInt(1, user_id);
-            deleteUser.execute();
+            getOrganisation.setInt(1, organisation_id);
+            deleteOrganisation.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    @Override
-    public User get(String username) {
-        User user = new User();
+    public Organisation get(Integer organisation_id) {
+        Organisation organisation = new Organisation();
         ResultSet rs = null;
         try {
-            getUser.setString(1, username);
+            getOrganisation.setInt(1, organisation_id);
             int index = 0;
-            rs = getUser.executeQuery();
+            rs = getOrganisation.executeQuery();
             if(rs.next()){
-                user.setUsername(rs.getString("user_id"));
-                user.setPassword(rs.getString("password"));
-                user.setAccountType(AccountType.valueOf(rs.getString("account_type")));
+                organisation.setOrganisationID(rs.getInt("organisation_id"));
+                organisation.setOrganisationName(rs.getString("organisation_name"));
+                organisation.setCredits(rs.getInt("credits"));
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        return user;
+        return organisation;
     }
 
-    @Override
-    public ArrayList<User> getAll() {
-        ArrayList<User>  users = new ArrayList<>();
+    public ArrayList<Organisation> getAll() {
+        ArrayList<Organisation>  organisations = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getUser.executeQuery();
+            rs = getOrganisation.executeQuery();
             int index = 0;
             rs.next();
             while(rs.next()){
-                User user = new User();
-                user.setUsername(rs.getString("user_id"));
-                user.setPassword(rs.getString("password"));
-                user.setAccountType(AccountType.valueOf(rs.getString("account_type")));
-                users.add(user);
+                Organisation organisation = new Organisation();
+                organisation.setOrganisationID(rs.getInt("organisation_id"));
+                organisation.setOrganisationName(rs.getString("organisation_name"));
+                organisation.setCredits(rs.getInt("credits"));
+                organisations.add(organisation);
                 index++;
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+
+        return organisations;
     }
 }

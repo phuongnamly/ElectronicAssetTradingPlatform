@@ -2,7 +2,6 @@ package server.database.JBDCDataSource;
 
 import server.database.DBConnection;
 import server.database.JBDCDataSource.Entity.Asset;
-import server.database.JBDCDataSource.Entity.Enum.AccountType;
 import server.database.JBDCDataSource.Entity.User;
 
 import java.sql.*;
