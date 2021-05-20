@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c0e173-3710-42a8-8035-d5e16aafe9a4" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Listing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Organisation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/AddressBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/AddressBookData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/AddressBookUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/UserDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/NetworkServerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.props" beforeDir="false" afterPath="$PROJECT_DIR$/db.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +54,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="server.database.tables" />
-      <recent name="server.database" />
-      <recent name="" />
       <recent name="server" />
+      <recent name="server.database" />
+      <recent name="client" />
+      <recent name="server.database.tables" />
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform" />
@@ -62,13 +66,39 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AddressBook">
+    <configuration name="AddressBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.AddressBook" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="database.Main" />
       <module name="Electronic_Asset_Trading_Platform" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AddressBook" />
+        <item itemvalue="Application.NetworkServerGUI" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -147,10 +183,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="-database and server setup" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1621387251263">
+    <state x="339" y="0" width="617" height="680" key="#Main" timestamp="1621479765617">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1621387251263" />
+    <state x="339" y="0" width="617" height="680" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1621479765617" />
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1621486367727">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621486367727" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1621484601091">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1621484601091" />
     <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619767457888">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -167,18 +211,34 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1620880441382" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621408259219">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621485797842">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621408259219" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621485797842" />
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog" timestamp="1620878962902">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1620878962902" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1620889855994">
+    <state width="1237" height="397" key="GridCell.Tab.0.bottom" timestamp="1621487404652">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1620889855994" />
+    <state width="1237" height="397" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1621487404652" />
+    <state width="1237" height="397" key="GridCell.Tab.0.center" timestamp="1621487404652">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="397" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1621487404652" />
+    <state width="1237" height="397" key="GridCell.Tab.0.left" timestamp="1621487404652">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="397" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1621487404652" />
+    <state width="1237" height="397" key="GridCell.Tab.0.right" timestamp="1621487404652">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="397" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1621487404652" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1621480916044">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1621480916044" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1620889788467">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -187,6 +247,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1621387014061" />
+    <state x="187" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621483873698">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="187" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1621483873698" />
     <state x="348" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1621298750891">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -199,5 +263,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1621407528325" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/client/NetworkDataSource.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/server/Server.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

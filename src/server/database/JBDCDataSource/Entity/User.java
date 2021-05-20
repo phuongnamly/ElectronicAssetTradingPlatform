@@ -10,14 +10,15 @@ import server.database.JBDCDataSource.Entity.Enum.AccountType;
  */
 public class User implements Comparable<User> {
 
-   private Integer organisationID;
+   private String userID;
+   private String organisationID;
    private String username;
    private String password;
    private String salt;
    private String email;
-   private Integer phoneNum;
+   private String phoneNum;
    private String address;
-   private AccountType accountType;
+   private String accountType;
 
    public User(){
 
@@ -29,7 +30,7 @@ public class User implements Comparable<User> {
     * @param password
     * @param accountType
     */
-   public User(Integer organisationID, String username, String password, String salt, String email, Integer phoneNum, String address, AccountType accountType) {
+   public User(String organisationID, String username, String password, String salt, String email, String phoneNum, String address, String accountType) {
       this.organisationID = organisationID;
       this.username = username;
       this.password = password;
@@ -42,14 +43,24 @@ public class User implements Comparable<User> {
    }
 
    /**
+    * @return the user ID
+    */
+   public String getUserID() { return userID; }
+
+   /**
+    * @param userID the user ID to set
+    */
+   public void setUserID(String userID) { this.userID = userID; }
+
+   /**
     * @return the organisation ID
     */
-   public Integer getOrganisationID() { return organisationID; }
+   public String getOrganisationID() { return organisationID; }
 
    /**
     * @param organisationID the organisation ID to set
     */
-   public void setOrganisationID(Integer organisationID) { this.organisationID = organisationID; }
+   public void setOrganisationID(String organisationID) { this.organisationID = organisationID; }
 
    /**
     * @return the username
@@ -96,14 +107,14 @@ public class User implements Comparable<User> {
    /**
     * @return the account type
     */
-   public AccountType getAccountType() {
+   public String getAccountType() {
       return accountType;
    }
 
    /**
     * @param accountType the account type to set
     */
-   public void setAccountType(AccountType accountType) {
+   public void setAccountType(String accountType) {
       this.accountType = accountType;
    }
 
@@ -124,14 +135,14 @@ public class User implements Comparable<User> {
    /**
     * @return the phone number
     */
-   public int getPhoneNum() {
+   public String getPhoneNum() {
       return phoneNum;
    }
 
    /**
     * @param phoneNum the phone number to set
     */
-   public void setPhoneNum(int phoneNum) { this.phoneNum = phoneNum; }
+   public void setPhoneNum(String phoneNum) { this.phoneNum = phoneNum; }
 
    /**
     * @return the address type

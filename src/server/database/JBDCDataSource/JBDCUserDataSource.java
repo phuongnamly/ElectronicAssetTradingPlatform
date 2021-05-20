@@ -6,22 +6,25 @@ import server.database.JBDCDataSource.Entity.User;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class JBDCUserDataSource {
 
     public static final String CREATE_TABLE =
-            "CREATE TABLE `user` (\n" +
+            "CREATE TABLE IF NOT EXISTS `user` (\n" +
                     "  `user_id`  INTEGER /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" + // from https://stackoverflow.com/a/41028314
                     "  `organisation_id` INTEGER,\n" +
                     "  `username` VARCHAR(50) NOT NULL,\n" +
                     "  `password` VARCHAR(255) NOT NULL,\n" +
                     "  `salt` VARCHAR(255) NOT NULL,\n" +
-                    "  `account_type` ENUM('admin',leader','member') NOT NULL,\n" +
+                    "  `account_type` ENUM('admin','leader','member'),\n" +
                     "  `email` VARCHAR(255) NOT NULL,\n" +
                     "  `phone` INT(10) NOT NULL,\n" +
                     "  `address` VARCHAR(255) NOT NULL,\n" +
-                    "  PRIMARY KEY (`user_id`) NOT NULL,\n" +
-                    "  FOREIGN KEY (organisation_id) REFERENCES organisation(organisation_id))\n" +
+                    "  PRIMARY KEY (`user_id`)\n" +
+//                    "  PRIMARY KEY (`user_id`),\n" +
+//                    "  FOREIGN KEY (organisation_id) REFERENCES organisation(organisation_id)\n" +
                     ");";
 
     private static final String CREATE_USER = "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
@@ -33,6 +36,10 @@ public class JBDCUserDataSource {
     private static final String GET_USER = "SELECT * FROM user WHERE user_id=?";
 
     private static final String GET_ALL_USERS = "SELECT * FROM user";
+
+    private static final String COUNT_ROWS = "SELECT COUNT(*) FROM user";
+
+    private static final String GET_NAMES = "SELECT username FROM user";
 
     private Connection connection;
 
@@ -46,6 +53,9 @@ public class JBDCUserDataSource {
 
     private PreparedStatement getAllUsers;
 
+    private PreparedStatement rowCount;
+
+    private PreparedStatement getNameList;
 
     public JBDCUserDataSource() {
         connection = DBConnection.getInstance();
@@ -57,6 +67,9 @@ public class JBDCUserDataSource {
             deleteUser = connection.prepareStatement(DELETE_USER);
             getUser = connection.prepareStatement(GET_USER);
             getAllUsers = connection.prepareStatement(GET_ALL_USERS);
+            rowCount = connection.prepareStatement(COUNT_ROWS);
+            getNameList = connection.prepareStatement(GET_NAMES);
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -65,13 +78,13 @@ public class JBDCUserDataSource {
     public void create(User user) {
         // "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
-            createUser.setInt(1, user.getOrganisationID());
+            createUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
             createUser.setString(2, user.getUsername());
             createUser.setString(3, user.getPassword());
             createUser.setString(4, user.getSalt());
-            createUser.setString(5, user.getAccountType().name());
+            createUser.setString(5, user.getAccountType());
             createUser.setString(6, user.getEmail());
-            createUser.setInt(7, user.getPhoneNum());
+            createUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
             createUser.setString(8, user.getPassword());
             createUser.execute();
         } catch (SQLException ex) {
@@ -79,17 +92,18 @@ public class JBDCUserDataSource {
         }
     }
 
-    public void edit(int user_id, User user) {
+    public void edit(User user) {
         // "UPDATE user SET organisation_id = ?, username = ?, password = ?, salt = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
         try {
-            editUser.setInt(1, user.getOrganisationID());
+            editUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
             editUser.setString(2, user.getUsername());
             editUser.setString(3, user.getPassword());
             editUser.setString(4, user.getSalt());
-            editUser.setString(5, user.getAccountType().name());
+            editUser.setString(5, user.getAccountType());
             editUser.setString(6, user.getEmail());
-            editUser.setInt(7, user.getPhoneNum());
+            editUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
             editUser.setString(8, user.getPassword());
+            editUser.setInt(9, Integer.parseInt(user.getUserID()));
             editUser.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -113,13 +127,13 @@ public class JBDCUserDataSource {
             int index = 0;
             rs = getUser.executeQuery();
             if(rs.next()){
-                user.setOrganisationID(rs.getInt("organisation_id"));
+                user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 user.setSalt(rs.getString("salt"));
-                user.setAccountType(AccountType.valueOf(rs.getString("account_type")));
+                user.setAccountType(rs.getString("account_type"));
                 user.setEmail(rs.getString("email"));
-                user.setPhoneNum((rs.getInt("phone_number")));
+                user.setPhoneNum((rs.getString("phone_number")));
                 user.setAddress(rs.getString("address"));
             }
 
@@ -138,13 +152,13 @@ public class JBDCUserDataSource {
             rs.next();
             while(rs.next()){
                 User user = new User();
-                user.setOrganisationID(rs.getInt("organisation_id"));
-                user.setUsername(rs.getString("user_id"));
+                user.setOrganisationID(rs.getString("organisation_id"));
+                user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 user.setSalt(rs.getString("salt"));
-                user.setAccountType(AccountType.valueOf(rs.getString("account_type")));
+                user.setAccountType(rs.getString("account_type"));
                 user.setEmail(rs.getString("email"));
-                user.setPhoneNum((rs.getInt("phone_number")));
+                user.setPhoneNum((rs.getString("phone_number")));
                 user.setAddress(rs.getString("address"));
 
                 users.add(user);
@@ -155,5 +169,40 @@ public class JBDCUserDataSource {
         }
 
         return users;
+    }
+
+    public int getSize() {
+        ResultSet rs = null;
+        int rows = 0;
+
+        /* BEGIN MISSING CODE */
+        try {
+            rs = rowCount.executeQuery();
+            rs.next();
+            rows = rs.getInt(1);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        /* END MISSING CODE */
+
+        return rows;
+    }
+
+    public Set<String> nameSet() {
+        Set<String> names = new TreeSet<String>();
+        ResultSet rs = null;
+
+        /* BEGIN MISSING CODE */
+        try {
+            rs = getNameList.executeQuery();
+            while (rs.next()) {
+                names.add(rs.getString("username"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        /* END MISSING CODE */
+
+        return names;
     }
 }

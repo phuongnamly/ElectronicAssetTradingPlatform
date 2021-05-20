@@ -1,13 +1,17 @@
 package server;
 
+import client.NetworkDataSource;
+import server.database.JBDCDataSource.*;
+import server.database.JBDCDataSource.Entity.User;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class NetworkServer {
+public class Server {
     private static final int PORT = 10000;
 
     /**
@@ -25,7 +29,11 @@ public class NetworkServer {
     /**
      * The connection to the database where everything is stored.
      */
-    private AddressBookDataSource database;
+    private JBDCAssetDataSource assetDatabase;
+    private JBDCListingDataSource listingDatabase;
+    private JBDCOrganisationDataSource organisationDatabase;
+    private JBDCTradeDataSource tradeDatabase;
+    private JBDCUserDataSource userDatabase;
 
     /**
      * Handles the connection received from ServerSocket.
@@ -88,33 +96,14 @@ public class NetworkServer {
          * lock around all database operations, in this case with a synchronized block on the database object.
          */
         switch (command) {
-            case ADD_PERSON: {
+            case ADD_USER: {
                 // client is sending us a new person
-                final Person p = (Person) inputStream.readObject();
-                synchronized (database) {
-                    database.addPerson(p);
+                final User user = (User) inputStream.readObject();
+                synchronized (userDatabase) {
+                    userDatabase.create(user);
                 }
-                System.out.println(String.format("Added person '%s' to database from client %s",
-                        p.getName(), socket.toString()));
-            }
-            break;
-
-            case GET_PERSON: {
-                // client sends us the name of the person to retrieve
-                final String personName = (String) inputStream.readObject();
-                synchronized (database) {
-                    // synchronize both the get as well as the send, that way
-                    // we don't send a half updated person
-                    final Person person = database.getPerson(personName);
-
-                    // send the client back the person's details, or null
-                    outputStream.writeObject(person);
-
-                    if (person != null)
-                        System.out.println(String.format("Sent person '%s' to client %s",
-                                person.getName(), socket.toString()));
-                }
-                outputStream.flush();
+                System.out.println(String.format("Added user '%s' to database from client %s",
+                        user.getUsername(), socket.toString()));
             }
             break;
 
@@ -122,25 +111,38 @@ public class NetworkServer {
                 // no parameters sent by client
 
                 // send the client back the size of the database
-                synchronized (database) {
-                    outputStream.writeInt(database.getSize());
+                synchronized (userDatabase) {
+                    outputStream.writeInt(userDatabase.getSize());
                 }
                 outputStream.flush();
 
                 System.out.println(String.format("Sent size of %d to client %s",
-                        database.getSize(), socket.toString()));
+                        userDatabase.getSize(), socket.toString()));
             }
             break;
 
-            case DELETE_PERSON: {
+            case EDIT_USER: {
                 // one parameter - the person's name
-                final String personName = (String) inputStream.readObject();
-                synchronized (database) {
-                    database.deletePerson(personName);
+                final User user = (User) inputStream.readObject();
+
+                synchronized (userDatabase) {
+                    userDatabase.edit(user);
                 }
 
-                System.out.println(String.format("Deleted person '%s' on behalf of client %s",
-                        personName, socket.toString()));
+                System.out.println(String.format("Edited user '%s' on behalf of client %s",
+                        user.getUsername(), socket.toString()));
+            }
+            break;
+
+            case DELETE_USER: {
+                // one parameter - the person's name
+                final int user_id = (Integer) inputStream.readObject();
+                synchronized (userDatabase) {
+                    userDatabase.delete(user_id);
+                }
+
+                System.out.println(String.format("Deleted user with id '%s' on behalf of client %s",
+                        user_id, socket.toString()));
             }
             break;
 
@@ -148,8 +150,8 @@ public class NetworkServer {
                 // no parameters sent by client
 
                 // send the client back the name set
-                synchronized (database) {
-                    outputStream.writeObject(database.nameSet());
+                synchronized (userDatabase) {
+                    outputStream.writeObject(userDatabase.nameSet());
                 }
                 outputStream.flush();
 
@@ -157,6 +159,41 @@ public class NetworkServer {
                         socket.toString()));
             }
             break;
+
+            case GET_USER: {
+                // client sends us the name of the person to retrieve
+                final String userName = (String) inputStream.readObject();
+                synchronized (userDatabase) {
+                    // synchronize both the get as well as the send, that way
+                    // we don't send a half updated person
+                    final User user = userDatabase.get(userName);
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(user);
+
+                    if (user != null)
+                        System.out.println(String.format("Sent person '%s' to client %s",
+                                user.getUsername(), socket.toString()));
+                }
+                outputStream.flush();
+            }
+            break;
+
+            case GET_USERS: {
+                synchronized (userDatabase) {
+                    // synchronize both the get as well as the send, that way
+                    // we don't send a half updated person
+                    final ArrayList<User> users = (ArrayList<User>) inputStream.readObject();
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(users);
+
+                    if (users != null)
+                        System.out.println(String.format("Sent all users to client %s",
+                                socket.toString()));
+                }
+                outputStream.flush();
+            }
         }
     }
 
@@ -174,7 +211,11 @@ public class NetworkServer {
      */
     public void start() throws IOException {
         // Connect to the database.
-        database = new JDBCAddressBookDataSource();
+        userDatabase = new JBDCUserDataSource();
+//        organisationDatabase = new JBDCOrganisationDataSource();
+//        listingDatabase = new JBDCListingDataSource();
+//        assetDatabase = new JBDCAssetDataSource();
+//        tradeDatabase = new JBDCTradeDataSource();
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             serverSocket.setSoTimeout(SOCKET_ACCEPT_TIMEOUT);
