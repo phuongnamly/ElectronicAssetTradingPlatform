@@ -75,6 +75,24 @@ public class JBDCUserDataSource {
         }
     }
 
+    public boolean VerifyLogIn(String username_key, String password_key){
+        ArrayList<User> users = get(username_key);
+
+        if(users.size() == 0){
+            return false;
+        }
+        else{
+            String password = users.get(0).getPassword();
+
+            if (password == password_key)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void create(User user) {
         // "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
@@ -119,14 +137,15 @@ public class JBDCUserDataSource {
         }
     }
 
-    public User get(String username) {
-        User user = new User();
+    public ArrayList<User> get(String username) {
+        ArrayList<User>  users = new ArrayList<>();
         ResultSet rs = null;
         try {
             getUser.setString(1, username);
             int index = 0;
             rs = getUser.executeQuery();
-            if(rs.next()){
+            while(rs.next()){
+                User user = new User();
                 user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
@@ -135,13 +154,15 @@ public class JBDCUserDataSource {
                 user.setEmail(rs.getString("email"));
                 user.setPhoneNum((rs.getString("phone_number")));
                 user.setAddress(rs.getString("address"));
+
+                users.add(user);
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        return user;
+        return users;
     }
 
     public ArrayList<User> getAll() {

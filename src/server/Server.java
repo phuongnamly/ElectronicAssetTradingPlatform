@@ -96,6 +96,21 @@ public class Server {
          * lock around all database operations, in this case with a synchronized block on the database object.
          */
         switch (command) {
+            case LOG_IN: {
+                // List<String> sent by the client
+                final ArrayList<String> loginData = (ArrayList<String>) inputStream.readObject();
+                String username = loginData.get(0);
+                String password = loginData.get(1);
+
+                // send the boolean back to the client
+                synchronized (userDatabase) {
+                    outputStream.writeBoolean(userDatabase.VerifyLogIn(username, password));
+                }
+                outputStream.flush();
+
+            }
+            break;
+
             case ADD_USER: {
                 // client is sending us a new person
                 final User user = (User) inputStream.readObject();
@@ -166,14 +181,14 @@ public class Server {
                 synchronized (userDatabase) {
                     // synchronize both the get as well as the send, that way
                     // we don't send a half updated person
-                    final User user = userDatabase.get(userName);
+                    final ArrayList<User> users = userDatabase.get(userName);
 
                     // send the client back the person's details, or null
-                    outputStream.writeObject(user);
+                    outputStream.writeObject(users);
 
-                    if (user != null)
+                    if (users != null)
                         System.out.println(String.format("Sent person '%s' to client %s",
-                                user.getUsername(), socket.toString()));
+                                users.get(0).getUsername(), socket.toString()));
                 }
                 outputStream.flush();
             }

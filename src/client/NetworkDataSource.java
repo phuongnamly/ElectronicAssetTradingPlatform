@@ -3,10 +3,12 @@ package client;
 import client.UserDataSource;
 import server.database.JBDCDataSource.Entity.User;
 
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,6 +24,7 @@ public class NetworkDataSource implements UserDataSource {
      * These are the commands which will be sent across the network connection.
      */
     public enum Command {
+        LOG_IN,
         ADD_USER,
         EDIT_USER,
         DELETE_USER,
@@ -45,6 +48,28 @@ public class NetworkDataSource implements UserDataSource {
             // But it wasn't written to handle this, so make sure your
             // server is running beforehand!
             System.out.println("Failed to connect to server");
+        }
+    }
+
+    public boolean login(String username, String password){
+        try {
+            outputStream.writeObject(Command.LOG_IN);
+            ArrayList<String> loginData = new ArrayList<>();
+            loginData.add(username);
+            loginData.add(password);
+            outputStream.writeObject(loginData);
+            outputStream.flush();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if(dataInputStream.readBoolean()){
+                return false;
+            } else{
+                return true;
+            }
+        } catch (IOException | ClassCastException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 
