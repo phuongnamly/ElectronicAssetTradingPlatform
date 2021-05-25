@@ -1,6 +1,6 @@
 package client;
 
-import client.UserDataSource;
+import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
 
 import java.io.DataInputStream;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class NetworkDataSource implements UserDataSource {
+public class NetworkDataSource {
     private static final String HOSTNAME = "127.0.0.1";
     private static final int PORT = 10000;
 
@@ -32,6 +32,13 @@ public class NetworkDataSource implements UserDataSource {
         GET_USERS,
         GET_NAME_SET,
         GET_SIZE,
+
+        // Organisation
+        ADD_ORGANISATION,
+        EDIT_ORGANISATION,
+        DELETE_ORGANISATION,
+        GET_ORGANISATION,
+        GET_ORGANISATIONS,
     }
 
     public NetworkDataSource() {
@@ -62,11 +69,8 @@ public class NetworkDataSource implements UserDataSource {
 
             DataInputStream dataInputStream = new DataInputStream(inputStream);
 
-            if(dataInputStream.readBoolean()){
-                return false;
-            } else{
-                return true;
-            }
+            return (dataInputStream.readBoolean());
+
         } catch (IOException | ClassCastException e) {
             e.printStackTrace();
             return false;
@@ -170,6 +174,70 @@ public class NetworkDataSource implements UserDataSource {
         } catch (IOException | ClassNotFoundException | ClassCastException e) {
             e.printStackTrace();
             return new HashSet<>();
+        }
+    }
+
+    // Organisation
+    public boolean addOrganisation(String organisationName, String credits) {
+        try {
+            outputStream.writeObject(Command.ADD_ORGANISATION);
+            // List<String>
+            Organisation organisation = new Organisation();
+            organisation.setOrganisationName(organisationName);
+            organisation.setCredits(credits);
+            outputStream.writeObject(organisation);
+            outputStream.flush();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if (dataInputStream.readBoolean()) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (IOException | ClassCastException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean deleteOrganisation(String organisationID){
+        try {
+            outputStream.writeObject(Command.DELETE_ORGANISATION);
+            // List<String>
+            outputStream.writeObject(organisationID);
+            outputStream.flush();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if (dataInputStream.readBoolean()) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (IOException | ClassCastException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean editOrganisation(String organisationID){
+        try {
+            outputStream.writeObject(Command.DELETE_ORGANISATION);
+            // List<String>
+            outputStream.writeObject(organisationID);
+            outputStream.flush();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if (dataInputStream.readBoolean()) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (IOException | ClassCastException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

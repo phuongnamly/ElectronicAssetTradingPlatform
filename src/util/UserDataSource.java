@@ -1,4 +1,4 @@
-package client;
+package util;
 
 import server.database.JBDCDataSource.Entity.User;
 

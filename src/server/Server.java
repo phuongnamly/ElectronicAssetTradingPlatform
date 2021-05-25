@@ -2,6 +2,7 @@ package server;
 
 import client.NetworkDataSource;
 import server.database.JBDCDataSource.*;
+import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
 
 import java.io.*;
@@ -209,6 +210,31 @@ public class Server {
                 }
                 outputStream.flush();
             }
+            break;
+
+            case ADD_ORGANISATION:{
+                // List<String> sent by the client
+                final Organisation organisation = (Organisation) inputStream.readObject();
+
+                // send the boolean back to the client
+                synchronized (organisationDatabase) {
+                    outputStream.writeBoolean(organisationDatabase.create(organisation));
+                }
+                outputStream.flush();
+            }
+            break;
+
+            case DELETE_ORGANISATION:{
+                // List<String> sent by the client
+                final String organisationID = (String) inputStream.readObject();
+
+                // send the boolean back to the client
+                synchronized (organisationDatabase) {
+                    outputStream.writeBoolean(organisationDatabase.delete(organisationID));
+                }
+                outputStream.flush();
+            }
+            break;
         }
     }
 
@@ -227,7 +253,7 @@ public class Server {
     public void start() throws IOException {
         // Connect to the database.
         userDatabase = new JBDCUserDataSource();
-//        organisationDatabase = new JBDCOrganisationDataSource();
+        organisationDatabase = new JBDCOrganisationDataSource();
 //        listingDatabase = new JBDCListingDataSource();
 //        assetDatabase = new JBDCAssetDataSource();
 //        tradeDatabase = new JBDCTradeDataSource();

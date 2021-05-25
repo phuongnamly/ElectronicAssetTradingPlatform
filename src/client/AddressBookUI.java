@@ -1,6 +1,7 @@
 package client;
 
 import server.database.JBDCDataSource.Entity.User;
+import util.AddressBookData;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;

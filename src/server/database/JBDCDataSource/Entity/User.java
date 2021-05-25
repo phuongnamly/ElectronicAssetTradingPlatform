@@ -2,13 +2,15 @@ package server.database.JBDCDataSource.Entity;
 
 import server.database.JBDCDataSource.Entity.Enum.AccountType;
 
+import java.io.Serializable;
+
 /**
  * Stores address details for a person.
  * 
  * @author Malcolm Corney
  * @version $Id: Exp $
  */
-public class User implements Comparable<User> {
+public class User implements Comparable<User>, Serializable {
 
    private String userID;
    private String organisationID;

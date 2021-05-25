@@ -33,7 +33,7 @@ public class JBDCUserDataSource {
 
     private static final String DELETE_USER = "DELETE FROM user WHERE user_id=?";
 
-    private static final String GET_USER = "SELECT * FROM user WHERE user_id=?";
+    private static final String GET_USER = "SELECT * FROM user WHERE username=?";
 
     private static final String GET_ALL_USERS = "SELECT * FROM user";
 
@@ -84,7 +84,7 @@ public class JBDCUserDataSource {
         else{
             String password = users.get(0).getPassword();
 
-            if (password == password_key)
+            if (password.equals(password_key))
             {
                 return true;
             }
@@ -120,7 +120,7 @@ public class JBDCUserDataSource {
             editUser.setString(5, user.getAccountType());
             editUser.setString(6, user.getEmail());
             editUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
-            editUser.setString(8, user.getPassword());
+            editUser.setString(8, user.getAddress());
             editUser.setInt(9, Integer.parseInt(user.getUserID()));
             editUser.execute();
         } catch (SQLException ex) {
@@ -152,7 +152,7 @@ public class JBDCUserDataSource {
                 user.setSalt(rs.getString("salt"));
                 user.setAccountType(rs.getString("account_type"));
                 user.setEmail(rs.getString("email"));
-                user.setPhoneNum((rs.getString("phone_number")));
+                user.setPhoneNum((rs.getString("phone")));
                 user.setAddress(rs.getString("address"));
 
                 users.add(user);
@@ -179,7 +179,7 @@ public class JBDCUserDataSource {
                 user.setSalt(rs.getString("salt"));
                 user.setAccountType(rs.getString("account_type"));
                 user.setEmail(rs.getString("email"));
-                user.setPhoneNum((rs.getString("phone_number")));
+                user.setPhoneNum((rs.getString("phone")));
                 user.setAddress(rs.getString("address"));
 
                 users.add(user);

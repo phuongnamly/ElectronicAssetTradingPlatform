@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92c0e173-3710-42a8-8035-d5e16aafe9a4" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ClosingListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ClosingListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$NameListListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$NameListListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/UserDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Organisation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Organisation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/AddressBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/AddressBookData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/AddressBookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/AddressBookUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/UserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UserDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Organisation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +67,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Other projects/Electronic billboard" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -66,7 +92,7 @@
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,7 +105,7 @@
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,7 +118,7 @@
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,10 +235,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621486367727" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621848482378">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621919445199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621848482378" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621919445199" />
     <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1621484601091">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -233,38 +259,43 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1620880441382" />
+    <state x="171" y="0" key="DBNavigator.ProjectSettingsDialog" timestamp="1621944017563">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="DBNavigator.ProjectSettingsDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621944017563" />
     <state width="1278" height="440" key="DebuggerActiveHint" timestamp="1621661799575">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1278" height="440" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1621661799575" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621663913764">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621946469551">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621946469551" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621663913764" />
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog" timestamp="1620878962902">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1620878962902" />
-    <state width="1237" height="45" key="GridCell.Tab.0.bottom" timestamp="1621850379652">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1621952247028">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="109" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621770643092" />
-    <state width="1237" height="45" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1621850379652" />
-    <state width="1237" height="45" key="GridCell.Tab.0.center" timestamp="1621850379652">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247028" />
+    <state width="1237" height="33" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
+    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1621952247027">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="109" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621770643091" />
-    <state width="1237" height="45" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1621850379652" />
-    <state width="1237" height="45" key="GridCell.Tab.0.left" timestamp="1621850379652">
+    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247027" />
+    <state width="1237" height="33" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
+    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1621952247027">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="109" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621770643091" />
-    <state width="1237" height="45" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1621850379652" />
-    <state width="1237" height="45" key="GridCell.Tab.0.right" timestamp="1621850379652">
+    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247027" />
+    <state width="1237" height="33" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1621952247028">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="109" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621770643091" />
-    <state width="1237" height="45" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1621850379652" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247028" />
+    <state width="1237" height="33" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1621480916044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -294,15 +325,9 @@
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1621407528325" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/Mockup2.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Electronic_Asset_Trading_Platform$Mockup2.ic" NAME="Mockup2 Coverage Results" MODIFIED="1621947993298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>util.*</FILTER>
+    </SUITE>
   </component>
 </project>

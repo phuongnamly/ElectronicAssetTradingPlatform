@@ -12,12 +12,12 @@ public class JBDCOrganisationDataSource {
             "CREATE TABLE IF NOT EXISTS `organisation` (\n" +
                     "  `organisation_id` INTEGER  /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
                     "  `organisation_name` VARCHAR(100),\n" +
-                    "  `credits` INT(MAXINT),\n" +
+                    "  `credits` INTEGER ,\n" +
                     "  PRIMARY KEY (`organisation_id`)\n" +
                     ");";
 
 
-    private static final String CREATE_ORGANISATION = "REPLACE INTO organisation (organisation_id, organisation_name, credits) VALUES (?, ?, ?);";
+    private static final String CREATE_ORGANISATION = "REPLACE INTO organisation (organisation_name, credits) VALUES (?, ?);";
 
     private static final String EDIT_ORGANISATION = "UPDATE organisation SET organisation_name = ?, credits = ? WHERE organisation_id=? = ?";
 
@@ -44,6 +44,7 @@ public class JBDCOrganisationDataSource {
         connection = DBConnection.getInstance();
         try {
             Statement st = connection.createStatement();
+            st.execute(CREATE_TABLE);
 
             createOrganisation = connection.prepareStatement(CREATE_ORGANISATION);
             editOrganisation = connection.prepareStatement(EDIT_ORGANISATION);
@@ -55,21 +56,23 @@ public class JBDCOrganisationDataSource {
         }
     }
 
-    public void create(Organisation organisation) {
+    public boolean create(Organisation organisation) {
         try {
-            createOrganisation.setInt(1, organisation.getOrganisationID());
-            createOrganisation.setString(2, organisation.getOrganisationName());
-            createOrganisation.setInt(3, organisation.getCredits());
-            createOrganisation.execute();
+            createOrganisation.setString(1, organisation.getOrganisationName());
+            createOrganisation.setInt(2, Integer.parseInt(organisation.getCredits()));
+            return createOrganisation.execute();
+
         } catch (SQLException ex) {
             ex.printStackTrace();
+
+            return false;
         }
     }
 
     public void edit(int organisation_id, Organisation organisation) {
         try {
             editOrganisation.setString(1, organisation.getOrganisationName());
-            editOrganisation.setInt(2, organisation.getCredits());
+            editOrganisation.setInt(2, Integer.parseInt(organisation.getCredits()));
             editOrganisation.setInt(3, organisation_id);
             editOrganisation.execute();
         } catch (SQLException ex) {
@@ -77,33 +80,38 @@ public class JBDCOrganisationDataSource {
         }
     }
 
-    public void delete(int organisation_id) {
+    public boolean delete(String organisation_id) {
         try {
-            getOrganisation.setInt(1, organisation_id);
+            deleteOrganisation.setInt(1, Integer.parseInt(organisation_id));
             deleteOrganisation.execute();
+            return true;
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public Organisation get(Integer organisation_id) {
-        Organisation organisation = new Organisation();
+    public ArrayList<Organisation> get(Integer organisation_id) {
+        ArrayList<Organisation>  organisations = new ArrayList<>();
         ResultSet rs = null;
         try {
             getOrganisation.setInt(1, organisation_id);
             int index = 0;
             rs = getOrganisation.executeQuery();
             if(rs.next()){
-                organisation.setOrganisationID(rs.getInt("organisation_id"));
+                Organisation organisation = new Organisation();
+                organisation.setOrganisationID(rs.getString("organisation_id"));
                 organisation.setOrganisationName(rs.getString("organisation_name"));
-                organisation.setCredits(rs.getInt("credits"));
+                organisation.setCredits(rs.getString("credits"));
+                organisations.add(organisation);
+                index++;
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        return organisation;
+        return organisations;
     }
 
     public ArrayList<Organisation> getAll() {
@@ -115,9 +123,9 @@ public class JBDCOrganisationDataSource {
             rs.next();
             while(rs.next()){
                 Organisation organisation = new Organisation();
-                organisation.setOrganisationID(rs.getInt("organisation_id"));
+                organisation.setOrganisationID(rs.getString("organisation_id"));
                 organisation.setOrganisationName(rs.getString("organisation_name"));
-                organisation.setCredits(rs.getInt("credits"));
+                organisation.setCredits(rs.getString("credits"));
                 organisations.add(organisation);
                 index++;
             }
