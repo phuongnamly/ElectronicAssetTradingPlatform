@@ -20,6 +20,7 @@ public class NetworkDataSource implements UserDataSource {
     private ObjectOutputStream outputStream;
     private ObjectInputStream inputStream;
 
+
     /**
      * These are the commands which will be sent across the network connection.
      */
@@ -32,6 +33,9 @@ public class NetworkDataSource implements UserDataSource {
         GET_USERS,
         GET_NAME_SET,
         GET_SIZE,
+
+        //Asset
+        ADD_ASSET,
     }
 
     public NetworkDataSource() {
@@ -72,6 +76,19 @@ public class NetworkDataSource implements UserDataSource {
             return false;
         }
     }
+    public void addAsset(String assetType, String assetName) {
+        try {
+            outputStream.writeObject(Command.ADD_ASSET);
+            ArrayList<String> assetData = new ArrayList<>();
+            assetData.add(assetType);
+            assetData.add(assetName);
+            outputStream.writeObject(assetData);
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void addUser(User u) {
         if (u == null)

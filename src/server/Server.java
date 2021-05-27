@@ -2,6 +2,7 @@ package server;
 
 import client.NetworkDataSource;
 import server.database.JBDCDataSource.*;
+import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.User;
 
 import java.io.*;
@@ -110,7 +111,18 @@ public class Server {
 
             }
             break;
+            case ADD_ASSET: {
+                // List<String> sent by the client
+                final Asset asset = (Asset) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.create(asset);
+                }
+                System.out.println(String.format("Added asset '%s' to database from client %s",
+                        asset.getAssetName(), socket.toString()));
 
+
+            }
+            break;
             case ADD_USER: {
                 // client is sending us a new person
                 final User user = (User) inputStream.readObject();

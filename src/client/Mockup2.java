@@ -177,6 +177,18 @@ public class Mockup2 extends JFrame{
                 String username = usernameTextField.getText();
                 String password = passwordTextField.getText();
 
+                String assetName = "Asset1";
+                String assetType = "AssetType1";
+                data.addAsset(assetType, assetName);
+
+
+//               if(data.addAsset(assetType, assetName)){
+//                   System.out.println("Asset add successful");
+//               }
+//               else{
+//                   System.out.println("I fuck up");
+//               }
+
                 if(data.login(username, password)){
                     // go to home page here
 
@@ -189,6 +201,8 @@ public class Mockup2 extends JFrame{
 
             }
         }
+
+
 
 //        /**
 //         * When the new button is pressed, clear the field display, make them
