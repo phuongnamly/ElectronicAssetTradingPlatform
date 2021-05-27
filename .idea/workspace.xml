@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92c0e173-3710-42a8-8035-d5e16aafe9a4" name="Default Changelist" comment="-database and server setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +40,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Other projects/Electronic billboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -166,9 +161,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.AddressBook" />
+      <item itemvalue="Application.Mockup2" />
       <item itemvalue="Application.NetworkServerGUI" />
       <item itemvalue="Application.testDatabase" />
-      <item itemvalue="Application.Mockup2" />
     </list>
     <recent_temporary>
       <list>
@@ -254,26 +249,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1620878962902" />
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1622083303508">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1622085585901">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247028" />
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622083303508" />
-    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1622083303507">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622085585901" />
+    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1622085585901">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247027" />
-    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622083303507" />
-    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1622083303507">
+    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622085585901" />
+    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1622085585900">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247027" />
-    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622083303507" />
-    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1622083303508">
+    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622085585900" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1622085585901">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247028" />
-    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622083303508" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622085585901" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1621480916044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

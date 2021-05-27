@@ -14,7 +14,6 @@ import java.io.Console;
 public class Mockup2 extends JFrame{
     private JTextField usernameTextField;
     private JTextField passwordTextField;
-    //
     JButton sign;
     JButton signup;
 
@@ -175,27 +174,16 @@ public class Mockup2 extends JFrame{
 //                deletePressed();
 //            }
             if(source == sign) {
-                // Organisation stuff
-                String organisationName = "Stark";
-                String credits = "100";
-
-
-                if (data.addOrganisation(organisationName,credits)){
-                    System.out.println("Mock database successful");
-                }
-
-                data.deleteOrganisation("5");
-
-                // User stuff
                 String username = usernameTextField.getText();
                 String password = passwordTextField.getText();
 
                 if(data.login(username, password)){
                     // go to home page here
+
                     System.out.println("Log in successful");
                 }
                 else{
-                    System.out.println("Nope");
+
                 }
             }else if(source == signup){
 
