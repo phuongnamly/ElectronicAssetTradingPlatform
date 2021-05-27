@@ -51,7 +51,7 @@ public class Mockup2 extends JFrame{
         signinpanel.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
-        signinpanel.setBorder(BorderFactory.createTitledBorder("Signin or Register"));
+        signinpanel.setBorder(BorderFactory.createTitledBorder("Sign-in or Register"));
         constraints.gridx = 1;
         constraints.gridy = 1;
         constraints.insets = new Insets(5,5,5,5 );
@@ -126,7 +126,7 @@ public class Mockup2 extends JFrame{
 
 
     private void signupButtonClick(ActionEvent actionEvent){
-        JOptionPane.showMessageDialog(this, "Signup message",
+        JOptionPane.showMessageDialog(this, "Sign-up message",
                 "Signup Form", JOptionPane.WARNING_MESSAGE);
         JOptionPane.showInputDialog("Name: ");
         JOptionPane.showInputDialog("Address: ");
