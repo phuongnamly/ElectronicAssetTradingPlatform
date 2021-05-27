@@ -1,15 +1,19 @@
 package server.database.JBDCDataSource.Entity;
 
-public class Organisation {
-    private int organisationID;
+import java.io.Serializable;
+
+public class Organisation implements Serializable {
+    private static final long serialVersionUID = 332082608397623483L;
+
+    private String organisationID;
     private String organisationName;
-    private Integer credits;
+    private String credits;
 
     public Organisation(){
 
     }
 
-    public Organisation(int organisationID, String organisationName, Integer credits){
+    public Organisation(String organisationID, String organisationName, String credits){
         this.organisationID = organisationID;
         this.organisationName = organisationName;
         this.credits = credits;
@@ -18,12 +22,12 @@ public class Organisation {
     /**
      * @return the organisation ID
      */
-    public Integer getOrganisationID() { return organisationID; }
+    public String getOrganisationID() { return organisationID; }
 
     /**
      * @param organisationID the organisation ID to set
      */
-    public void setOrganisationID(Integer organisationID) { this.organisationID = organisationID; }
+    public void setOrganisationID(String organisationID) { this.organisationID = organisationID; }
 
     /**
      * @return the organisation name
@@ -38,10 +42,10 @@ public class Organisation {
     /**
      * @return the organisation credit
      */
-    public Integer getCredits() { return credits; }
+    public String getCredits() { return credits; }
 
     /**
      * @param credits the organisation ID to set
      */
-    public void setCredits(Integer credits) { this.credits = credits; }
+    public void setCredits(String credits) { this.credits = credits; }
 }

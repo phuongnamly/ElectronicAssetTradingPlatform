@@ -1,6 +1,5 @@
-package  client;
+package guiExploration;
 
-import server.database.JBDCDataSource.Entity.User;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -8,16 +7,12 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Console;
 
 
 public class Mockup2 extends JFrame{
-    private JTextField usernameTextField;
-    private JTextField passwordTextField;
-    JButton sign;
-    JButton signup;
+    private JTextArea display;
 
-    NetworkDataSource data;
+
 
     public Mockup2 (){
         super("Homepage Trading App");
@@ -48,47 +43,61 @@ public class Mockup2 extends JFrame{
 
 
         signinpanel.setLayout(new GridBagLayout());
+        //signinpanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         GridBagConstraints constraints = new GridBagConstraints();
 
         signinpanel.setBorder(BorderFactory.createTitledBorder("Signin or Register"));
+
         constraints.gridx = 1;
         constraints.gridy = 1;
+
         constraints.insets = new Insets(5,5,5,5 );
 
 
 
         //Introducing Textfields for info inptu
-//        JTextField signin = new JTextField(10);
-//        JTextField password = new JTextField(10);
+        JTextField signin = new JTextField(10);
+        constraints.gridx++;
 
-        usernameTextField = new JTextField(10);
-        passwordTextField = new JTextField(10);
+        JTextField password = new JTextField(10);
+        constraints.gridx++;
 
         signinpanel.add(new JLabel("USERNAME"), constraints);
         constraints.gridy++;
+        constraints.gridx++; //added remove later
 
-        signinpanel.add(usernameTextField, constraints);
+        signinpanel.add(signin, constraints);
 
         constraints.gridy++;
+        constraints.gridx++; //added remove later
 
 
         signinpanel.add(new JLabel("Password"), constraints);
 
         constraints.gridy++;
+        constraints.gridx++; //added remove later
 
-        signinpanel.add(passwordTextField, constraints);
+        signinpanel.add(password, constraints);
 
         constraints.gridy++;
+        constraints.gridx++; //added remove later
 
-//        sign = createButton("Sign In", this::signinButtonClick);
-        sign = new JButton("Sign In");
+        JButton sign = new JButton("Sign In");
+
+        JButton signup = new JButton("Sign Up");
+
+        sign = createButton("Sign In", this::signinButtonClick);
         signup = createButton("Sign Up", this::signupButtonClick);
 
         signinpanel.add(sign, constraints);
         constraints.gridy++;
+        constraints.gridx++;
         signinpanel.add(signup, constraints);
         constraints.gridy++;
+        constraints.gridx++;
         constraints.gridy++;
+        constraints.gridx++;
+
 
 
         setLayout(new GridBagLayout());
@@ -96,11 +105,6 @@ public class Mockup2 extends JFrame{
         add(signinpanel);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
-
-
-        addButtonListeners(new ButtonListener());
-
-        data = new NetworkDataSource();
 
         pack();
 
@@ -113,16 +117,6 @@ public class Mockup2 extends JFrame{
                 "Signup Error", JOptionPane.ERROR_MESSAGE);
 
     }
-
-    /**
-     * Adds a listener to the new, save and delete buttons
-     */
-    private void addButtonListeners(ActionListener listener) {
-        sign.addActionListener(listener);
-//        saveButton.addActionListener(listener);
-//        deleteButton.addActionListener(listener);
-    }
-
 
     private void signupButtonClick(ActionEvent actionEvent){
         JOptionPane.showMessageDialog(this, "Signup message",
@@ -145,11 +139,12 @@ public class Mockup2 extends JFrame{
         return button;
 
     }
-    
+
+
     public static void main(String[] args){
         new Mockup2();
-    }
 
+<<<<<<< HEAD
     /**
      * Handles events for the three buttons on the UI.
      *
@@ -261,5 +256,7 @@ public class Mockup2 extends JFrame{
 
 
 
-}
+    }
 
+
+}
