@@ -3,33 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="92c0e173-3710-42a8-8035-d5e16aafe9a4" name="Default Changelist" comment="-database and server setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ClosingListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ClosingListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$NameListListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$NameListListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/UserDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Organisation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Organisation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/AddressBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/AddressBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/AddressBookData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/AddressBookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/AddressBookUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/UserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/UserDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Organisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
@@ -86,7 +64,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mockup2">
+  <component name="RunManager" selected="Application.testDatabase">
     <configuration name="AddressBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.AddressBook" />
       <module name="Electronic Asset Trading Platform" />
@@ -194,9 +172,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testDatabase" />
         <item itemvalue="Application.Mockup2" />
         <item itemvalue="Application.NetworkServerGUI" />
-        <item itemvalue="Application.testDatabase" />
         <item itemvalue="Application.AddressBook" />
       </list>
     </recent_temporary>
@@ -239,10 +217,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621919445199" />
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1621484601091">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1622077568422">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1621484601091" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1622077568422" />
     <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619767457888">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -267,35 +245,35 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1278" height="440" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1621661799575" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621946469551">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1622075451507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621946469551" />
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621663913764" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622075451507" />
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog" timestamp="1620878962902">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="460" y="239" width="361" height="275" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1620878962902" />
-    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1621952247028">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1622083303508">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247028" />
-    <state width="1237" height="33" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
-    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1621952247027">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622083303508" />
+    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1622083303507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247027" />
-    <state width="1237" height="33" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
-    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1621952247027">
+    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622083303507" />
+    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1622083303507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247027" />
-    <state width="1237" height="33" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
-    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1621952247028">
+    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622083303507" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1622083303508">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1621952247028" />
-    <state width="1237" height="33" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1621922626364" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622083303508" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1621480916044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

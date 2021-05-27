@@ -13,6 +13,7 @@ public class JBDCOrganisationDataSource {
                     "  `organisation_id` INTEGER  /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
                     "  `organisation_name` VARCHAR(100),\n" +
                     "  `credits` INTEGER ,\n" +
+                    "  UNIQUE (`organisation_name`),\n" +
                     "  PRIMARY KEY (`organisation_id`)\n" +
                     ");";
 
@@ -69,22 +70,23 @@ public class JBDCOrganisationDataSource {
         }
     }
 
-    public void edit(int organisation_id, Organisation organisation) {
+    public boolean edit(Organisation organisation) {
         try {
             editOrganisation.setString(1, organisation.getOrganisationName());
             editOrganisation.setInt(2, Integer.parseInt(organisation.getCredits()));
-            editOrganisation.setInt(3, organisation_id);
-            editOrganisation.execute();
+            editOrganisation.setInt(3, Integer.parseInt(organisation.getOrganisationID()));
+            return editOrganisation.execute();
+
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
     public boolean delete(String organisation_id) {
         try {
             deleteOrganisation.setInt(1, Integer.parseInt(organisation_id));
-            deleteOrganisation.execute();
-            return true;
+            return deleteOrganisation.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;

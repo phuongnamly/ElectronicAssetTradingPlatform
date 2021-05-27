@@ -175,6 +175,7 @@ public class Mockup2 extends JFrame{
 //                deletePressed();
 //            }
             if(source == sign) {
+                // Organisation stuff
                 String organisationName = "Stark";
                 String credits = "100";
 
@@ -185,7 +186,7 @@ public class Mockup2 extends JFrame{
 
                 data.deleteOrganisation("5");
 
-
+                // User stuff
                 String username = usernameTextField.getText();
                 String password = passwordTextField.getText();
 
