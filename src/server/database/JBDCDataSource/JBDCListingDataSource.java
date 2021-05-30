@@ -15,11 +15,11 @@ public class JBDCListingDataSource {
                     "  `listing_id` INTEGER /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
                     "  `organisation_id` INTEGER,\n" +
                     "  `asset_id` INTEGER,\n" +
-                    "  `quantity` INT(MAXINT),\n" +
-                    "  `price` INT(MAXINT),\n" +
+                    "  `quantity` INTEGER,\n" +
+                    "  `price` INTEGER,\n" +
                     "  PRIMARY KEY (`listing_id`)\n" +
-                    "  FOREIGN KEY (listing_id) REFERENCES listing(listing_id)),\n" +
-                    "  FOREIGN KEY (user_id) REFERENCES user(user_id))\n" +
+                    "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`)\n" +
+                    "  FOREIGN KEY (`asset_id`) REFERENCES `asset`(`asset_id`))\n" +
                     ");";
 
     private static final String CREATE_LISTING = "REPLACE INTO listing (organisation_id, asset_id, quantity, price) VALUES (?, ?, ?, ?);";

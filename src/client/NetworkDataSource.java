@@ -1,5 +1,6 @@
 package client;
 
+import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
 
@@ -10,6 +11,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class NetworkDataSource {
@@ -79,16 +81,26 @@ public class NetworkDataSource {
             return false;
         }
     }
-    public void addAsset(String assetType, String assetName) {
+    public boolean addAsset(String assetType, String assetName) {
         try {
             outputStream.writeObject(Command.ADD_ASSET);
-            ArrayList<String> assetData = new ArrayList<>();
-            assetData.add(assetType);
-            assetData.add(assetName);
+            Asset assetData = new Asset();
+            assetData.setAssetType(assetType);
+            assetData.setAssetName(assetName);
+
             outputStream.writeObject(assetData);
             outputStream.flush();
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if (dataInputStream.readBoolean()) {
+                return false;
+            } else {
+                return true;
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
@@ -237,11 +249,15 @@ public class NetworkDataSource {
         }
     }
 
-    public boolean editOrganisation(String organisationID){
+    public boolean editOrganisation(String organisationID, String organisationName, String credits){
         try {
-            outputStream.writeObject(Command.DELETE_ORGANISATION);
-            // List<String>
-            outputStream.writeObject(organisationID);
+            outputStream.writeObject(Command.EDIT_ORGANISATION);
+
+            Organisation organisation = new Organisation();
+            organisation.setOrganisationID(organisationID);
+            organisation.setOrganisationName(organisationName);
+            organisation.setCredits(credits);
+            outputStream.writeObject(organisation);
             outputStream.flush();
 
             DataInputStream dataInputStream = new DataInputStream(inputStream);
@@ -254,6 +270,18 @@ public class NetworkDataSource {
         } catch (IOException | ClassCastException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public ArrayList<Organisation> getOrganisations(){
+        try {
+            outputStream.writeObject(Command.GET_ORGANISATIONS);
+            outputStream.flush();
+
+            return (ArrayList<Organisation>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException | ClassCastException e) {
+            e.printStackTrace();
+            return new ArrayList<Organisation>();
         }
     }
 }

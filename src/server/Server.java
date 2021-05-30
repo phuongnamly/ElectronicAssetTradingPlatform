@@ -247,6 +247,34 @@ public class Server {
                 outputStream.flush();
             }
             break;
+
+            case EDIT_ORGANISATION:{
+                // List<String> sent by the client
+                final Organisation organisation = (Organisation) inputStream.readObject();
+
+                // send the boolean back to the client
+                synchronized (organisationDatabase) {
+                    outputStream.writeBoolean(organisationDatabase.edit(organisation));
+                }
+                outputStream.flush();
+            }
+            break;
+
+            case GET_ORGANISATIONS:{
+                synchronized (organisationDatabase) {
+                    // synchronize both the get as well as the send, that way
+                    // we don't send a half updated person
+                    final ArrayList<Organisation> organisations = organisationDatabase.getAll();
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(organisations);
+
+                    if (organisations != null)
+                        System.out.println(String.format("Sent all organisations to client %s",
+                                socket.toString()));
+                }
+                outputStream.flush();
+            }
         }
     }
 
@@ -267,7 +295,7 @@ public class Server {
         userDatabase = new JBDCUserDataSource();
         organisationDatabase = new JBDCOrganisationDataSource();
 //        listingDatabase = new JBDCListingDataSource();
-//        assetDatabase = new JBDCAssetDataSource();
+        assetDatabase = new JBDCAssetDataSource();
 //        tradeDatabase = new JBDCTradeDataSource();
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {

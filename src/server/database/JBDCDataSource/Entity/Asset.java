@@ -1,15 +1,17 @@
 package server.database.JBDCDataSource.Entity;
 
-public class Asset {
-    private int assetID;
+import java.io.Serializable;
+
+public class Asset implements Serializable {
+    private static final long serialVersionUID = 332082608397623483L;
+    private String assetID;
     private String assetType;
     private String assetName;
 
     public Asset(){
 
     }
-
-    public Asset(int assetID, String assetType, String assetName){
+    public Asset(String assetID, String assetType, String assetName){
         this.assetID = assetID;
         this.assetType = assetType;
         this.assetName = assetName;
@@ -18,12 +20,12 @@ public class Asset {
     /**
      * @return the asset ID
      */
-    public Integer getAssetID() { return assetID; }
+    public String getAssetID() { return assetID; }
 
     /**
      * @param assetID the asset ID to set
      */
-    public void setAssetID(Integer assetID) { this.assetID = assetID; }
+    public void setAssetID(String assetID) { this.assetID = assetID; }
 
     /**
      * @return the asset type

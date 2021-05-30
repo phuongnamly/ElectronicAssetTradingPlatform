@@ -22,9 +22,9 @@ public class JBDCUserDataSource {
                     "  `email` VARCHAR(255) NOT NULL,\n" +
                     "  `phone` INT(10) NOT NULL,\n" +
                     "  `address` VARCHAR(255) NOT NULL,\n" +
-                    "  PRIMARY KEY (`user_id`)\n" +
-//                    "  PRIMARY KEY (`user_id`),\n" +
-//                    "  FOREIGN KEY (organisation_id) REFERENCES organisation(organisation_id)\n" +
+                    "  UNIQUE (`username`),\n" +
+                    "  PRIMARY KEY (`user_id`),\n" +
+                    "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`)\n" +
                     ");";
 
     private static final String CREATE_USER = "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
