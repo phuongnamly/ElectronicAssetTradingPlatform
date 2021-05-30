@@ -86,7 +86,7 @@ public class JBDCListingDataSource {
 
     public void delete(int id) {
         try {
-            get.setInt(1, id);
+            delete.setInt(1, id);
             delete.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();

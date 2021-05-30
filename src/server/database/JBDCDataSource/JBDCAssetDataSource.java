@@ -67,20 +67,20 @@ public class JBDCAssetDataSource {
         }
     }
 
-    public void edit(int asset_id, Asset asset) {
+    public void edit(Asset asset) {
         try {
             editAsset.setString(1, asset.getAssetType());
             editAsset.setString(2, asset.getAssetName());
-            editAsset.setInt(3, asset_id);
+            editAsset.setInt(3, Integer.parseInt(asset.getAssetID()));
             editAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    public void delete(int asset_id) {
+    public void delete(String asset_id) {
         try {
-            getAsset.setInt(1, asset_id);
+            deleteAsset.setInt(1, Integer.parseInt(asset_id));
             deleteAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();

@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf947340-6a8f-4f5c-89e9-e992275803c4" name="Default Changelist" comment="-database and server setup">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Asset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Asset.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCAssetDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCAssetDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCListingDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCListingDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +67,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mockup2">
+  <component name="RunManager" selected="Application.testDatabase">
     <configuration name="AddressBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.AddressBook" />
       <module name="Electronic Asset Trading Platform" />
@@ -156,10 +141,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testDatabase" />
         <item itemvalue="Application.Mockup2" />
         <item itemvalue="Application.NetworkServerGUI" />
         <item itemvalue="Application.AddressBook" />
-        <item itemvalue="Application.testDatabase" />
       </list>
     </recent_temporary>
   </component>

@@ -38,6 +38,22 @@ public class NetworkDataSource {
 
         //Asset
         ADD_ASSET,
+        EDIT_ASSET,
+        DELETE_ASSET,
+        GET_ASSET,
+
+        //Trade
+        ADD_TRADE,
+        EDIT_TRADE,
+        DELETE_TRADE,
+        GET_TRADE,
+
+        //Listing
+        ADD_LISTING,
+        EDIT_LISTING,
+        DELETE_LISTING,
+        GET_LISTING,
+
         // Organisation
         ADD_ORGANISATION,
         EDIT_ORGANISATION,
@@ -81,29 +97,6 @@ public class NetworkDataSource {
             return false;
         }
     }
-    public boolean addAsset(String assetType, String assetName) {
-        try {
-            outputStream.writeObject(Command.ADD_ASSET);
-            Asset assetData = new Asset();
-            assetData.setAssetType(assetType);
-            assetData.setAssetName(assetName);
-
-            outputStream.writeObject(assetData);
-            outputStream.flush();
-            DataInputStream dataInputStream = new DataInputStream(inputStream);
-
-            if (dataInputStream.readBoolean()) {
-                return false;
-            } else {
-                return true;
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
 
     public void addUser(User u) {
         if (u == null)
@@ -284,4 +277,53 @@ public class NetworkDataSource {
             return new ArrayList<Organisation>();
         }
     }
+
+//     Asset
+    public boolean addAsset(String assetType, String assetName) {
+        try {
+            outputStream.writeObject(Command.ADD_ASSET);
+            Asset assetData = new Asset();
+            assetData.setAssetType(assetType);
+            assetData.setAssetName(assetName);
+
+            outputStream.writeObject(assetData);
+            outputStream.flush();
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if (dataInputStream.readBoolean()) {
+                return false;
+            } else {
+                return true;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean editAsset(String assetID, String assetName, String assetType){
+        try {
+            outputStream.writeObject(Command.EDIT_ASSET);
+            Asset asset= new Asset();
+            asset.setAssetID(assetID);
+            asset.setAssetName(assetName);
+            asset.setAssetType(assetType);
+            outputStream.writeObject(asset);
+            outputStream.flush();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            if (dataInputStream.readBoolean()) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (IOException | ClassCastException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
 }

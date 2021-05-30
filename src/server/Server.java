@@ -112,18 +112,7 @@ public class Server {
 
             }
             break;
-            case ADD_ASSET: {
-                // List<String> sent by the client
-                final Asset asset = (Asset) inputStream.readObject();
-                synchronized (assetDatabase) {
-                    assetDatabase.create(asset);
-                }
-                System.out.println(String.format("Added asset '%s' to database from client %s",
-                        asset.getAssetName(), socket.toString()));
 
-
-            }
-            break;
             case ADD_USER: {
                 // client is sending us a new person
                 final User user = (User) inputStream.readObject();
@@ -275,6 +264,40 @@ public class Server {
                 }
                 outputStream.flush();
             }
+            break;
+
+            //Asset
+            case ADD_ASSET: {
+                // List<String> sent by the client
+                final Asset asset = (Asset) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.create(asset);
+                }
+                System.out.println(String.format("Added asset '%s' to database from client %s",
+                        asset.getAssetName(), socket.toString()));
+
+
+            }
+            break;
+
+            case EDIT_ASSET: {
+                final Asset asset = (Asset) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.edit(asset);
+                }
+                System.out.println(String.format("Edited asset '%s' to database from client %s",
+                        asset.getAssetName(), socket.toString()));
+            }
+            break;
+
+            case DELETE_ASSET: {
+                final String assetID = (String) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.delete(assetID);
+                }
+                outputStream.flush();
+            }
+
         }
     }
 
