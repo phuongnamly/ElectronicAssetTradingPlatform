@@ -1,13 +1,12 @@
-package server.database.JBDCDataSource;
+package oldCode;
 
 import server.database.DBConnection;
-import server.database.JBDCDataSource.Entity.Trade;
 import server.database.JBDCDataSource.Entity.Enum.TradeType;
 
 import java.sql.*;
 import java.util.ArrayList;
 
-public class JBDCTradeDataSource  {
+public class JBDCTradeDataSource {
 
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `trade` (\n" +

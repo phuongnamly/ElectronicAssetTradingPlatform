@@ -14,17 +14,23 @@ public class JBDCListingDataSource {
             "CREATE TABLE IF NOT EXISTS `listing` (\n" +
                     "  `listing_id` INTEGER /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
                     "  `organisation_id` INTEGER,\n" +
+                    "  `user_id` INTEGER,\n" +
                     "  `asset_id` INTEGER,\n" +
+                    "  `current_trade` BOOLEAN,\n" +
+                    "  `trade_type` ENUM('BUY','SELL'),\n" +
                     "  `quantity` INTEGER,\n" +
                     "  `price` INTEGER,\n" +
-                    "  PRIMARY KEY (`listing_id`)\n" +
-                    "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`)\n" +
+                    "  `date` DATETIME,\n" +
+                    "  PRIMARY KEY (`listing_id`),\n" +
+                    "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`),\n" +
+                    "  FOREIGN KEY (user_id) REFERENCES user(user_id)),\n" +
                     "  FOREIGN KEY (`asset_id`) REFERENCES `asset`(`asset_id`))\n" +
                     ");";
 
-    private static final String CREATE_LISTING = "REPLACE INTO listing (organisation_id, asset_id, quantity, price) VALUES (?, ?, ?, ?);";
 
-    private static final String EDIT_LISTING = "UPDATE listing SET quantity = ?, price = ? WHERE listing_id = ?";
+    private static final String CREATE_LISTING = "REPLACE INTO listing (organisation_id, user_id, asset_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+
+    private static final String EDIT_LISTING = "UPDATE listing SET current_trade = ?, trade_type = ?, quantity = ?, price = ?, date = ? WHERE listing_id = ?";
 
     private static final String DELETE_LISTING = "DELETE FROM listing WHERE listing_id=?";
 
@@ -61,74 +67,97 @@ public class JBDCListingDataSource {
         }
     }
 
-    public void create(Listing listing) {
+    public boolean create(Listing listing) {
+//        private static final String CREATE_LISTING = "REPLACE INTO listing (organisation_id, user_id, asset_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
-            create.setInt(1, listing.getOrganisationID());
-            create.setInt(2, listing.getAssetID());
-            create.setInt(3, listing.getQuantity());
-            create.setInt(4, listing.getPrice());
-            create.execute();
+            create.setInt(1, Integer.parseInt(listing.getOrganisationID()));
+            create.setInt(2, Integer.parseInt(listing.getUserID()));
+            create.setInt(3, Integer.parseInt(listing.getAssetID()));
+            create.setBoolean(4, listing.getCurrentTrade());
+            create.setString(5, listing.getOrganisationID());
+            create.setInt(6, Integer.parseInt(listing.getQuantity()));
+            create.setInt(7, Integer.parseInt(listing.getPrice()));
+            create.setString(8, listing.getDate());
+            return create.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public void edit(int id, Listing listing) {
+    public boolean edit(Listing listing) {
+//        private static final String EDIT_LISTING = "UPDATE listing SET current_trade = ?, trade_type = ?, quantity = ?, price = ?, date = ? WHERE listing_id = ?";
         try {
-            create.setInt(1, listing.getQuantity());
-            create.setInt(2, listing.getPrice());
-            edit.setInt(3, id);
-            edit.execute();
+            edit.setBoolean(1, listing.getCurrentTrade());
+            edit.setString(2, listing.getTradeType());
+            edit.setInt(3, Integer.parseInt(listing.getQuantity()));
+            edit.setInt(1, Integer.parseInt(listing.getPrice()));
+            edit.setInt(5,  Integer.parseInt(listing.getListingID()));
+            return edit.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public void delete(int id) {
+    public boolean delete(String listing_id) {
         try {
-            get.setInt(1, id);
-            delete.execute();
+            delete.setInt(1, Integer.parseInt(listing_id));
+            return delete.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public Listing get(String username) {
-        Listing listing = new Listing();
+    public ArrayList<Listing> get(String listing_id) {
+        ArrayList<Listing> listings = new ArrayList<>();
         ResultSet rs = null;
         try {
-            get.setString(1, username);
+            get.setString(1, listing_id);
             int index = 0;
             rs = get.executeQuery();
+
             if(rs.next()){
-                listing.setOrganisationID(rs.getInt("organisation_id"));
-                listing.setAssetID(rs.getInt("asset_id"));
-                listing.setQuantity(rs.getInt("quantity"));
-                listing.setPrice(rs.getInt("price"));
+                Listing listing = new Listing();
+                listing.setListingID(rs.getString("listing_id"));
+                listing.setOrganisationID(rs.getString("organisation_id"));
+                listing.setUserID(rs.getString("user_id"));
+                listing.setAssetID(rs.getString("asset_id"));
+                listing.setCurrentTrade(rs.getBoolean("current_trade"));
+                listing.setTradeType(rs.getString("trade_type"));
+                listing.setQuantity(rs.getString("quantity"));
+                listing.setPrice(rs.getString("price"));
+                listing.setDate(rs.getString("date"));
+                listings.add(listing);
+                index++;
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        return listing;
+        return listings;
     }
 
     public ArrayList<Listing> getAll() {
-        ArrayList<Listing>  listings = new ArrayList<>();
+        ArrayList<Listing> listings = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = get.executeQuery();
+            rs = getAll.executeQuery();
             int index = 0;
-            rs.next();
-            while(rs.next()){
+
+            while (rs.next()){
                 Listing listing = new Listing();
-
-                listing.setOrganisationID(rs.getInt("organisation_id"));
-                listing.setAssetID(rs.getInt("asset_id"));
-                listing.setQuantity(rs.getInt("quantity"));
-                listing.setPrice(rs.getInt("price"));
-
+                listing.setListingID(rs.getString("listing_id"));
+                listing.setOrganisationID(rs.getString("organisation_id"));
+                listing.setUserID(rs.getString("user_id"));
+                listing.setAssetID(rs.getString("asset_id"));
+                listing.setCurrentTrade(rs.getBoolean("current_trade"));
+                listing.setTradeType(rs.getString("trade_type"));
+                listing.setQuantity(rs.getString("quantity"));
+                listing.setPrice(rs.getString("price"));
+                listing.setDate(rs.getString("date"));
                 listings.add(listing);
                 index++;
             }

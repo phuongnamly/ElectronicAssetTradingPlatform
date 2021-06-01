@@ -33,7 +33,6 @@ public class Server {
     private JBDCAssetDataSource assetDatabase;
     private JBDCListingDataSource listingDatabase;
     private JBDCOrganisationDataSource organisationDatabase;
-    private JBDCTradeDataSource tradeDatabase;
     private JBDCUserDataSource userDatabase;
 
     /**
@@ -116,8 +115,11 @@ public class Server {
                 // client is sending us a new person
                 final User user = (User) inputStream.readObject();
                 synchronized (userDatabase) {
-                    userDatabase.create(user);
+                    outputStream.writeBoolean(userDatabase.create(user));
                 }
+
+                outputStream.flush();
+
                 System.out.println(String.format("Added user '%s' to database from client %s",
                         user.getUsername(), socket.toString()));
             }
@@ -142,8 +144,10 @@ public class Server {
                 final User user = (User) inputStream.readObject();
 
                 synchronized (userDatabase) {
-                    userDatabase.edit(user);
+                    outputStream.writeBoolean(userDatabase.edit(user));
                 }
+
+                outputStream.flush();
 
                 System.out.println(String.format("Edited user '%s' on behalf of client %s",
                         user.getUsername(), socket.toString()));
@@ -153,9 +157,12 @@ public class Server {
             case DELETE_USER: {
                 // one parameter - the person's name
                 final int user_id = (Integer) inputStream.readObject();
+
                 synchronized (userDatabase) {
-                    userDatabase.delete(user_id);
+                    outputStream.writeBoolean(userDatabase.delete(user_id));
                 }
+
+                outputStream.flush();
 
                 System.out.println(String.format("Deleted user with id '%s' on behalf of client %s",
                         user_id, socket.toString()));
@@ -199,7 +206,7 @@ public class Server {
                 synchronized (userDatabase) {
                     // synchronize both the get as well as the send, that way
                     // we don't send a half updated person
-                    final ArrayList<User> users = (ArrayList<User>) inputStream.readObject();
+                    final ArrayList<User> users = (ArrayList<User>) userDatabase.getAll();
 
                     // send the client back the person's details, or null
                     outputStream.writeObject(users);
@@ -221,6 +228,9 @@ public class Server {
                     outputStream.writeBoolean(organisationDatabase.create(organisation));
                 }
                 outputStream.flush();
+
+                System.out.println(String.format("Added organisation '%s' to database from client %s",
+                        organisation.getOrganisationName(), socket.toString()));
             }
             break;
 

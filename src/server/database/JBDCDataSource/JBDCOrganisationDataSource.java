@@ -120,9 +120,9 @@ public class JBDCOrganisationDataSource {
         ArrayList<Organisation>  organisations = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getOrganisation.executeQuery();
+            rs = getAllOrganisations.executeQuery();
             int index = 0;
-            rs.next();
+
             while(rs.next()){
                 Organisation organisation = new Organisation();
                 organisation.setOrganisationID(rs.getString("organisation_id"));

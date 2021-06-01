@@ -1,9 +1,5 @@
 package client;
 
-import util.AddressBookData;
-
-import javax.swing.*;
-
 /**
  * Invokes the Address Book application.
  * @author Malcolm Corney

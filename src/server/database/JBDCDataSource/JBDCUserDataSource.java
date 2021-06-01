@@ -93,7 +93,7 @@ public class JBDCUserDataSource {
         return false;
     }
 
-    public void create(User user) {
+    public boolean create(User user) {
         // "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
             createUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
@@ -104,13 +104,15 @@ public class JBDCUserDataSource {
             createUser.setString(6, user.getEmail());
             createUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
             createUser.setString(8, user.getPassword());
-            createUser.execute();
+
+            return createUser.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public void edit(User user) {
+    public boolean edit(User user) {
         // "UPDATE user SET organisation_id = ?, username = ?, password = ?, salt = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
         try {
             editUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
@@ -122,18 +124,21 @@ public class JBDCUserDataSource {
             editUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
             editUser.setString(8, user.getAddress());
             editUser.setInt(9, Integer.parseInt(user.getUserID()));
-            editUser.execute();
+
+            return editUser.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public void delete(int user_id) {
+    public boolean delete(int user_id) {
         try {
             getUser.setInt(1, user_id);
-            deleteUser.execute();
+            return deleteUser.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
@@ -144,7 +149,8 @@ public class JBDCUserDataSource {
             getUser.setString(1, username);
             int index = 0;
             rs = getUser.executeQuery();
-            while(rs.next()){
+            
+            if(rs.next()){
                 User user = new User();
                 user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
@@ -169,8 +175,8 @@ public class JBDCUserDataSource {
         ArrayList<User>  users = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getUser.executeQuery();;
-            rs.next();
+            rs = getAllUsers.executeQuery();;
+
             while(rs.next()){
                 User user = new User();
                 user.setOrganisationID(rs.getString("organisation_id"));
