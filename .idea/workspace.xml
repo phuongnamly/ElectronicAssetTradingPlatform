@@ -1,243 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="92c0e173-3710-42a8-8035-d5e16aafe9a4" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/oldCode/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCListingDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCListingDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/AddressBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/AddressBookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/AddressBookUI.java" afterDir="false" />
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.props" beforeDir="false" afterPath="$PROJECT_DIR$/db.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/META-INF/Electronic Asset Trading Platform.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Asset.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCAssetDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Listing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldCode/Trade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCTradeDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldCode/JBDCTradeDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/AddressBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldCode/AddressBookData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/UserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldCode/UserDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
-  </component>
-  <component name="ProjectId" id="1rsOFp26xuhCr02EqTg15D5KRTp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Other projects/Electronic billboard" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="oldCode" />
-      <recent name="server" />
-      <recent name="server.database" />
-      <recent name="client" />
-      <recent name="server.database.tables" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform" />
-      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src" />
-      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Mockup4">
-    <configuration name="AddressBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.AddressBook" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oldCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Mockup2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.Mockup2" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oldCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Mockup4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.Mockup4" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oldCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Electronic_Asset_Trading_Platform" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Electronic_Asset_Trading_Platform" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.AddressBook" />
-      <item itemvalue="Application.NetworkServerGUI" />
-      <item itemvalue="Application.testDatabase" />
-      <item itemvalue="Application.Mockup2" />
-      <item itemvalue="Application.Mockup4" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Mockup4" />
-        <item itemvalue="Application.testDatabase" />
-        <item itemvalue="Application.Mockup2" />
-        <item itemvalue="Application.NetworkServerGUI" />
-        <item itemvalue="Application.AddressBook" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="92c0e173-3710-42a8-8035-d5e16aafe9a4" name="Default Changelist" comment="" />
-      <created>1619761229474</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1619761229474</updated>
-    </task>
-    <task id="LOCAL-00001" summary="-database and server setup">
-      <created>1620880409472</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1620880409472</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="-database and server setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="-database and server setup" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Electronic_Asset_Trading_Platform$Mockup2.ic" NAME="Mockup2 Coverage Results" MODIFIED="1621947993298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>util.*</FILTER>
-    </SUITE>
+  <component name="WindowStateProjectService">
+    <state x="715" y="25" key="FileChooserDialogImpl" timestamp="1622519991356">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="715" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622519991356" />
+    <state x="0" y="51" width="1280" height="579" key="MergeDialog" timestamp="1622522028220">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="51" width="1280" height="579" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522028220" />
+    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1622522030279">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522030279" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1622519995752">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1622519995752" />
+    <state x="529" y="256" key="VCS.EditChangelistDialog" timestamp="1622522517512">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="529" y="256" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522517512" />
+    <state x="333" y="99" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1622521994789">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="333" y="99" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1622521994789" />
+    <state x="93" y="93" width="1095" height="495" key="dock-window-1" timestamp="1622522749468">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1622522749468" />
   </component>
 </project>

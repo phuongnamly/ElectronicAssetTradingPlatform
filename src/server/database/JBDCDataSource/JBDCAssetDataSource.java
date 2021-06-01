@@ -11,7 +11,7 @@ public class JBDCAssetDataSource {
 
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `asset` (\n" +
-                    "  `asset_id` INTEGER PRIMARY KEY /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
+                    "  `asset_id` INTEGER /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
                     "  `asset_type` VARCHAR(100),\n" +
                     "  `asset_name` VARCHAR(100),\n" +
                     "  PRIMARY KEY (`asset_id`)\n" +
@@ -67,27 +67,27 @@ public class JBDCAssetDataSource {
         }
     }
 
-    public void edit(int asset_id, Asset asset) {
+    public void edit(Asset asset) {
         try {
             editAsset.setString(1, asset.getAssetType());
             editAsset.setString(2, asset.getAssetName());
-            editAsset.setInt(3, asset_id);
+            editAsset.setInt(3, Integer.parseInt(asset.getAssetID()));
             editAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    public void delete(int asset_id) {
+    public void delete(String asset_id) {
         try {
-            getAsset.setInt(1, asset_id);
+            deleteAsset.setInt(1, Integer.parseInt(asset_id));
             deleteAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
-    public Asset get(Integer asset_id) {
+    public Asset get(int asset_id) {
         Asset asset = new Asset();
         ResultSet rs = null;
         try {
@@ -95,7 +95,7 @@ public class JBDCAssetDataSource {
 
             rs = getAsset.executeQuery();
             if(rs.next()){
-                asset.setAssetID(rs.getInt("asset_id"));
+                asset.setAssetID(rs.getString("asset_id"));
                 asset.setAssetType(rs.getString("asset_type"));
                 asset.setAssetName(rs.getString("asset_name"));
             }
@@ -115,7 +115,7 @@ public class JBDCAssetDataSource {
             rs.next();
             while(rs.next()){
                 Asset asset = new Asset();
-                asset.setAssetID(rs.getInt("asset_id"));
+                asset.setAssetID(rs.getString("asset_id"));
                 asset.setAssetType(rs.getString("asset_type"));
                 asset.setAssetName(rs.getString("asset_name"));
                 assets.add(asset);

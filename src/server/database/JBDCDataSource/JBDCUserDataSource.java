@@ -149,7 +149,7 @@ public class JBDCUserDataSource {
             getUser.setString(1, username);
             int index = 0;
             rs = getUser.executeQuery();
-            
+
             if(rs.next()){
                 User user = new User();
                 user.setOrganisationID(rs.getString("organisation_id"));

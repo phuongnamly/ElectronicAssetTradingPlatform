@@ -1,7 +1,9 @@
 package server.database;
 
+import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
+import server.database.JBDCDataSource.JBDCAssetDataSource;
 import server.database.JBDCDataSource.JBDCOrganisationDataSource;
 import server.database.JBDCDataSource.JBDCUserDataSource;
 
@@ -12,13 +14,60 @@ public class testDatabase {
 
     static private JBDCUserDataSource userDatabase;
     static private JBDCOrganisationDataSource organisationDatabase;
+    static private JBDCAssetDataSource assetDatabase;
 
     public static void main(String[] args){
         organisationDatabase = new JBDCOrganisationDataSource();
         userDatabase = new JBDCUserDataSource();
+        assetDatabase = new JBDCAssetDataSource();
 
-        mockUpOrganisation();
-        mockUpUser();
+//        mockUpOrganisation();
+//        mockUpUser();
+//        mockUpAsset();
+        mockUpListing();
+    }
+
+    private static void mockUpListing() {
+        creatMockListing();
+        editMockListing();
+        deleteMockListing();
+    }
+
+    private static void creatMockListing() {
+    }
+
+    private static void editMockListing() {
+    }
+
+    private static void deleteMockListing() {
+    }
+
+    public static void mockUpAsset() {
+//        createMockAsset();
+//        editMockAsset();
+        deleteMockAsset();
+//        getMockAsset();
+    }
+
+    private static void getMockAsset() {
+    }
+
+    private static void deleteMockAsset() {
+        assetDatabase.delete("4");
+        assetDatabase.delete("5");
+
+    }
+
+    private static void editMockAsset() {
+        assetDatabase.edit(new Asset("4","tools","hammer"));
+        assetDatabase.edit(new Asset("5,","tools","hammer"));
+
+    }
+
+    private static void createMockAsset() {
+        assetDatabase.create(new Asset("", "dvd", "Avenger"));
+        assetDatabase.create(new Asset("", "dvd", "Batman"));
+
     }
 
     public static void mockUpUser(){

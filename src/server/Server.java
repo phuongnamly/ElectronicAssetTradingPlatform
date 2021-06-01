@@ -2,6 +2,7 @@ package server;
 
 import client.NetworkDataSource;
 import server.database.JBDCDataSource.*;
+import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
 
@@ -273,6 +274,40 @@ public class Server {
                 }
                 outputStream.flush();
             }
+            break;
+
+            //Asset
+            case ADD_ASSET: {
+                // List<String> sent by the client
+                final Asset asset = (Asset) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.create(asset);
+                }
+                System.out.println(String.format("Added asset '%s' to database from client %s",
+                        asset.getAssetName(), socket.toString()));
+
+
+            }
+            break;
+
+            case EDIT_ASSET: {
+                final Asset asset = (Asset) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.edit(asset);
+                }
+                System.out.println(String.format("Edited asset '%s' to database from client %s",
+                        asset.getAssetName(), socket.toString()));
+            }
+            break;
+
+            case DELETE_ASSET: {
+                final String assetID = (String) inputStream.readObject();
+                synchronized (assetDatabase) {
+                    assetDatabase.delete(assetID);
+                }
+                outputStream.flush();
+            }
+
         }
     }
 
@@ -293,7 +328,7 @@ public class Server {
         userDatabase = new JBDCUserDataSource();
         organisationDatabase = new JBDCOrganisationDataSource();
 //        listingDatabase = new JBDCListingDataSource();
-//        assetDatabase = new JBDCAssetDataSource();
+        assetDatabase = new JBDCAssetDataSource();
 //        tradeDatabase = new JBDCTradeDataSource();
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {

@@ -149,7 +149,6 @@ public class Mockup2 extends JFrame{
     public static void main(String[] args){
         new Mockup2();
     }
-
     /**
      * Handles events for the three buttons on the UI.
      *
@@ -176,6 +175,20 @@ public class Mockup2 extends JFrame{
             if(source == sign) {
                 String username = usernameTextField.getText();
                 String password = passwordTextField.getText();
+
+                String assetName = "Asset1";
+                String assetType = "AssetType1";
+                if(data.addAsset(assetType, assetName)) {
+                    System.out.println("Add asset successful");
+                }
+
+
+//               if(data.addAsset(assetType, assetName)){
+//                   System.out.println("Asset add successful");
+//               }
+//               else{
+//                   System.out.println("I fuck up");
+//               }
 
                 if(data.login(username, password)){
                     // go to home page here
@@ -243,7 +256,10 @@ public class Mockup2 extends JFrame{
 //            nameList.setSelectedIndex(index);
 //            checkListSize();
 //        }
+
     }
+
+
 
 
 
