@@ -20,22 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.props" beforeDir="false" afterPath="$PROJECT_DIR$/db.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/META-INF/Electronic Asset Trading Platform.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Asset.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCAssetDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -4,6 +4,7 @@ import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
 import server.database.JBDCDataSource.JBDCAssetDataSource;
+import server.database.JBDCDataSource.JBDCListingDataSource;
 import server.database.JBDCDataSource.JBDCOrganisationDataSource;
 import server.database.JBDCDataSource.JBDCUserDataSource;
 
@@ -15,25 +16,27 @@ public class testDatabase {
     static private JBDCUserDataSource userDatabase;
     static private JBDCOrganisationDataSource organisationDatabase;
     static private JBDCAssetDataSource assetDatabase;
+    static private JBDCListingDataSource listingDatabase;
 
     public static void main(String[] args){
         organisationDatabase = new JBDCOrganisationDataSource();
         userDatabase = new JBDCUserDataSource();
         assetDatabase = new JBDCAssetDataSource();
+        listingDatabase = new JBDCListingDataSource();
 
 //        mockUpOrganisation();
 //        mockUpUser();
 //        mockUpAsset();
-        mockUpListing();
+//        mockUpListing();
     }
 
     private static void mockUpListing() {
-        creatMockListing();
+        createMockListing();
         editMockListing();
         deleteMockListing();
     }
 
-    private static void creatMockListing() {
+    private static void createMockListing() {
     }
 
     private static void editMockListing() {
