@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.props" beforeDir="false" afterPath="$PROJECT_DIR$/db.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase.java" afterDir="false" />
-    </list>
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Week 3/Tute" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -54,12 +51,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="715" y="25" key="FileChooserDialogImpl" timestamp="1622519991356">
+    <state x="715" y="25" key="FileChooserDialogImpl" timestamp="1622527824848">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="715" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622519991356" />
+    <state x="715" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622527824848" />
     <state x="0" y="51" width="1280" height="579" key="MergeDialog" timestamp="1622522028220">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -84,5 +82,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1622522749468" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Electronic_Asset_Trading_Platform$Mockup2.ic" NAME="Mockup2 Coverage Results" MODIFIED="1621947993298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>util.*</FILTER>
+    </SUITE>
   </component>
 </project>

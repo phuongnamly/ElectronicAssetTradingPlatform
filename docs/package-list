@@ -1,7 +1,0 @@
-client
-oldCode
-server
-server.database
-server.database.JBDCDataSource
-server.database.JBDCDataSource.Entity
-server.database.JBDCDataSource.Entity.Enum

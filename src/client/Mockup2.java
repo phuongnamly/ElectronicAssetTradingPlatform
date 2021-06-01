@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Console;
 
+import static utils.hash.Hash.getHashedPassword;
+
 
 public class Mockup2 extends JFrame{
     private JTextField usernameTextField;
@@ -173,13 +175,20 @@ public class Mockup2 extends JFrame{
 //                deletePressed();
 //            }
             if(source == sign) {
+
+
+
                 String username = usernameTextField.getText();
                 String password = passwordTextField.getText();
+                String hashedPassword = getHashedPassword(password);
 
                 String assetName = "Asset1";
                 String assetType = "AssetType1";
                 if(data.addAsset(assetType, assetName)) {
                     System.out.println("Add asset successful");
+
+                    // next page
+
                 }
 
 
@@ -190,10 +199,14 @@ public class Mockup2 extends JFrame{
 //                   System.out.println("I fuck up");
 //               }
 
-                if(data.login(username, password)){
+                if(data.login(username, hashedPassword)){
                     // go to home page here
 
                     System.out.println("Log in successful");
+
+                    // go to homepage GUI (homepage.java)
+                    // new HomePage();
+                    // dispose;
                 }
                 else{
 

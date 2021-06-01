@@ -79,11 +79,11 @@ public class testDatabase {
     }
 
     public static void createMockUser(){
-        userDatabase.create(new User("1","admin", "admin", "dsasdasd","admin@gmail.com", "0123456789", "Garden Point", "admin"));
-        userDatabase.create(new User("2","Nam", "123123", "dsasdasd","nam@gmail.com", "0123456789", "Garden Point", "leader")) ;
-        userDatabase.create(new User("3","Thomas", "123123", "dsasdasd","thomas@gmail.com", "0123456789", "Kelvin Grove", "leader")) ;
-        userDatabase.create(new User("4","Jason", "12123", "dsasdasd","jason@gmail.com", "0123456789", "Garden Point", "leader")) ;
-        userDatabase.create(new User("5","Selwyn", "123123", "dsasdasd","selwyn@gmail.com", "0123456789", "Garden Point", "leader")) ;
+        userDatabase.create(new User("1","admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin"));
+        userDatabase.create(new User("2","Nam", "123123", "nam@gmail.com", "0123456789", "Garden Point", "leader")) ;
+        userDatabase.create(new User("3","Thomas", "123123", "thomas@gmail.com", "0123456789", "Kelvin Grove", "leader")) ;
+        userDatabase.create(new User("4","Jason", "12123", "jason@gmail.com", "0123456789", "Garden Point", "leader")) ;
+        userDatabase.create(new User("5","Selwyn", "123123", "selwyn@gmail.com", "0123456789", "Garden Point", "leader")) ;
     }
 
     public static void getMockUser(){
@@ -113,6 +113,6 @@ public class testDatabase {
     }
 
     public static void deleteMockOrganisation(){
-        //        organisationDatabase.delete("3");
+        organisationDatabase.delete("3");
     }
 }

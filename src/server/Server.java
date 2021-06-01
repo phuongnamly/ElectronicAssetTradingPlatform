@@ -327,9 +327,8 @@ public class Server {
         // Connect to the database.
         userDatabase = new JBDCUserDataSource();
         organisationDatabase = new JBDCOrganisationDataSource();
-//        listingDatabase = new JBDCListingDataSource();
+        listingDatabase = new JBDCListingDataSource();
         assetDatabase = new JBDCAssetDataSource();
-//        tradeDatabase = new JBDCTradeDataSource();
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             serverSocket.setSoTimeout(SOCKET_ACCEPT_TIMEOUT);
