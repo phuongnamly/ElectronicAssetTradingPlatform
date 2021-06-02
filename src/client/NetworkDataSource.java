@@ -4,20 +4,11 @@ import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.Organisation;
 import server.database.JBDCDataSource.Entity.User;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class NetworkDataSource {
-    private static final String HOSTNAME = "127.0.0.1";
-    private static final int PORT = 10000;
-
     private Socket socket;
     private ObjectOutputStream outputStream;
     private ObjectInputStream inputStream;
@@ -42,12 +33,6 @@ public class NetworkDataSource {
         DELETE_ASSET,
         GET_ASSET,
 
-        //Trade
-        ADD_TRADE,
-        EDIT_TRADE,
-        DELETE_TRADE,
-        GET_TRADE,
-
         //Listing
         ADD_LISTING,
         EDIT_LISTING,
@@ -63,13 +48,27 @@ public class NetworkDataSource {
     }
 
     public NetworkDataSource() {
+        Properties props = new Properties();
+        FileInputStream in = null;
+
         try {
+            in = new FileInputStream("./src/server/properties/connection.props");
+            props.load(in);
+            in.close();
+
+            final String HOSTNAME = props.getProperty("con.hostname");
+            final int PORT = Integer.parseInt(props.getProperty("con.port"));
+
+
             // Persist a single connection through the whole lifetime of the application.
             // We will re-use this same connection/socket, rather than repeatedly opening
             // and closing connections.
             socket = new Socket(HOSTNAME, PORT);
             outputStream = new ObjectOutputStream(socket.getOutputStream());
             inputStream = new ObjectInputStream(socket.getInputStream());
+
+        } catch (FileNotFoundException fnfe) {
+            System.err.println(fnfe);
         } catch (IOException e) {
             // If the server connection fails, we're going to throw exceptions
             // whenever the application actually tries to query anything.

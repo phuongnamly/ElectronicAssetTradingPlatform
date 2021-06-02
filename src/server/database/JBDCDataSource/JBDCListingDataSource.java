@@ -20,8 +20,8 @@ public class JBDCListingDataSource {
                     "  `date` DATETIME,\n" +
                     "  PRIMARY KEY (`listing_id`),\n" +
                     "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`),\n" +
-                    "  FOREIGN KEY (user_id) REFERENCES user(user_id)),\n" +
-                    "  FOREIGN KEY (`asset_id`) REFERENCES `asset`(`asset_id`))\n" +
+                    "  FOREIGN KEY (user_id) REFERENCES user(user_id),\n" +
+                    "  FOREIGN KEY (`asset_id`) REFERENCES `asset`(`asset_id`)\n" +
                     ");";
 
 
