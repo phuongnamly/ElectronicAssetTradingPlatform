@@ -1,6 +1,5 @@
 package server.database.JBDCDataSource;
 
-import server.database.DBConnection;
 import server.database.JBDCDataSource.Entity.Organisation;
 
 import java.sql.*;

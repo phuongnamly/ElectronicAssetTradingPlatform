@@ -19,26 +19,99 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup" />
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+      <change afterPath="$PROJECT_DIR$/src/server/database/testDatabase/TestDBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/database/testDatabase/testOrganisationDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$ClosingListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI$NameListListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/AddressBookUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/oldCode/AddressBookData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/oldCode/UserDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Enum/AccountType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Enum/AccountType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Enum/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Enum/AccountType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/testDatabase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1tLefOO5cIlKv0OcAhEYy2Q2rAW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Week 3/Tute" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TestDBConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
+      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.TestDBConnection" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestDBConnection" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup" />
+      <created>1622552900130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622552900130</updated>
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -54,10 +127,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="715" y="25" key="FileChooserDialogImpl" timestamp="1622527824848">
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1622617002703">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="715" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622527824848" />
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1622617002703" />
+    <state x="715" y="25" key="FileChooserDialogImpl" timestamp="1622614996253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="715" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622614996253" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1622617882126">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622617882126" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1622617882126">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622617882126" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1622617882125">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622617882125" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1622617882126">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622617882126" />
     <state x="0" y="51" width="1280" height="579" key="MergeDialog" timestamp="1622522028220">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -78,6 +171,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="99" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1622521994789" />
+    <state x="376" y="233" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1622618261358">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="376" y="233" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1622618261358" />
     <state x="93" y="93" width="1095" height="495" key="dock-window-1" timestamp="1622522749468">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

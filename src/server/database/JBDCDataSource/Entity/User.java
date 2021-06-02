@@ -3,6 +3,7 @@ package server.database.JBDCDataSource.Entity;
 import server.database.JBDCDataSource.Entity.Enum.AccountType;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Stores address details for a person.
@@ -16,12 +17,10 @@ public class User implements Comparable<User>, Serializable {
    private String organisationID;
    private String username;
    private String password;
-   private String salt;
    private String email;
    private String phoneNum;
    private String address;
    private String accountType;
-
    public User(){
 
    }
@@ -32,12 +31,11 @@ public class User implements Comparable<User>, Serializable {
     * @param password
     * @param accountType
     */
-   public User(String organisationID, String username, String password, String salt, String email, String phoneNum, String address, String accountType) {
+   public User(String organisationID, String username, String password, String email, String phoneNum, String address, String accountType) {
       this.organisationID = organisationID;
       this.username = username;
       this.password = password;
 //      this.accountType = accountType.values()[accountTypeIndex];
-      this.salt = salt;
       this.email = email;
       this.phoneNum = phoneNum;
       this.address = address;
@@ -90,20 +88,6 @@ public class User implements Comparable<User>, Serializable {
     */
    public void setPassword(String password) {
       this.password = password;
-   }
-
-   /**
-    * @return the salt
-    */
-   public String getSalt() {
-      return salt;
-   }
-
-   /**
-    * @param salt the salt to set
-    */
-   public void setSalt(String salt) {
-      this.salt = salt;
    }
 
    /**

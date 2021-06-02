@@ -1,4 +1,4 @@
-package server.database;
+package server.database.testDatabase;
 
 import server.database.JBDCDataSource.Entity.Asset;
 import server.database.JBDCDataSource.Entity.Organisation;
@@ -11,8 +11,6 @@ import server.database.JBDCDataSource.JBDCUserDataSource;
 import java.util.List;
 
 public class testDatabase {
-
-
     static private JBDCUserDataSource userDatabase;
     static private JBDCOrganisationDataSource organisationDatabase;
     static private JBDCAssetDataSource assetDatabase;

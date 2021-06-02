@@ -1,7 +1,5 @@
 package server.database.JBDCDataSource;
 
-import server.database.DBConnection;
-import server.database.JBDCDataSource.Entity.Enum.AccountType;
 import server.database.JBDCDataSource.Entity.User;
 
 import java.sql.*;
@@ -17,8 +15,7 @@ public class JBDCUserDataSource {
                     "  `organisation_id` INTEGER,\n" +
                     "  `username` VARCHAR(50) NOT NULL,\n" +
                     "  `password` VARCHAR(255) NOT NULL,\n" +
-                    "  `salt` VARCHAR(255) NOT NULL,\n" +
-                    "  `account_type` ENUM('admin','leader','member'),\n" +
+                    "  `account_type` ENUM('admin','member'),\n" +
                     "  `email` VARCHAR(255) NOT NULL,\n" +
                     "  `phone` INT(10) NOT NULL,\n" +
                     "  `address` VARCHAR(255) NOT NULL,\n" +
@@ -27,9 +24,9 @@ public class JBDCUserDataSource {
                     "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`)\n" +
                     ");";
 
-    private static final String CREATE_USER = "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    private static final String CREATE_USER = "REPLACE INTO user (organisation_id, username, password, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
-    private static final String EDIT_USER = "UPDATE user SET organisation_id = ?, username = ?, password = ?, salt = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
+    private static final String EDIT_USER = "UPDATE user SET organisation_id = ?, username = ?, password = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
 
     private static final String DELETE_USER = "DELETE FROM user WHERE user_id=?";
 
@@ -94,16 +91,15 @@ public class JBDCUserDataSource {
     }
 
     public boolean create(User user) {
-        // "REPLACE INTO user (organisation_id, username, password, salt, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+        // "REPLACE INTO user (organisation_id, username, password, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
             createUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
             createUser.setString(2, user.getUsername());
             createUser.setString(3, user.getPassword());
-            createUser.setString(4, user.getSalt());
-            createUser.setString(5, user.getAccountType());
-            createUser.setString(6, user.getEmail());
-            createUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
-            createUser.setString(8, user.getPassword());
+            createUser.setString(4, user.getAccountType());
+            createUser.setString(5, user.getEmail());
+            createUser.setInt(6, Integer.parseInt(user.getPhoneNum()));
+            createUser.setString(7, user.getPassword());
 
             return createUser.execute();
         } catch (SQLException ex) {
@@ -113,17 +109,16 @@ public class JBDCUserDataSource {
     }
 
     public boolean edit(User user) {
-        // "UPDATE user SET organisation_id = ?, username = ?, password = ?, salt = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
+        // "UPDATE user SET organisation_id = ?, username = ?, password = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
         try {
             editUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
             editUser.setString(2, user.getUsername());
             editUser.setString(3, user.getPassword());
-            editUser.setString(4, user.getSalt());
-            editUser.setString(5, user.getAccountType());
-            editUser.setString(6, user.getEmail());
-            editUser.setInt(7, Integer.parseInt(user.getPhoneNum()));
-            editUser.setString(8, user.getAddress());
-            editUser.setInt(9, Integer.parseInt(user.getUserID()));
+            editUser.setString(4, user.getAccountType());
+            editUser.setString(5, user.getEmail());
+            editUser.setInt(6, Integer.parseInt(user.getPhoneNum()));
+            editUser.setString(7, user.getAddress());
+            editUser.setInt(8, Integer.parseInt(user.getUserID()));
 
             return editUser.execute();
         } catch (SQLException ex) {
@@ -155,7 +150,6 @@ public class JBDCUserDataSource {
                 user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
-                user.setSalt(rs.getString("salt"));
                 user.setAccountType(rs.getString("account_type"));
                 user.setEmail(rs.getString("email"));
                 user.setPhoneNum((rs.getString("phone")));
@@ -182,7 +176,6 @@ public class JBDCUserDataSource {
                 user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
-                user.setSalt(rs.getString("salt"));
                 user.setAccountType(rs.getString("account_type"));
                 user.setEmail(rs.getString("email"));
                 user.setPhoneNum((rs.getString("phone")));
