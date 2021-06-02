@@ -55,61 +55,66 @@ public class JBDCAssetDataSource {
         }
     }
 
-    public void create(Asset asset) {
+    public boolean create(Asset asset) {
         try {
             createAsset.setString(1, asset.getAssetType());
             createAsset.setString(2, asset.getAssetName());
-            createAsset.execute();
+            return createAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public void edit(Asset asset) {
+    public boolean edit(Asset asset) {
         try {
             editAsset.setString(1, asset.getAssetType());
             editAsset.setString(2, asset.getAssetName());
             editAsset.setInt(3, Integer.parseInt(asset.getAssetID()));
-            editAsset.execute();
+            return editAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public void delete(String asset_id) {
+    public boolean delete(String asset_id) {
         try {
             deleteAsset.setInt(1, Integer.parseInt(asset_id));
-            deleteAsset.execute();
+            return deleteAsset.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         }
     }
 
-    public Asset get(int asset_id) {
-        Asset asset = new Asset();
+    public ArrayList<Asset> get(int asset_id) {
+        ArrayList<Asset>  assets = new ArrayList<>();
         ResultSet rs = null;
         try {
             getAsset.setInt(1, asset_id);
 
             rs = getAsset.executeQuery();
             if(rs.next()){
+                Asset asset = new Asset();
                 asset.setAssetID(rs.getString("asset_id"));
                 asset.setAssetType(rs.getString("asset_type"));
                 asset.setAssetName(rs.getString("asset_name"));
+                assets.add(asset);
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        return asset;
+        return assets;
     }
 
     public ArrayList<Asset> getAll() {
         ArrayList<Asset>  assets = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getAsset.executeQuery();
+            rs = getAllAssets.executeQuery();
             rs.next();
             while(rs.next()){
                 Asset asset = new Asset();
