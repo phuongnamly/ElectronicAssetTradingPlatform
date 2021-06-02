@@ -1,4 +1,4 @@
-package server.database.JBDCDataSource;
+package server.database.schema;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

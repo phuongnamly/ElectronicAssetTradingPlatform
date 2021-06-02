@@ -1,17 +1,18 @@
 package server;
 
 import client.NetworkDataSource;
-import server.database.JBDCDataSource.*;
-import server.database.JBDCDataSource.Entity.Asset;
-import server.database.JBDCDataSource.Entity.Organisation;
-import server.database.JBDCDataSource.Entity.User;
+import server.database.Entity.Asset;
+import server.database.Entity.Organisation;
+import server.database.Entity.User;
+import server.database.schema.JBDCAssetDataSource;
+import server.database.schema.JBDCListingDataSource;
+import server.database.schema.JBDCOrganisationDataSource;
+import server.database.schema.JBDCUserDataSource;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;

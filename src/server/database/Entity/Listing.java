@@ -1,12 +1,8 @@
-package server.database.JBDCDataSource.Entity;
+package server.database.Entity;
 
-import server.database.JBDCDataSource.Entity.Enum.TradeType;
+import server.database.Entity.Enum.TradeType;
 
 import java.io.Serializable;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 public class Listing implements Serializable {
     private static final long serialVersionUID = 332082608397623483L;

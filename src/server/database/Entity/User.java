@@ -1,9 +1,8 @@
-package server.database.JBDCDataSource.Entity;
+package server.database.Entity;
 
-import server.database.JBDCDataSource.Entity.Enum.AccountType;
+import server.database.Entity.Enum.AccountType;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  * Stores address details for a person.

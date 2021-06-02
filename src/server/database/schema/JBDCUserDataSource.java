@@ -1,6 +1,6 @@
-package server.database.JBDCDataSource;
+package server.database.schema;
 
-import server.database.JBDCDataSource.Entity.User;
+import server.database.Entity.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -40,15 +40,15 @@ public class JBDCUserDataSource {
 
     private Connection connection;
 
-    private PreparedStatement createUser;
+    private PreparedStatement create;
 
-    private PreparedStatement editUser;
+    private PreparedStatement edit;
 
-    private PreparedStatement deleteUser;
+    private PreparedStatement delete;
 
-    private PreparedStatement getUser;
+    private PreparedStatement get;
 
-    private PreparedStatement getAllUsers;
+    private PreparedStatement getAll;
 
     private PreparedStatement rowCount;
 
@@ -59,11 +59,11 @@ public class JBDCUserDataSource {
         try {
             Statement st = connection.createStatement();
             st.execute(CREATE_TABLE);
-            createUser = connection.prepareStatement(CREATE_USER);
-            editUser = connection.prepareStatement(EDIT_USER);
-            deleteUser = connection.prepareStatement(DELETE_USER);
-            getUser = connection.prepareStatement(GET_USER);
-            getAllUsers = connection.prepareStatement(GET_ALL_USERS);
+            create = connection.prepareStatement(CREATE_USER);
+            edit = connection.prepareStatement(EDIT_USER);
+            delete = connection.prepareStatement(DELETE_USER);
+            get = connection.prepareStatement(GET_USER);
+            getAll = connection.prepareStatement(GET_ALL_USERS);
             rowCount = connection.prepareStatement(COUNT_ROWS);
             getNameList = connection.prepareStatement(GET_NAMES);
 
@@ -93,15 +93,16 @@ public class JBDCUserDataSource {
     public boolean create(User user) {
         // "REPLACE INTO user (organisation_id, username, password, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
-            createUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
-            createUser.setString(2, user.getUsername());
-            createUser.setString(3, user.getPassword());
-            createUser.setString(4, user.getAccountType());
-            createUser.setString(5, user.getEmail());
-            createUser.setInt(6, Integer.parseInt(user.getPhoneNum()));
-            createUser.setString(7, user.getPassword());
+            create.setInt(1, Integer.parseInt(user.getOrganisationID()));
+            create.setString(2, user.getUsername());
+            create.setString(3, user.getPassword());
+            create.setString(4, user.getAccountType());
+            create.setString(5, user.getEmail());
+            create.setInt(6, Integer.parseInt(user.getPhoneNum()));
+            create.setString(7, user.getPassword());
 
-            return createUser.execute();
+            int rowsCount = create.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -111,16 +112,17 @@ public class JBDCUserDataSource {
     public boolean edit(User user) {
         // "UPDATE user SET organisation_id = ?, username = ?, password = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
         try {
-            editUser.setInt(1, Integer.parseInt(user.getOrganisationID()));
-            editUser.setString(2, user.getUsername());
-            editUser.setString(3, user.getPassword());
-            editUser.setString(4, user.getAccountType());
-            editUser.setString(5, user.getEmail());
-            editUser.setInt(6, Integer.parseInt(user.getPhoneNum()));
-            editUser.setString(7, user.getAddress());
-            editUser.setInt(8, Integer.parseInt(user.getUserID()));
+            edit.setInt(1, Integer.parseInt(user.getOrganisationID()));
+            edit.setString(2, user.getUsername());
+            edit.setString(3, user.getPassword());
+            edit.setString(4, user.getAccountType());
+            edit.setString(5, user.getEmail());
+            edit.setInt(6, Integer.parseInt(user.getPhoneNum()));
+            edit.setString(7, user.getAddress());
+            edit.setInt(8, Integer.parseInt(user.getUserID()));
 
-            return editUser.execute();
+            int rowsCount = edit.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -129,8 +131,9 @@ public class JBDCUserDataSource {
 
     public boolean delete(int user_id) {
         try {
-            getUser.setInt(1, user_id);
-            return deleteUser.execute();
+            get.setInt(1, user_id);
+            int rowsCount = delete.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -141,9 +144,9 @@ public class JBDCUserDataSource {
         ArrayList<User>  users = new ArrayList<>();
         ResultSet rs = null;
         try {
-            getUser.setString(1, username);
+            get.setString(1, username);
             int index = 0;
-            rs = getUser.executeQuery();
+            rs = get.executeQuery();
 
             if(rs.next()){
                 User user = new User();
@@ -169,7 +172,7 @@ public class JBDCUserDataSource {
         ArrayList<User>  users = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getAllUsers.executeQuery();;
+            rs = getAll.executeQuery();;
 
             while(rs.next()){
                 User user = new User();

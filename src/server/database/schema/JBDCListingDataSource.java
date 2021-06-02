@@ -1,6 +1,6 @@
-package server.database.JBDCDataSource;
+package server.database.schema;
 
-import server.database.JBDCDataSource.Entity.Listing;
+import server.database.Entity.Listing;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -75,7 +75,8 @@ public class JBDCListingDataSource {
             create.setInt(6, Integer.parseInt(listing.getQuantity()));
             create.setInt(7, Integer.parseInt(listing.getPrice()));
             create.setString(8, listing.getDate());
-            return create.execute();
+            int rowsCount = create.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -90,7 +91,8 @@ public class JBDCListingDataSource {
             edit.setInt(3, Integer.parseInt(listing.getQuantity()));
             edit.setInt(1, Integer.parseInt(listing.getPrice()));
             edit.setInt(5,  Integer.parseInt(listing.getListingID()));
-            return edit.execute();
+            int rowsCount = edit.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -100,7 +102,8 @@ public class JBDCListingDataSource {
     public boolean delete(String listing_id) {
         try {
             delete.setInt(1, Integer.parseInt(listing_id));
-            return delete.execute();
+            int rowsCount = delete.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;

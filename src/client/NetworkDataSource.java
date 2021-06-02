@@ -1,8 +1,8 @@
 package client;
 
-import server.database.JBDCDataSource.Entity.Asset;
-import server.database.JBDCDataSource.Entity.Organisation;
-import server.database.JBDCDataSource.Entity.User;
+import server.database.Entity.Asset;
+import server.database.Entity.Organisation;
+import server.database.Entity.User;
 
 import java.io.*;
 import java.net.Socket;

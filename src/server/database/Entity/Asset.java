@@ -1,4 +1,4 @@
-package server.database.JBDCDataSource.Entity;
+package server.database.Entity;
 
 import java.io.Serializable;
 

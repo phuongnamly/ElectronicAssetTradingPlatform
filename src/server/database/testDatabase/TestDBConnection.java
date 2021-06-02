@@ -1,7 +1,7 @@
 package server.database.testDatabase;
 
 import org.junit.jupiter.api.Test;
-import server.database.JBDCDataSource.DBConnection;
+import server.database.schema.DBConnection;
 
 import static org.junit.jupiter.api.Assertions.*;
 

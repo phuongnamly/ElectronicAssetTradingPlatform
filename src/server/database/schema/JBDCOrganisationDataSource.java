@@ -1,6 +1,6 @@
-package server.database.JBDCDataSource;
+package server.database.schema;
 
-import server.database.JBDCDataSource.Entity.Organisation;
+import server.database.Entity.Organisation;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -29,15 +29,15 @@ public class JBDCOrganisationDataSource {
 
     private Connection connection;
 
-    private PreparedStatement createOrganisation;
+    private PreparedStatement create;
 
-    private PreparedStatement editOrganisation;
+    private PreparedStatement edit;
 
-    private PreparedStatement deleteOrganisation;
+    private PreparedStatement delete;
 
-    private PreparedStatement getOrganisation;
+    private PreparedStatement get;
 
-    private PreparedStatement getAllOrganisations;
+    private PreparedStatement getAll;
 
 
     public JBDCOrganisationDataSource() {
@@ -46,11 +46,11 @@ public class JBDCOrganisationDataSource {
             Statement st = connection.createStatement();
             st.execute(CREATE_TABLE);
 
-            createOrganisation = connection.prepareStatement(CREATE_ORGANISATION);
-            editOrganisation = connection.prepareStatement(EDIT_ORGANISATION);
-            deleteOrganisation = connection.prepareStatement(DELETE_ORGANISATION);
-            getOrganisation = connection.prepareStatement(GET_ORGANISATION);
-            getAllOrganisations = connection.prepareStatement(GET_ALL_ORGANISATIONS);
+            create = connection.prepareStatement(CREATE_ORGANISATION);
+            edit = connection.prepareStatement(EDIT_ORGANISATION);
+            delete = connection.prepareStatement(DELETE_ORGANISATION);
+            get = connection.prepareStatement(GET_ORGANISATION);
+            getAll = connection.prepareStatement(GET_ALL_ORGANISATIONS);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -58,24 +58,24 @@ public class JBDCOrganisationDataSource {
 
     public boolean create(Organisation organisation) {
         try {
-            createOrganisation.setString(1, organisation.getOrganisationName());
-            createOrganisation.setInt(2, Integer.parseInt(organisation.getCredits()));
-            return createOrganisation.execute();
+            create.setString(1, organisation.getOrganisationName());
+            create.setInt(2, Integer.parseInt(organisation.getCredits()));
 
+            int rowsCount = create.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
-
             return false;
         }
     }
 
     public boolean edit(Organisation organisation) {
         try {
-            editOrganisation.setString(1, organisation.getOrganisationName());
-            editOrganisation.setInt(2, Integer.parseInt(organisation.getCredits()));
-            editOrganisation.setInt(3, Integer.parseInt(organisation.getOrganisationID()));
-            return editOrganisation.execute();
-
+            edit.setString(1, organisation.getOrganisationName());
+            edit.setInt(2, Integer.parseInt(organisation.getCredits()));
+            edit.setInt(3, Integer.parseInt(organisation.getOrganisationID()));
+            int rowsCount = edit.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -84,8 +84,9 @@ public class JBDCOrganisationDataSource {
 
     public boolean delete(String organisation_id) {
         try {
-            deleteOrganisation.setInt(1, Integer.parseInt(organisation_id));
-            return deleteOrganisation.execute();
+            delete.setInt(1, Integer.parseInt(organisation_id));
+            int rowsCount = delete.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -96,9 +97,9 @@ public class JBDCOrganisationDataSource {
         ArrayList<Organisation>  organisations = new ArrayList<>();
         ResultSet rs = null;
         try {
-            getOrganisation.setInt(1, organisation_id);
+            get.setInt(1, organisation_id);
             int index = 0;
-            rs = getOrganisation.executeQuery();
+            rs = get.executeQuery();
             if(rs.next()){
                 Organisation organisation = new Organisation();
                 organisation.setOrganisationID(rs.getString("organisation_id"));
@@ -119,7 +120,7 @@ public class JBDCOrganisationDataSource {
         ArrayList<Organisation>  organisations = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getAllOrganisations.executeQuery();
+            rs = getAll.executeQuery();
             int index = 0;
 
             while(rs.next()){
