@@ -1,20 +1,24 @@
 package server;
 
 import client.NetworkDataSource;
-import server.database.JBDCDataSource.*;
-import server.database.JBDCDataSource.Entity.Asset;
-import server.database.JBDCDataSource.Entity.Organisation;
-import server.database.JBDCDataSource.Entity.User;
+import server.database.Entity.Asset;
+import server.database.Entity.Organisation;
+import server.database.Entity.User;
+import server.database.schema.JBDCAssetDataSource;
+import server.database.schema.JBDCListingDataSource;
+import server.database.schema.JBDCOrganisationDataSource;
+import server.database.schema.JBDCUserDataSource;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Server {
-    private static final int PORT = 10000;
+    private static int PORT;
 
     /**
      * this is the timeout inbetween accepting clients, not reading from the socket itself.
@@ -35,6 +39,23 @@ public class Server {
     private JBDCListingDataSource listingDatabase;
     private JBDCOrganisationDataSource organisationDatabase;
     private JBDCUserDataSource userDatabase;
+
+    public Server(){
+        Properties props = new Properties();
+        FileInputStream in = null;
+        try {
+            in = new FileInputStream("./src/server/properties/connection.props");
+            props.load(in);
+            in.close();
+
+            PORT = Integer.parseInt(props.getProperty("con.port"));
+
+        } catch (FileNotFoundException fnfe) {
+            System.err.println(fnfe);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 
     /**
      * Handles the connection received from ServerSocket.
@@ -325,10 +346,10 @@ public class Server {
      */
     public void start() throws IOException {
         // Connect to the database.
-        userDatabase = new JBDCUserDataSource();
         organisationDatabase = new JBDCOrganisationDataSource();
-        listingDatabase = new JBDCListingDataSource();
+        userDatabase = new JBDCUserDataSource();
         assetDatabase = new JBDCAssetDataSource();
+        listingDatabase = new JBDCListingDataSource();
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             serverSocket.setSoTimeout(SOCKET_ACCEPT_TIMEOUT);

@@ -1,12 +1,12 @@
 package server.database.testDatabase;
 
-import server.database.JBDCDataSource.Entity.Asset;
-import server.database.JBDCDataSource.Entity.Organisation;
-import server.database.JBDCDataSource.Entity.User;
-import server.database.JBDCDataSource.JBDCAssetDataSource;
-import server.database.JBDCDataSource.JBDCListingDataSource;
-import server.database.JBDCDataSource.JBDCOrganisationDataSource;
-import server.database.JBDCDataSource.JBDCUserDataSource;
+import server.database.Entity.Asset;
+import server.database.Entity.Organisation;
+import server.database.Entity.User;
+import server.database.schema.JBDCAssetDataSource;
+import server.database.schema.JBDCListingDataSource;
+import server.database.schema.JBDCOrganisationDataSource;
+import server.database.schema.JBDCUserDataSource;
 
 import java.util.List;
 

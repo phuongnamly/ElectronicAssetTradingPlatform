@@ -1,14 +1,9 @@
 package  client;
 
-import server.database.JBDCDataSource.Entity.User;
-
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Console;
 
 import static utils.hash.Hash.getHashedPassword;
 

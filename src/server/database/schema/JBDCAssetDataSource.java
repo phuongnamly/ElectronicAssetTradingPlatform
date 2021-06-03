@@ -1,6 +1,6 @@
-package server.database.JBDCDataSource;
+package server.database.schema;
 
-import server.database.JBDCDataSource.Entity.Asset;
+import server.database.Entity.Asset;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -28,15 +28,15 @@ public class JBDCAssetDataSource {
 
     private Connection connection;
 
-    private PreparedStatement createAsset;
+    private PreparedStatement create;
 
-    private PreparedStatement editAsset;
+    private PreparedStatement edit;
 
-    private PreparedStatement deleteAsset;
+    private PreparedStatement delete;
 
-    private PreparedStatement getAsset;
+    private PreparedStatement get;
 
-    private PreparedStatement getAllAssets;
+    private PreparedStatement getAll;
 
 
     public JBDCAssetDataSource() {
@@ -45,11 +45,11 @@ public class JBDCAssetDataSource {
             Statement st = connection.createStatement();
             st.execute(CREATE_TABLE);
 
-            createAsset = connection.prepareStatement(CREATE_ASSET);
-            editAsset = connection.prepareStatement(EDIT_ASSET);
-            deleteAsset = connection.prepareStatement(DELETE_ASSET);
-            getAsset = connection.prepareStatement(GET_ASSET);
-            getAllAssets = connection.prepareStatement(GET_ALL_ASSETS);
+            create = connection.prepareStatement(CREATE_ASSET);
+            edit = connection.prepareStatement(EDIT_ASSET);
+            delete = connection.prepareStatement(DELETE_ASSET);
+            get = connection.prepareStatement(GET_ASSET);
+            getAll = connection.prepareStatement(GET_ALL_ASSETS);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -57,9 +57,10 @@ public class JBDCAssetDataSource {
 
     public boolean create(Asset asset) {
         try {
-            createAsset.setString(1, asset.getAssetType());
-            createAsset.setString(2, asset.getAssetName());
-            return createAsset.execute();
+            create.setString(1, asset.getAssetType());
+            create.setString(2, asset.getAssetName());
+            int rowsCount = create.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -68,10 +69,11 @@ public class JBDCAssetDataSource {
 
     public boolean edit(Asset asset) {
         try {
-            editAsset.setString(1, asset.getAssetType());
-            editAsset.setString(2, asset.getAssetName());
-            editAsset.setInt(3, Integer.parseInt(asset.getAssetID()));
-            return editAsset.execute();
+            edit.setString(1, asset.getAssetType());
+            edit.setString(2, asset.getAssetName());
+            edit.setInt(3, Integer.parseInt(asset.getAssetID()));
+            int rowsCount = edit.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -80,8 +82,9 @@ public class JBDCAssetDataSource {
 
     public boolean delete(String asset_id) {
         try {
-            deleteAsset.setInt(1, Integer.parseInt(asset_id));
-            return deleteAsset.execute();
+            delete.setInt(1, Integer.parseInt(asset_id));
+            int rowsCount = delete.executeUpdate();
+            return (rowsCount>0);
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;
@@ -92,9 +95,9 @@ public class JBDCAssetDataSource {
         ArrayList<Asset>  assets = new ArrayList<>();
         ResultSet rs = null;
         try {
-            getAsset.setInt(1, asset_id);
+            get.setInt(1, asset_id);
 
-            rs = getAsset.executeQuery();
+            rs = get.executeQuery();
             if(rs.next()){
                 Asset asset = new Asset();
                 asset.setAssetID(rs.getString("asset_id"));
@@ -114,7 +117,7 @@ public class JBDCAssetDataSource {
         ArrayList<Asset>  assets = new ArrayList<>();
         ResultSet rs = null;
         try {
-            rs = getAllAssets.executeQuery();
+            rs = getAll.executeQuery();
             rs.next();
             while(rs.next()){
                 Asset asset = new Asset();
