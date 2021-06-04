@@ -1,6 +1,6 @@
 package server.database.schema;
 
-import server.database.Entity.Listing;
+import server.database.entity.Listing;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -34,6 +34,9 @@ public class JBDCListingDataSource {
     private static final String GET_LISTING = "SELECT * FROM listing WHERE listing_id=?";
 
     private static final String GET_ALL_LISTINGS = "SELECT * FROM listing";
+
+//    write many additional methods
+//    private static final String GET_ALL_LISTINGS = "SELECT * FROM WHERE current_trade=?";
 
     private Connection connection;
 

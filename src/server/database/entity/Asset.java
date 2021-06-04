@@ -1,4 +1,4 @@
-package server.database.Entity;
+package server.database.entity;
 
 import java.io.Serializable;
 

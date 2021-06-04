@@ -1,6 +1,6 @@
 package server.database.schema;
 
-import server.database.Entity.Organisation;
+import server.database.entity.Organisation;
 
 import java.sql.*;
 import java.util.ArrayList;

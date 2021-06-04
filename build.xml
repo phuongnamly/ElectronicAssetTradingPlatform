@@ -1,0 +1,35 @@
+<!--<project name="Electronic Asset Trading Platform">-->
+<!--    <property name="build.dir" location="target/classes" />-->
+<!--    <path id="junit.class.path">-->
+<!--        <pathelement location="lib/apiguardian-api-1.0.0.jar" />-->
+<!--        <pathelement location="lib/junit-jupiter-5.4.2.jar" />-->
+<!--        <pathelement location="lib/junit-jupiter-api-5.4.2.jar" />-->
+<!--        <pathelement location="lib/junit-jupiter-engine-5.4.2.jar" />-->
+<!--        <pathelement location="lib/junit-jupiter-params-5.4.2.jar" />-->
+<!--        <pathelement location="lib/junit-platform-commons-1.4.2.jar" />-->
+<!--        <pathelement location="lib/junit-platform-engine-1.4.2.jar" />-->
+<!--        <pathelement location="lib/opentest4j-1.1.1.jar" />-->
+<!--        <pathelement location="${build.dir}" />-->
+<!--    </path>-->
+<!--    <target name="compile">-->
+<!--        <mkdir dir="${build.dir}" />-->
+<!--        <javac srcdir="src" destdir="target"-->
+<!--               includeantruntime="false" />-->
+<!--    </target>-->
+<!--    …-->
+<!--</project>-->
+
+<project name="Electronic Asset Trading Platform">
+    <target name="compile">
+        <mkdir dir="$target" />
+        <javac srcdir="src" destdir="target"
+               includeantruntime="false" />
+    </target>
+
+    <target name="test">
+        <mkdir dir = "testtarget"/>
+        <javac srcdir="src" destdir="testtarget" includeantruntime="false">
+            <classpath location=""/>
+        </javac>
+    </target>
+</project>

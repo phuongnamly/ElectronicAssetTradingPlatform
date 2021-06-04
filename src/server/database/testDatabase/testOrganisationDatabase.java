@@ -2,7 +2,7 @@ package server.database.testDatabase;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import server.database.Entity.Organisation;
+import server.database.entity.Organisation;
 import server.database.schema.JBDCOrganisationDataSource;
 
 import static org.junit.Assert.assertTrue;
@@ -34,6 +34,7 @@ class testOrganisationDatabase {
     @Test
     public void testCreate()  {
         assertTrue(organisationDatabase.create(new Organisation("","Electronic Asset Trading Company", "0")));
+        // getOne
     }
 
     @Test
@@ -46,6 +47,7 @@ class testOrganisationDatabase {
 
     @Test
     public void testGetOne()  {
+        //
     }
 
     @Test

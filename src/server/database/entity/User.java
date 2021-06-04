@@ -1,6 +1,4 @@
-package server.database.Entity;
-
-import server.database.Entity.Enum.AccountType;
+package server.database.entity;
 
 import java.io.Serializable;
 

@@ -20,42 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_junit_platform_junit_platform_launcher_1_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/NetworkServerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/NetworkServerGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/DBConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Asset.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Enum/AccountType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Enum/TradeType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Listing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/Organisation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/Entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCAssetDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCListingDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCOrganisationDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/JBDCDataSource/JBDCUserDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/TestDBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/TestDBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/testDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/testDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Mockup2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/NetworkDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/NetworkServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/NetworkServerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/Entity/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Enum/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/Entity/Enum/AccountType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Enum/TradeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/Entity/Enum/TradeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/Entity/Listing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/Entity/Organisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCAssetDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCOrganisationDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/JBDCDataSource/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/TestDBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/TestDBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/Entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/entity/Asset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/Entity/Enum/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/entity/Enum/AccountType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/Entity/Enum/TradeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/entity/Enum/TradeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/Entity/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/entity/Listing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/Entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/entity/Organisation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCAssetDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCOrganisationDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/testDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/testOrganisationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/testOrganisationDatabase.java" afterDir="false" />
     </list>
@@ -83,6 +63,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -90,7 +71,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Other projects/CAB302-Assignment-Group-90" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -195,14 +179,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1622692135308">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1622692135308" />
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1622617002703">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1622617002703" />
-    <state x="715" y="25" key="FileChooserDialogImpl" timestamp="1622639753685">
+    <state x="696" y="25" key="FileChooserDialogImpl" timestamp="1622716071841">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="715" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622639753685" />
+    <state x="696" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622716071841" />
     <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1622645712035">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -227,10 +215,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522030279" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1622519995752">
+    <state x="218" y="17" width="1038" height="663" key="SettingsEditor" timestamp="1622704027158">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1622519995752" />
+    <state x="218" y="17" width="1038" height="663" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1622704027158" />
     <state x="529" y="256" key="VCS.EditChangelistDialog" timestamp="1622522517512">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -239,14 +227,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="99" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1622521994789" />
-    <state x="376" y="233" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1622618261358">
+    <state x="735" y="168" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1622703775670">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="376" y="233" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1622618261358" />
+    <state x="735" y="168" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1622703775670" />
     <state x="93" y="93" width="1095" height="495" key="dock-window-1" timestamp="1622522749468">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1622522749468" />
+    <state x="91" y="0" key="new project wizard" timestamp="1622691332920">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1622691332920" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
