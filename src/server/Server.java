@@ -1,9 +1,9 @@
 package server;
 
 import client.NetworkDataSource;
-import server.database.entity.Asset;
-import server.database.entity.Organisation;
-import server.database.entity.User;
+import server.database.mockDatabase.entity.Asset;
+import server.database.mockDatabase.entity.Organisation;
+import server.database.mockDatabase.entity.User;
 import server.database.schema.JBDCAssetDataSource;
 import server.database.schema.JBDCListingDataSource;
 import server.database.schema.JBDCOrganisationDataSource;

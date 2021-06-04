@@ -1,11 +1,12 @@
 package server.database.schema;
 
-import server.database.entity.Listing;
+import server.database.mockDatabase.entity.Listing;
+import server.database.mockDatabase.mockInterface.ListingDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
 
-public class JBDCListingDataSource {
+public class JBDCListingDataSource implements ListingDataSource {
 
     public static final String CREATE_TABLE_LISTING =
             "CREATE TABLE IF NOT EXISTS `listing` (\n" +
@@ -35,6 +36,9 @@ public class JBDCListingDataSource {
 
     private static final String GET_ALL_LISTINGS = "SELECT * FROM listing";
 
+    private static final String DELETE_ALL_LISTINGS = "TRUNCATE TABLE listing";
+
+
 //    write many additional methods
 //    private static final String GET_ALL_LISTINGS = "SELECT * FROM WHERE current_trade=?";
 
@@ -50,6 +54,8 @@ public class JBDCListingDataSource {
 
     private PreparedStatement getAll;
 
+    private PreparedStatement deleteAll;
+
 
     public JBDCListingDataSource() {
         connection = DBConnection.getInstance();
@@ -62,6 +68,7 @@ public class JBDCListingDataSource {
             delete = connection.prepareStatement(DELETE_LISTING);
             get = connection.prepareStatement(GET_LISTING);
             getAll = connection.prepareStatement(GET_ALL_LISTINGS);
+            deleteAll = connection.prepareStatement(DELETE_ALL_LISTINGS);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -170,5 +177,16 @@ public class JBDCListingDataSource {
         }
 
         return listings;
+    }
+
+    @Override
+    public boolean deleteAll() {
+        try {
+            int rowsCount = deleteAll.executeUpdate();
+            return (rowsCount>0);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
     }
 }

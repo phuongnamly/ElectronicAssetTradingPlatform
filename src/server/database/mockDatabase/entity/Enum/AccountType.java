@@ -1,4 +1,4 @@
-package server.database.entity.Enum;
+package server.database.mockDatabase.entity.Enum;
 
 public enum AccountType {
     admin,

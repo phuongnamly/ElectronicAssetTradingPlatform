@@ -1,13 +1,14 @@
 package server.database.schema;
 
-import server.database.entity.User;
+import server.database.mockDatabase.entity.User;
+import server.database.mockDatabase.mockInterface.UserDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class JBDCUserDataSource {
+public class JBDCUserDataSource implements UserDataSource {
 
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `user` (\n" +
@@ -38,6 +39,8 @@ public class JBDCUserDataSource {
 
     private static final String GET_NAMES = "SELECT username FROM user";
 
+    private static final String DELETE_USERS = "TRUNCATE TABLE user";
+
     private Connection connection;
 
     private PreparedStatement create;
@@ -49,6 +52,8 @@ public class JBDCUserDataSource {
     private PreparedStatement get;
 
     private PreparedStatement getAll;
+
+    private PreparedStatement deleteAll;
 
     private PreparedStatement rowCount;
 
@@ -66,6 +71,7 @@ public class JBDCUserDataSource {
             getAll = connection.prepareStatement(GET_ALL_USERS);
             rowCount = connection.prepareStatement(COUNT_ROWS);
             getNameList = connection.prepareStatement(GET_NAMES);
+            deleteAll = connection.prepareStatement(DELETE_USERS);
 
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -129,9 +135,9 @@ public class JBDCUserDataSource {
         }
     }
 
-    public boolean delete(int user_id) {
+    public boolean delete(String user_id) {
         try {
-            get.setInt(1, user_id);
+            get.setInt(1,  Integer.parseInt(user_id));
             int rowsCount = delete.executeUpdate();
             return (rowsCount>0);
         } catch (SQLException ex) {
@@ -192,6 +198,17 @@ public class JBDCUserDataSource {
         }
 
         return users;
+    }
+
+    @Override
+    public boolean deleteAll() {
+        try {
+            int rowsCount = deleteAll.executeUpdate();
+            return (rowsCount>0);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
     }
 
     public int getSize() {

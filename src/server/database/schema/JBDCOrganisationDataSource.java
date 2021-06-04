@@ -1,11 +1,12 @@
 package server.database.schema;
 
-import server.database.entity.Organisation;
+import server.database.mockDatabase.entity.Organisation;
+import server.database.mockDatabase.mockInterface.OrganisationDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
 
-public class JBDCOrganisationDataSource {
+public class JBDCOrganisationDataSource implements OrganisationDataSource {
 
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `organisation` (\n" +
@@ -27,6 +28,8 @@ public class JBDCOrganisationDataSource {
 
     private static final String GET_ALL_ORGANISATIONS = "SELECT * FROM organisation";
 
+    private static final String DELETE_ALL_ORGANISATIONS = "TRUNCATE TABLE organisation";
+
     private Connection connection;
 
     private PreparedStatement create;
@@ -38,6 +41,8 @@ public class JBDCOrganisationDataSource {
     private PreparedStatement get;
 
     private PreparedStatement getAll;
+
+    private PreparedStatement deleteAll;
 
 
     public JBDCOrganisationDataSource() {
@@ -51,6 +56,8 @@ public class JBDCOrganisationDataSource {
             delete = connection.prepareStatement(DELETE_ORGANISATION);
             get = connection.prepareStatement(GET_ORGANISATION);
             getAll = connection.prepareStatement(GET_ALL_ORGANISATIONS);
+            deleteAll = connection.prepareStatement(DELETE_ALL_ORGANISATIONS);
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -93,11 +100,11 @@ public class JBDCOrganisationDataSource {
         }
     }
 
-    public ArrayList<Organisation> get(Integer organisation_id) {
+    public ArrayList<Organisation> get(String organisation_id) {
         ArrayList<Organisation>  organisations = new ArrayList<>();
         ResultSet rs = null;
         try {
-            get.setInt(1, organisation_id);
+            get.setInt(1,  Integer.parseInt(organisation_id));
             int index = 0;
             rs = get.executeQuery();
             if(rs.next()){
@@ -138,4 +145,17 @@ public class JBDCOrganisationDataSource {
 
         return organisations;
     }
+
+    @Override
+    public boolean deleteAll() {
+        try {
+            int rowsCount = deleteAll.executeUpdate();
+            return (rowsCount>0);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+
 }

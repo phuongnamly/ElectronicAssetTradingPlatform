@@ -1,11 +1,12 @@
 package server.database.schema;
 
-import server.database.entity.Asset;
+import server.database.mockDatabase.entity.Asset;
+import server.database.mockDatabase.mockInterface.AssetDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
 
-public class JBDCAssetDataSource {
+public class JBDCAssetDataSource implements AssetDataSource {
 
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `asset` (\n" +
@@ -26,6 +27,9 @@ public class JBDCAssetDataSource {
 
     private static final String GET_ALL_ASSETS = "SELECT * FROM asset";
 
+    private static final String DELETE_ALL_ASSETS = "TRUNCATE TABLE asset";
+
+
     private Connection connection;
 
     private PreparedStatement create;
@@ -37,6 +41,8 @@ public class JBDCAssetDataSource {
     private PreparedStatement get;
 
     private PreparedStatement getAll;
+
+    private PreparedStatement deleteAll;
 
 
     public JBDCAssetDataSource() {
@@ -50,6 +56,8 @@ public class JBDCAssetDataSource {
             delete = connection.prepareStatement(DELETE_ASSET);
             get = connection.prepareStatement(GET_ASSET);
             getAll = connection.prepareStatement(GET_ALL_ASSETS);
+            deleteAll = connection.prepareStatement(DELETE_ALL_ASSETS);
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -91,11 +99,11 @@ public class JBDCAssetDataSource {
         }
     }
 
-    public ArrayList<Asset> get(int asset_id) {
+    public ArrayList<Asset> get(String asset_id) {
         ArrayList<Asset>  assets = new ArrayList<>();
         ResultSet rs = null;
         try {
-            get.setInt(1, asset_id);
+            get.setInt(1, Integer.parseInt(asset_id));
 
             rs = get.executeQuery();
             if(rs.next()){
@@ -132,5 +140,16 @@ public class JBDCAssetDataSource {
         }
 
         return assets;
+    }
+
+    @Override
+    public boolean deleteAll() {
+        try {
+            int rowsCount = deleteAll.executeUpdate();
+            return (rowsCount>0);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
     }
 }
