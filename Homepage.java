@@ -10,6 +10,12 @@ import java.awt.event.ActionListener;
 public class Homepage extends JFrame{
 
     private JTextField display;
+    private JLabel welcomeText;
+    private JLabel adviceText;
+
+    // VARIABLE FOR USERNAME
+    private String userField;
+
 
 
 
@@ -36,7 +42,7 @@ public class Homepage extends JFrame{
         display = newDisplay();
 
 
-        //JPanel for the whole area, with layout table properties
+        // Homepage JPanel
         JPanel homePanel = new JPanel();
         SpringLayout tpLayout = new SpringLayout();
         homePanel.setLayout(tpLayout);
@@ -44,61 +50,88 @@ public class Homepage extends JFrame{
                 BorderFactory.createEmptyBorder(5,5,5,5)));
         contentPane.add(homePanel);
 
+        // Homepage JPanel Formatting
         layout.putConstraint(SpringLayout.WEST, homePanel, 10, SpringLayout.WEST, contentPane);
         layout.putConstraint(SpringLayout.NORTH, homePanel, 70, SpringLayout.NORTH, contentPane);
         layout.putConstraint(SpringLayout.SOUTH, homePanel, -50, SpringLayout.SOUTH, contentPane);
         layout.putConstraint(SpringLayout.EAST, homePanel, -10, SpringLayout.EAST, contentPane);
 
+        // Welcome Text Panel
+        JPanel welcomeTextPane = new JPanel();
+        SpringLayout welcomeLayout = new SpringLayout();
+        welcomeTextPane.setLayout(welcomeLayout);
+        contentPane.add(welcomeTextPane);
+        welcomeLayout.putConstraint(SpringLayout.WEST, homePanel, 10, SpringLayout.WEST, contentPane);
+        welcomeLayout.putConstraint(SpringLayout.NORTH, homePanel, 10, SpringLayout.NORTH, contentPane);
+        welcomeLayout.putConstraint(SpringLayout.SOUTH, homePanel, 10, SpringLayout.SOUTH, contentPane);
+        welcomeLayout.putConstraint(SpringLayout.EAST, homePanel, 10, SpringLayout.EAST, contentPane);
+
+        userField = "Jeremy Nguyen";
+        welcomeText = new JLabel();
+        welcomeText.setText("Welcome back," + " " + userField + "!");
+        welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
+        homePanel.add(welcomeText);
+
+        // Advice Field
+        JPanel advicePane = new JPanel();
+        SpringLayout adviceLayout = new SpringLayout();
+        advicePane.setLayout(adviceLayout);
+        contentPane.add(advicePane);
+        welcomeLayout.putConstraint(SpringLayout.SOUTH, homePanel, 10, SpringLayout.SOUTH, contentPane);
+
+        adviceText =  new JLabel();
+        adviceText.setText("To get started, click a button above to take you elsewhere.");
+        homePanel.add(adviceText);
 
         // Creating Navigation Panel
-        JPanel MainButtonPanel = new JPanel();
+        JPanel navPane = new JPanel();
         SpringLayout mainLayout = new SpringLayout();
-        MainButtonPanel.setLayout(mainLayout);
-        MainButtonPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Main Panel"),
+        navPane.setLayout(mainLayout);
+        navPane.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Navigation"),
                 BorderFactory.createEmptyBorder(5,5,5,5)));
-        contentPane.add(MainButtonPanel);
-        layout.putConstraint(SpringLayout.WEST, MainButtonPanel, 10, SpringLayout.WEST, contentPane);
-        layout.putConstraint(SpringLayout.NORTH, MainButtonPanel, 10, SpringLayout.NORTH, contentPane);
-        layout.putConstraint(SpringLayout.SOUTH, MainButtonPanel, -280, SpringLayout.SOUTH, contentPane);
-        layout.putConstraint(SpringLayout.EAST, MainButtonPanel, -10, SpringLayout.EAST, contentPane);
+        contentPane.add(navPane);
+        layout.putConstraint(SpringLayout.WEST, navPane, 10, SpringLayout.WEST, contentPane);
+        layout.putConstraint(SpringLayout.NORTH, navPane, 10, SpringLayout.NORTH, contentPane);
+        layout.putConstraint(SpringLayout.SOUTH, navPane, -280, SpringLayout.SOUTH, contentPane);
+        layout.putConstraint(SpringLayout.EAST, navPane, -10, SpringLayout.EAST, contentPane);
 
         //Button for Home in Main Panel
         btnHome = new JButton("Home");
-        MainButtonPanel.add(btnHome);
-        mainLayout.putConstraint(SpringLayout.WEST, btnHome, 5, SpringLayout.WEST, MainButtonPanel);
-        mainLayout.putConstraint(SpringLayout.NORTH, btnHome, 1, SpringLayout.NORTH, MainButtonPanel);
+        navPane.add(btnHome);
+        mainLayout.putConstraint(SpringLayout.WEST, btnHome, 5, SpringLayout.WEST, navPane);
+        mainLayout.putConstraint(SpringLayout.NORTH, btnHome, 1, SpringLayout.NORTH, navPane);
 
         //Button for Ordering Pad
         btnOrderPad = new JButton("Order");
-        MainButtonPanel.add(btnOrderPad);
-        mainLayout.putConstraint(SpringLayout.WEST, btnOrderPad, 80, SpringLayout.WEST, MainButtonPanel);
-        mainLayout.putConstraint(SpringLayout.NORTH, btnOrderPad, 1, SpringLayout.NORTH, MainButtonPanel);
+        navPane.add(btnOrderPad);
+        mainLayout.putConstraint(SpringLayout.WEST, btnOrderPad, 80, SpringLayout.WEST, navPane);
+        mainLayout.putConstraint(SpringLayout.NORTH, btnOrderPad, 1, SpringLayout.NORTH, navPane);
 
+        // Button for Order History
         btnOrderHistory = new JButton("History");
-        MainButtonPanel.add(btnOrderHistory);
-        mainLayout.putConstraint(SpringLayout.WEST, btnOrderHistory, 160, SpringLayout.WEST, MainButtonPanel);
-        mainLayout.putConstraint(SpringLayout.NORTH, btnOrderHistory, 1, SpringLayout.NORTH, MainButtonPanel);
+        navPane.add(btnOrderHistory);
+        mainLayout.putConstraint(SpringLayout.WEST, btnOrderHistory, 160, SpringLayout.WEST, navPane);
+        mainLayout.putConstraint(SpringLayout.NORTH, btnOrderHistory, 1, SpringLayout.NORTH, navPane);
 
+        // Button for Edit
         btnEdit = new JButton("Edit");
-        MainButtonPanel.add(btnEdit);
-        mainLayout.putConstraint(SpringLayout.WEST, btnEdit, 250, SpringLayout.WEST, MainButtonPanel);
-        mainLayout.putConstraint(SpringLayout.NORTH, btnEdit, 1, SpringLayout.NORTH, MainButtonPanel);
+        navPane.add(btnEdit);
+        mainLayout.putConstraint(SpringLayout.WEST, btnEdit, 250, SpringLayout.WEST, navPane);
+        mainLayout.putConstraint(SpringLayout.NORTH, btnEdit, 1, SpringLayout.NORTH, navPane);
 
+        // Button for Settings
         btnSettings = new JButton("Settings");
-        MainButtonPanel.add(btnSettings);
-        mainLayout.putConstraint(SpringLayout.WEST, btnSettings,  320, SpringLayout.WEST, MainButtonPanel);
-        mainLayout.putConstraint(SpringLayout.NORTH, btnSettings, 1, SpringLayout.NORTH, MainButtonPanel);
+        navPane.add(btnSettings);
+        mainLayout.putConstraint(SpringLayout.WEST, btnSettings,  320, SpringLayout.WEST, navPane);
+        mainLayout.putConstraint(SpringLayout.NORTH, btnSettings, 1, SpringLayout.NORTH, navPane);
 
+        // Button to Log Out
         btnLogOut = new JButton("Logout");
-        MainButtonPanel.add(btnLogOut);
-        //mainLayout.putConstraint(SpringLayout.WEST, btnLogOut, 5, SpringLayout.EAST, btnSettings);
-        mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, MainButtonPanel);
-        mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, MainButtonPanel);
+        navPane.add(btnLogOut);
+        mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, navPane);
+        mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, navPane);
 
-
-
-
-        /* show frame */
+        // Compile frame
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
@@ -115,34 +148,8 @@ public class Homepage extends JFrame{
 
     }
 
-    private void reviewButtonClicked(ActionEvent actionEvent) {
-        JOptionPane.showMessageDialog(this, "Thank you for updating!", "Update", JOptionPane.OK_OPTION);
-    }
 
-    private void saveAsClicked(ActionEvent actionEvent) {
-        JOptionPane.showMessageDialog(this, "Are you sure you want to create new asset?",
-                "Save As Confirm", JOptionPane.OK_CANCEL_OPTION);
-    }
-
-
-
-
-    private JButton createButton(String str, ActionListener listener){
-        //Create the JbUTTTON
-        JButton button = new JButton();
-        //Set button text
-        button.setText(str);
-        //Add listener
-        button.addActionListener(listener);
-        //Return Button
-        return button;
-    }
-
-
-
-
-
-
+    // Main function to run Homepage GUI
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(new Runnable() {
