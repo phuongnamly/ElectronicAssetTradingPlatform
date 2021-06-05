@@ -58,9 +58,6 @@ public class orderHistory extends JFrame{
 
 
 
-
-
-
     public orderHistory() {
 
         JFrame frame = new JFrame("Order History");
@@ -197,7 +194,7 @@ public class orderHistory extends JFrame{
         mainLayout.putConstraint(SpringLayout.NORTH, btnHome, 1, SpringLayout.NORTH, MainButtonPanel);
 
         //Button for Ordering Pad
-        btnOrderPad = new JButton("Order");
+        btnOrderPad = createButton("Order", this::orderButtonClicked);
         MainButtonPanel.add(btnOrderPad);
         mainLayout.putConstraint(SpringLayout.WEST, btnOrderPad, 80, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnOrderPad, 1, SpringLayout.NORTH, MainButtonPanel);
@@ -338,6 +335,20 @@ public class orderHistory extends JFrame{
         frame.setSize(550,475);
         frame.setVisible(true);
     }
+
+
+    ///WHEN CLICKED ORDER BUTTON WILL OPEN UP ORDER PANEL (THIS.SETVISIBLE SHOULD WORK HOWEVER IT IS NOT WANTING TO CLOSE?? Will wait until final implementation to check
+    private void orderButtonClicked(java.awt.event.ActionEvent evt){
+        Mockup4 mockup4 = new Mockup4();
+        mockup4.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }
+
+    //PLEASE CHECK THIS LATER TODAY
+
+
+
 
     private JTextField newDisplay() {
 
