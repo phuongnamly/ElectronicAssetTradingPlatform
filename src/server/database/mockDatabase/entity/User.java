@@ -14,10 +14,10 @@ public class User implements Comparable<User>, Serializable {
    private String organisationID;
    private String username;
    private String password;
+   private String accountType;
    private String email;
    private String phoneNum;
    private String address;
-   private String accountType;
    public User(){
 
    }
@@ -33,10 +33,10 @@ public class User implements Comparable<User>, Serializable {
       this.username = username;
       this.password = password;
 //      this.accountType = accountType.values()[accountTypeIndex];
+      this.accountType = accountType;
       this.email = email;
       this.phoneNum = phoneNum;
       this.address = address;
-      this.accountType = accountType;
    }
 
    /**

@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup" />
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/NetworkServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/NetworkServerGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Other projects/CAB302-Assignment-Group-90" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -137,7 +140,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -162,6 +164,94 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1622692135308">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1622692135308" />
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1622617002703">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1622617002703" />
+    <state x="380" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622819622504">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="380" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622819622504" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1622861571492">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622820293025" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1622861571492" />
+    <state x="0" y="255" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622821170269">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="255" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622821170269" />
+    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1622819872636">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622819872636" />
+    <state x="438" y="222" width="509" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1622820468755">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="222" width="509" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622820468755" />
+    <state x="399" y="65" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1622792616190">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="399" y="65" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1622792616190" />
+    <state x="696" y="25" key="FileChooserDialogImpl" timestamp="1622815773453">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="696" y="25" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1622815773453" />
+    <state x="696" y="25" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622801914223" />
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1622645712035">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622645712035" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1622645712035">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622645712035" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1622645712034">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622645712034" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1622645712035">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622645712035" />
+    <state x="0" y="51" width="1280" height="579" key="MergeDialog" timestamp="1622522028220">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="51" width="1280" height="579" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522028220" />
+    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1622522030279">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522030279" />
+    <state x="218" y="17" width="1038" height="663" key="SettingsEditor" timestamp="1622704027158">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="218" y="17" width="1038" height="663" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1622704027158" />
+    <state x="529" y="256" key="VCS.EditChangelistDialog" timestamp="1622522517512">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="529" y="256" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1622522517512" />
+    <state x="333" y="99" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1622521994789">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="333" y="99" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1622521994789" />
+    <state x="735" y="168" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1622703775670">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="735" y="168" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1622703775670" />
+    <state x="93" y="93" width="1095" height="495" key="dock-window-1" timestamp="1622522749468">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1622522749468" />
+    <state x="91" y="0" key="new project wizard" timestamp="1622691332920">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1622691332920" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

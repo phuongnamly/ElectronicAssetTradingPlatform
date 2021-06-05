@@ -25,7 +25,7 @@ public class NetworkServerGUI {
 
     private static void createAndShowGUI(Server server) {
         JDialog dialog = new JDialog();
-        dialog.setTitle("Network server for Electronic Asset Trading Plaltform");
+        dialog.setTitle("Network server for Electronic Asset Trading Platform");
         JButton shutdownButton = new JButton("Shut down server");
         // This button will simply close the dialog. CLosing the dialog
         // will shut down the server
