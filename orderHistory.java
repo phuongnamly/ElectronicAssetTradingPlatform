@@ -1,4 +1,4 @@
-package guiExploration;
+package client;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,6 +48,19 @@ public class orderHistory extends JFrame{
 
 
 
+
+
+    //Table to input all the current orders list to view successful and ongoing orders
+    //Cannot delete successful orders
+    //Able to delete ongoing orders
+    //Able to edit current orders
+    //Testing the JTable Features
+
+
+
+
+
+
     public orderHistory() {
 
         JFrame frame = new JFrame("Order History");
@@ -60,19 +73,104 @@ public class orderHistory extends JFrame{
         display = newDisplay();
 
 
-        //JPanel for the whole area, with layout table properties
+        //JPanel for the actionable area where it includes the ability to view balances and butons but excludes tables
         JPanel orderTable = new JPanel();
         SpringLayout tpLayout = new SpringLayout();
         orderTable.setLayout(tpLayout);
         orderTable.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Order History"),
                 BorderFactory.createEmptyBorder(5,5,5,5)));
         contentPane.add(orderTable);
-        layout.putConstraint(SpringLayout.WEST, orderTable, 10, SpringLayout.WEST, contentPane);
+        layout.putConstraint(SpringLayout.WEST, orderTable, 5, SpringLayout.WEST, contentPane);
         layout.putConstraint(SpringLayout.NORTH, orderTable, 70, SpringLayout.NORTH, contentPane);
         layout.putConstraint(SpringLayout.SOUTH, orderTable, -50, SpringLayout.SOUTH, contentPane);
-        layout.putConstraint(SpringLayout.EAST, orderTable, -10, SpringLayout.EAST, contentPane);
+        layout.putConstraint(SpringLayout.EAST, orderTable, -5, SpringLayout.EAST, contentPane);
+
+
+        //Viewing Balance
+        JLabel avaliableBalance = new JLabel("Avaliable Balance: ");
+        orderTable.add(avaliableBalance);
+        tpLayout.putConstraint(SpringLayout.WEST, avaliableBalance, 5, SpringLayout.WEST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, avaliableBalance, 5, SpringLayout.NORTH, orderTable);
+
+        //View Balannce (Input ActionListener to check (NOTE TO DEV, please put quantityText at top
+        JTextField viewAvaliable = new JTextField();
+        orderTable.add(viewAvaliable);
+        tpLayout.putConstraint(SpringLayout.WEST, viewAvaliable, 10, SpringLayout.EAST, avaliableBalance);
+        tpLayout.putConstraint(SpringLayout.EAST, viewAvaliable, 5, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, viewAvaliable, 6, SpringLayout.NORTH, orderTable);
+
+        JLabel totalBalance = new JLabel("Total Balance: ");
+        orderTable.add(totalBalance);
+        tpLayout.putConstraint(SpringLayout.WEST, totalBalance, 1, SpringLayout.WEST, avaliableBalance);
+        tpLayout.putConstraint(SpringLayout.NORTH, totalBalance, 40, SpringLayout.NORTH, avaliableBalance);
+
+        JTextField viewTotal = new JTextField();
+        orderTable.add(viewTotal);
+        tpLayout.putConstraint(SpringLayout.WEST, viewTotal, 10, SpringLayout.EAST, totalBalance);
+        tpLayout.putConstraint(SpringLayout.EAST, viewTotal, 5, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, viewTotal,  45, SpringLayout.NORTH, orderTable);
+
+
+
+        //JPanel for the order view Table and to edit
+        JPanel orderListPanel = new JPanel();
+        SpringLayout listLayout = new SpringLayout();
+        orderListPanel.setLayout(listLayout);
+        orderListPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of orders"),
+                BorderFactory.createEmptyBorder(5,5,5,5)));
+        orderTable.add(orderListPanel);
+
+        tpLayout.putConstraint(SpringLayout.WEST, orderListPanel, 2, SpringLayout.WEST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, orderListPanel, 120, SpringLayout.NORTH, orderTable);
+        tpLayout.putConstraint(SpringLayout.SOUTH, orderListPanel, -10, SpringLayout.SOUTH, orderTable);
+        tpLayout.putConstraint(SpringLayout.EAST, orderListPanel, -2, SpringLayout.EAST, orderTable);
+
+
+
+        //NOTE STRING VIEWORDER TO BE REPLACED DURING INTEGRATION, TEMP replacement to test JTable/ScrollPane
+        String[] header = {"Username", "Asset Type", "Func", "Limit Price", "Quantity", "Status", "View"};
+        String[][] viewOrder = {{"jshin4113", "jasonDollar","BUY","69", "13543", "Filled", "Edit"},
+                                {"ASAF","SelwynPound", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","SelwynPound", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASdasdAF","ThomasDOllar", "BUY", "1", "1223", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","SelwynPound", "SELL", "0.01", "1213", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","Selwyncoin", "SELL", "0.01", "12431323", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","JasonCoin", "SELL", "1241", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","NamDollar", "SELL", "4141", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","SelwynPound", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","Namcoin", "SELL", "0.14301", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","Thomaseuro", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","NamDong", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","Selwyuan", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","JasonWon", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","Nguyencoin", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+                                {"ASAF","TuanMinhYen", "SELL", "0.01", "123", "13245135", "Ongoing", "Edit"},
+
+        };
+
+
+        JTable listOrders = new JTable(viewOrder, header);
+        JScrollPane scrollOrder = new JScrollPane(listOrders);
+        scrollOrder.setPreferredSize(new Dimension(480, 130));
+
+        orderListPanel.add(scrollOrder);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //Creating MainButtonPanel
+        //This main button panel is inclusive of home, order and order history etc.
         JPanel MainButtonPanel = new JPanel();
         SpringLayout mainLayout = new SpringLayout();
         MainButtonPanel.setLayout(mainLayout);
@@ -83,6 +181,11 @@ public class orderHistory extends JFrame{
         layout.putConstraint(SpringLayout.NORTH, MainButtonPanel, 10, SpringLayout.NORTH, contentPane);
         layout.putConstraint(SpringLayout.SOUTH, MainButtonPanel, -280, SpringLayout.SOUTH, contentPane);
         layout.putConstraint(SpringLayout.EAST, MainButtonPanel, -10, SpringLayout.EAST, contentPane);
+
+
+
+
+
 
 
 
@@ -119,9 +222,6 @@ public class orderHistory extends JFrame{
         mainLayout.putConstraint(SpringLayout.NORTH, btnSettings, 1, SpringLayout.NORTH, MainButtonPanel);
 
 
-
-
-
         btnLogOut = new JButton("Logout");
         MainButtonPanel.add(btnLogOut);
         //mainLayout.putConstraint(SpringLayout.WEST, btnLogOut, 5, SpringLayout.EAST, btnSettings);
@@ -142,18 +242,18 @@ public class orderHistory extends JFrame{
 
 
 
-        ////BRAND NEW ASSET CREATION
-        JPanel orderPanel = new JPanel();
-        SpringLayout orderLayout = new SpringLayout();
-        orderPanel.setLayout(orderLayout);
-        orderPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Create New Asset"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-        orderTable.add(orderPanel);
-        tpLayout.putConstraint(SpringLayout.WEST,orderPanel, 20, SpringLayout.WEST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, orderPanel, 20, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.SOUTH, orderPanel, 160, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.EAST, orderPanel, 250, SpringLayout.WEST, orderTable);
-
+//        ////BRAND NEW ASSET CREATION
+//        JPanel orderPanel = new JPanel();
+//        SpringLayout orderLayout = new SpringLayout();
+//        orderPanel.setLayout(orderLayout);
+//        orderPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Create New Asset"),
+//                BorderFactory.createEmptyBorder(5,5,5,5)));
+//        orderTable.add(orderPanel);
+//        tpLayout.putConstraint(SpringLayout.WEST,orderPanel, 20, SpringLayout.WEST, orderTable);
+//        tpLayout.putConstraint(SpringLayout.NORTH, orderPanel, 20, SpringLayout.NORTH, orderTable);
+//        tpLayout.putConstraint(SpringLayout.SOUTH, orderPanel, 160, SpringLayout.NORTH, orderTable);
+//        tpLayout.putConstraint(SpringLayout.EAST, orderPanel, 250, SpringLayout.WEST, orderTable);
+//
 
 
 
@@ -201,31 +301,31 @@ public class orderHistory extends JFrame{
 
 
 
-        ///Defining the Order Pad Panel (North  West - Middle) ///////////// ORDER PAD AND BUTTONS
-        JPanel orderPad = new JPanel();
-        SpringLayout padLayout = new SpringLayout();
-        orderPad.setLayout(padLayout);
-        orderPad.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Asset Options"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-        orderTable.add(orderPad);
-        tpLayout.putConstraint(SpringLayout.WEST, orderPad, 20, SpringLayout.EAST, orderPanel);
-        tpLayout.putConstraint(SpringLayout.NORTH, orderPad, 20, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.SOUTH, orderPad, 280, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.EAST, orderPad, -20, SpringLayout.EAST, orderTable);
-        //Creating widgets and buttons for Order Pad
+//        ///Defining the Order Pad Panel (North  West - Middle) ///////////// ORDER PAD AND BUTTONS
+//        JPanel orderPad = new JPanel();
+//        SpringLayout padLayout = new SpringLayout();
+//        orderPad.setLayout(padLayout);
+//        orderPad.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Asset Options"),
+//                BorderFactory.createEmptyBorder(5,5,5,5)));
+//        orderTable.add(orderPad);
+//        tpLayout.putConstraint(SpringLayout.WEST, orderPad, 20, SpringLayout.EAST, orderPanel);
+//        tpLayout.putConstraint(SpringLayout.NORTH, orderPad, 20, SpringLayout.NORTH, orderTable);
+//        tpLayout.putConstraint(SpringLayout.SOUTH, orderPad, 280, SpringLayout.NORTH, orderTable);
+//        tpLayout.putConstraint(SpringLayout.EAST, orderPad, -20, SpringLayout.EAST, orderTable);
+//        //Creating widgets and buttons for Order Pad
 
-
-        //EDIT ASSET BUTTON
-        editAsset = createButton("Edit Asset", this::editButtonClick);
-        orderPad.add(editAsset);
-        padLayout.putConstraint(SpringLayout.WEST, editAsset, 5, SpringLayout.WEST, orderPad);
-        padLayout.putConstraint(SpringLayout.NORTH, editAsset, 5, SpringLayout.NORTH, orderPad);
-
-        deleteAsset = createButton("Delete Asset", this::deleteButtonClick);
-        orderPad.add(deleteAsset);
-        padLayout.putConstraint(SpringLayout.WEST, deleteAsset, 5, SpringLayout.WEST, orderPad);
-        padLayout.putConstraint(SpringLayout.NORTH, deleteAsset, 50, SpringLayout.NORTH, orderPad);
-
+//
+//        //EDIT ASSET BUTTON
+//        editAsset = createButton("Edit Asset", this::editButtonClick);
+//        orderPad.add(editAsset);
+//        padLayout.putConstraint(SpringLayout.WEST, editAsset, 5, SpringLayout.WEST, orderPad);
+//        padLayout.putConstraint(SpringLayout.NORTH, editAsset, 5, SpringLayout.NORTH, orderPad);
+//
+//        deleteAsset = createButton("Delete Asset", this::deleteButtonClick);
+//        orderPad.add(deleteAsset);
+//        padLayout.putConstraint(SpringLayout.WEST, deleteAsset, 5, SpringLayout.WEST, orderPad);
+//        padLayout.putConstraint(SpringLayout.NORTH, deleteAsset, 50, SpringLayout.NORTH, orderPad);
+//
 
 
 
@@ -245,7 +345,7 @@ public class orderHistory extends JFrame{
         display.setEditable(true);
         //display.setLineWrap(true);
         display.setFont(new Font("Arial",Font.BOLD, 13));
-       // display.setBorder(BorderFactory.createEtchedBorder());
+        // display.setBorder(BorderFactory.createEtchedBorder());
         return display;
 
     }
