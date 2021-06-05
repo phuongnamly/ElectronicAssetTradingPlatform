@@ -71,6 +71,8 @@ public class OrganisationData implements OrganisationDataSource {
 
     @Override
     public boolean deleteAll() {
-        return false;
+        organisations.clear();
+        id = 0;
+        return true;
     }
 }

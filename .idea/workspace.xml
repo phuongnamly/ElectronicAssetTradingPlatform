@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockAssetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockOrganisationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockOrganisationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/OrganisationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/OrganisationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/AssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/AssetDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
