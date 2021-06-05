@@ -1,8 +1,8 @@
 package client;
 
-import server.database.model.entity.Asset;
-import server.database.model.entity.Organisation;
-import server.database.model.entity.User;
+import client.model.entity.Asset;
+import client.model.entity.User;
+import client.model.entity.Organisation;
 
 import java.io.*;
 import java.net.Socket;

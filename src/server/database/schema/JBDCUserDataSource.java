@@ -99,6 +99,8 @@ public class JBDCUserDataSource implements UserDataSource {
     public boolean create(User user) {
         // "REPLACE INTO user (organisation_id, username, password, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
+
+            create.setInt(0, Integer.parseInt(user.getUserID()));
             create.setInt(1, Integer.parseInt(user.getOrganisationID()));
             create.setString(2, user.getUsername());
             create.setString(3, user.getPassword());

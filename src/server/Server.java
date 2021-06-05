@@ -1,9 +1,9 @@
 package server;
 //What up what up
 import client.NetworkDataSource;
-import server.database.model.entity.Asset;
-import server.database.model.entity.Organisation;
-import server.database.model.entity.User;
+import client.model.entity.Asset;
+import client.model.entity.Organisation;
+import client.model.entity.User;
 import server.database.schema.JBDCAssetDataSource;
 import server.database.schema.JBDCListingDataSource;
 import server.database.schema.JBDCOrganisationDataSource;
