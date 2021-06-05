@@ -46,4 +46,8 @@ public class Asset implements Serializable {
      * @param assetName the asset name to set
      */
     public void setAssetName(String assetName) { this.assetName = assetName; }
+    @Override
+    public  String toString(){
+        return this.assetID+this.assetType+this.assetName;
+    }
 }

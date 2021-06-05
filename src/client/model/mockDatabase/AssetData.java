@@ -1,7 +1,7 @@
 package client.model.mockDatabase;
 
 import client.model.entity.Asset;
-import client.model.entity.Organisation;
+import client.model.entity.Asset;
 import client.model.mockInterface.AssetDataSource;
 
 import java.util.ArrayList;
@@ -17,11 +17,11 @@ public class AssetData implements AssetDataSource {
 
 
     @Override
-    public boolean create(Asset Asset) {
+    public boolean create(Asset asset) {
         try {
             id++;
-            organisation.setOrganisationID(Integer.toString(id));
-            organisations.add(organisation);
+            asset.setAssetID(Integer.toString(id));
+            assets.add(asset);
 
             return true;
         } catch (Exception e) {
@@ -30,17 +30,17 @@ public class AssetData implements AssetDataSource {
     }
 
     @Override
-    public boolean edit(Asset Asset) {
+    public boolean edit(Asset asset) {
         try {
-            int organisationID = Integer.parseInt(organisation.getOrganisationID())-1;
-            Organisation prevOrganisation = organisations.get(organisationID);
-            if (organisation.getOrganisationName() == null){
-                organisation.setOrganisationName(prevOrganisation.getOrganisationName());
+            int assetID = Integer.parseInt(asset.getAssetID())-1;
+            Asset prevAsset = assets.get(assetID);
+            if (asset.getAssetName() == null){
+                asset.setAssetName(prevAsset.getAssetName());
             }
-            if (organisation.getCredits() == null){
-                organisation.setCredits(prevOrganisation.getCredits());
+            if (asset.getAssetType() == null){
+                asset.setAssetType(prevAsset.getAssetType());
             }
-            organisations.set(organisationID, organisation);
+            assets.set(assetID, asset);
             return true;
         } catch (Exception e) {
             return false;
@@ -50,8 +50,7 @@ public class AssetData implements AssetDataSource {
     @Override
     public boolean delete(String id) {
         try {
-
-            organisations.remove(Integer.parseInt(id)-1);
+            assets.remove(Integer.parseInt(id)-1);
             return true;
         } catch (Exception e) {
             return false;
@@ -60,10 +59,10 @@ public class AssetData implements AssetDataSource {
 
     @Override
     public ArrayList<Asset> get(String id) {
-        Organisation organisation = organisations.get(Integer.parseInt(id)-1);
-        ArrayList<Organisation> tempOrganisation = new ArrayList<>();
-        tempOrganisation.add(organisation);
-        return tempOrganisation;
+        Asset asset = assets.get(Integer.parseInt(id)-1);
+        ArrayList<Asset> tempAsset = new ArrayList<>();
+        tempAsset.add(asset);
+        return tempAsset;
     }
 
     @Override
@@ -73,6 +72,8 @@ public class AssetData implements AssetDataSource {
 
     @Override
     public boolean deleteAll() {
-        return false;
+        assets.clear();
+        id = 0;
+        return true;
     }
 }
