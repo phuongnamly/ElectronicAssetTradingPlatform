@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockAssetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockAssetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/ListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/ListingDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockAssetTest">
+  <component name="RunManager" selected="JUnit.mockOrganisationTest">
     <configuration name="mockAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -154,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.mockAssetTest" />
         <item itemvalue="JUnit.mockOrganisationTest" />
+        <item itemvalue="JUnit.mockAssetTest" />
         <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromDeleteOrganisation" />
         <item itemvalue="JUnit.mockOrganisationTest.TestBooleanOrganisationFromDeleteOrganisation" />
         <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromEditOrganisation" />
