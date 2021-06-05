@@ -17,8 +17,6 @@ public class Homepage extends JFrame{
     private String userField;
 
 
-
-
     ///Likely create another Java Class for the JButton declarations
     JButton btnHome;
     JButton btnOrderPad;
@@ -60,28 +58,30 @@ public class Homepage extends JFrame{
         JPanel welcomeTextPane = new JPanel();
         SpringLayout welcomeLayout = new SpringLayout();
         welcomeTextPane.setLayout(welcomeLayout);
-        contentPane.add(welcomeTextPane);
-        welcomeLayout.putConstraint(SpringLayout.WEST, homePanel, 10, SpringLayout.WEST, contentPane);
-        welcomeLayout.putConstraint(SpringLayout.NORTH, homePanel, 10, SpringLayout.NORTH, contentPane);
-        welcomeLayout.putConstraint(SpringLayout.SOUTH, homePanel, 10, SpringLayout.SOUTH, contentPane);
-        welcomeLayout.putConstraint(SpringLayout.EAST, homePanel, 10, SpringLayout.EAST, contentPane);
+        welcomeLayout.putConstraint(SpringLayout.SOUTH, welcomeTextPane, 1, SpringLayout.SOUTH, homePanel);
+        welcomeLayout.putConstraint(SpringLayout.EAST, welcomeTextPane, 350, SpringLayout.EAST, homePanel);
 
-        userField = "Jeremy Nguyen";
+        userField = "Jeremy";
         welcomeText = new JLabel();
         welcomeText.setText("Welcome back," + " " + userField + "!");
         welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
-        homePanel.add(welcomeText);
+        welcomeTextPane.add(welcomeText);
 
-        // Advice Field
+
+        // Advice Text Panel
         JPanel advicePane = new JPanel();
         SpringLayout adviceLayout = new SpringLayout();
         advicePane.setLayout(adviceLayout);
-        contentPane.add(advicePane);
-        welcomeLayout.putConstraint(SpringLayout.SOUTH, homePanel, 10, SpringLayout.SOUTH, contentPane);
 
         adviceText =  new JLabel();
         adviceText.setText("To get started, click a button above to take you elsewhere.");
-        homePanel.add(adviceText);
+        advicePane.add(adviceText);
+
+
+        // Adding text in HomePanel
+        homePanel.add(welcomeTextPane);
+        homePanel.add(advicePane);
+
 
         // Creating Navigation Panel
         JPanel navPane = new JPanel();
@@ -128,7 +128,7 @@ public class Homepage extends JFrame{
         // Button to Log Out
         btnLogOut = new JButton("Logout");
         navPane.add(btnLogOut);
-        mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, navPane);
+        mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 1 , SpringLayout.EAST, navPane);
         mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, navPane);
 
         // Compile frame
