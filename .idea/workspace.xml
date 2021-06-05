@@ -70,7 +70,20 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.testOrganisationDatabase.testCreate">
+  <component name="RunManager" selected="JUnit.TestDBConnection">
+    <configuration name="Mockup2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.Mockup2" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
       <module name="Electronic Asset Trading Platform" />
@@ -99,16 +112,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testOrganisationDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="PATTERN" value="server.database.model.UnitTest.mockTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
-      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
+      <option name="PACKAGE_NAME" value="server.database.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="server.database.model.UnitTest.mockTest.mockUserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,10 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testOrganisationDatabase.testCreate" />
         <item itemvalue="JUnit.TestDBConnection" />
-        <item itemvalue="JUnit.testOrganisationDatabase" />
+        <item itemvalue="JUnit.mockUserTest" />
         <item itemvalue="Application.NetworkServerGUI" />
+        <item itemvalue="Application.Mockup2" />
+        <item itemvalue="JUnit.testOrganisationDatabase.testCreate" />
       </list>
     </recent_temporary>
   </component>
