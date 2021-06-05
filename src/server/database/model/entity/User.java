@@ -1,4 +1,6 @@
-package server.database.mockDatabase.entity;
+package server.database.model.entity;
+
+import server.database.model.exception.UserException;
 
 import java.io.Serializable;
 
@@ -28,15 +30,20 @@ public class User implements Comparable<User>, Serializable {
     * @param password
     * @param accountType
     */
-   public User(String organisationID, String username, String password, String email, String phoneNum, String address, String accountType) {
-      this.organisationID = organisationID;
-      this.username = username;
-      this.password = password;
-//      this.accountType = accountType.values()[accountTypeIndex];
-      this.accountType = accountType;
-      this.email = email;
-      this.phoneNum = phoneNum;
-      this.address = address;
+   public User(String organisationID, String username, String password, String email, String phoneNum, String address, String accountType) throws UserException {
+      if(UserException.validate(organisationID, username, password, email, phoneNum, address, accountType)){
+         this.organisationID = organisationID;
+         this.username = username;
+         this.password = password;
+         this.accountType = accountType;
+         //      this.accountType = accountType.values()[accountTypeIndex];
+         this.email = email;
+         this.phoneNum = phoneNum;
+         this.address = address;
+      }
+      else{
+         throw new UserException("Invalid User information");
+      }
    }
 
    /**

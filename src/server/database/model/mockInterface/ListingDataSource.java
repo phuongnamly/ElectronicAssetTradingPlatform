@@ -1,6 +1,6 @@
-package server.database.mockDatabase.mockInterface;
+package server.database.model.mockInterface;
 
-import server.database.mockDatabase.entity.Listing;
+import server.database.model.entity.Listing;
 
 import java.util.ArrayList;
 

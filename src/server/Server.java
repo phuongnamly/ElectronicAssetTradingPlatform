@@ -1,9 +1,9 @@
 package server;
 
 import client.NetworkDataSource;
-import server.database.mockDatabase.entity.Asset;
-import server.database.mockDatabase.entity.Organisation;
-import server.database.mockDatabase.entity.User;
+import server.database.model.entity.Asset;
+import server.database.model.entity.Organisation;
+import server.database.model.entity.User;
 import server.database.schema.JBDCAssetDataSource;
 import server.database.schema.JBDCListingDataSource;
 import server.database.schema.JBDCOrganisationDataSource;
@@ -178,7 +178,7 @@ public class Server {
 
             case DELETE_USER: {
                 // one parameter - the person's name
-                final int user_id = (Integer) inputStream.readObject();
+                final String user_id = (String) inputStream.readObject();
 
                 synchronized (userDatabase) {
                     outputStream.writeBoolean(userDatabase.delete(user_id));

@@ -2,7 +2,8 @@ package server.database.testDatabase;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import server.database.mockDatabase.entity.Organisation;
+
+import server.database.model.entity.Organisation;
 import server.database.schema.JBDCOrganisationDataSource;
 
 import static org.junit.Assert.assertTrue;

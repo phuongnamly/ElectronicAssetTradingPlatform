@@ -1,4 +1,4 @@
-package server.database.mockDatabase.entity;
+package server.database.model.entity;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package server.database.mockDatabase.exception;
+package server.database.model.exception;
 
 public class OrganisationException extends Exception{
     public OrganisationException(){super();}

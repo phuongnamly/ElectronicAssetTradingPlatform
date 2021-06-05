@@ -1,16 +1,15 @@
-package server.database.mockDatabase;
+package server.database.model.mockDatabase;
 
-import server.database.mockDatabase.entity.User;
-import server.database.mockDatabase.mockInterface.UserDataSource;
+import server.database.model.entity.User;
+import server.database.model.mockInterface.UserDataSource;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class UserData implements UserDataSource {
     ArrayList<User> users;
     int id;
 
-    UserData(){
+    public UserData(){
         users = new ArrayList<>();
         id = 0;
     }
@@ -18,6 +17,7 @@ public class UserData implements UserDataSource {
     @Override
     public boolean create(User user) {
         try {
+            id++;
             user.setUserID(Integer.toString(id));
             users.add(user);
 
@@ -39,7 +39,10 @@ public class UserData implements UserDataSource {
 
     @Override
     public ArrayList<User> get(String id) {
-        return null;
+        User user = users.get(Integer.parseInt(id));
+        ArrayList<User> tempUser = new ArrayList<>();
+        tempUser.add(user);
+        return tempUser;
     }
 
     @Override
@@ -49,6 +52,8 @@ public class UserData implements UserDataSource {
 
     @Override
     public boolean deleteAll() {
-        return false;
+        users.clear();
+        id = 0;
+        return true;
     }
 }

@@ -1,4 +1,4 @@
-package server.database.mockDatabase.exception;
+package server.database.model.exception;
 
 public class AssetException extends Exception{
     public AssetException(){super();}

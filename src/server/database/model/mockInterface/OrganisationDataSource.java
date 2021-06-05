@@ -1,6 +1,6 @@
-package server.database.mockDatabase.mockInterface;
+package server.database.model.mockInterface;
 
-import server.database.mockDatabase.entity.Organisation;
+import server.database.model.entity.Organisation;
 import java.util.ArrayList;
 
 public interface OrganisationDataSource {

@@ -1,7 +1,7 @@
 package server.database.schema;
 
-import server.database.mockDatabase.entity.Listing;
-import server.database.mockDatabase.mockInterface.ListingDataSource;
+import server.database.model.entity.Listing;
+import server.database.model.mockInterface.ListingDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;

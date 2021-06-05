@@ -1,8 +1,8 @@
 package client;
 
-import server.database.mockDatabase.entity.Asset;
-import server.database.mockDatabase.entity.Organisation;
-import server.database.mockDatabase.entity.User;
+import server.database.model.entity.Asset;
+import server.database.model.entity.Organisation;
+import server.database.model.entity.User;
 
 import java.io.*;
 import java.net.Socket;
