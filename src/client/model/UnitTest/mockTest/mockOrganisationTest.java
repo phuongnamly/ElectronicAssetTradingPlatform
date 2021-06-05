@@ -46,42 +46,42 @@ public class mockOrganisationTest {
         ArrayList<Organisation> organisation_get = organisationdata.get("1");
         assertEquals(organisation_set.toString(), organisation_get.get(0).toString());
     }
-//    //    Test Edit User
+    //    Test Edit Organisation
+    @Test
+    void TestBooleanOrganisationFromEditOrganisation() throws OrganisationException{
+        organisationdata.create(new Organisation("1","Thomas Company", "100000"));
+        assertTrue(organisationdata.edit(new Organisation("1","Thomas Company 2 ", null)));
+    }
+
+    @Test
+    void TestGetOrganisationFromEditOrganisation() throws OrganisationException {
+        Organisation organisation_set_orig = new Organisation("1","Thomas Company", "100000");
+        Organisation organisation_set_new = new Organisation("1","Thomas Company 2 ", null);
+        Organisation organisation_expect = new Organisation("1","Thomas Company 2 ", "100000");
+        organisationdata.create(organisation_set_orig);
+        organisationdata.edit(organisation_set_new);
+        ArrayList<Organisation> organisation_get = organisationdata.get("1");
+
+        assertEquals(organisation_get.get(0).toString(),organisation_expect.toString());
+    }
+
+    //    Test delete organisatoin
+    @Test
+    void TestBooleanOrganisationFromDeleteOrganisation() throws OrganisationException{
+        organisationdata.create(new Organisation("1","Thomas Company", "100000"));
+        assertTrue(organisationdata.delete("1"));
+    }
+
 //    @Test
-//    void TestBooleanUserFromEditUser() throws UserException{
-//        organisationdata.create(new User("1",null,"admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin"));
-//        assertTrue(organisationdata.edit(new User("1",null,"admin", "admin", "admin@gmail.com", "0198765432", "KG", "admin")));
-//    }
-//
-//    @Test
-//    void TestGetUserFromEditUser() throws UserException {
-//        User user_set_orig = new User("1","1","admin", "admin", "admin@gmail.com", "987654321", "KG", "admin");
-//        User user_set_new = new User("1",null,"admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin");
-//        User user_expect = new User("1","1","admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin");
-//        userdata.create(user_set_orig);
-//        userdata.edit(user_set_new);
-//        ArrayList<User> user_get = userdata.get("1");
-//
-//        assertEquals(user_get.get(0).toString(),user_expect.toString());
-//    }
-//
-//    //    Test delete user
-//    @Test
-//    void TestBooleanUserFromDeleteUser() throws UserException{
-//        userdata.create(new User("1",null,"admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin"));
-//        assertTrue(userdata.delete("1"));
-//    }
-//
-//    @Test
-//    void TestGetUserFromDeleteUser() throws UserException, IndexOutOfBoundsException {
-//        User user_set_orig = new User("1","1","admin", "admin", "admin@gmail.com", "987654321", "KG", "admin");
+//    void TestGetOrganisationFromDeleteOrganisation() throws OrganisationException, IndexOutOfBoundsException {
+//        Organisation organisation_set_orig = new Organisation("1","Thomas Company", "100000");
 ////        User user_set_new = new User("1",null,"admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin");
 ////        User user_expect = new User("1","1","admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin");
-//        userdata.create(user_set_orig);
-//        userdata.delete("1");
+//        organisationdata.create(organisation_set_orig);
+//        organisationdata.delete("1");
 ////        userdata.edit(user_set_new);
 ////        ArrayList<User> user_get = userdata.get("1");
 //
-//        assertNull(userdata.get("1"));
+//        assertNull(organisationdata.get("1"));
 //    }
 }

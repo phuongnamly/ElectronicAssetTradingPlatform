@@ -48,4 +48,10 @@ public class Organisation implements Serializable {
      * @param credits the organisation ID to set
      */
     public void setCredits(String credits) { this.credits = credits; }
+
+    @Override
+    public  String toString(){
+        return this.organisationID+this.organisationName+this.credits;
+    }
+
 }

@@ -29,40 +29,31 @@ public class OrganisationData implements OrganisationDataSource {
 
     @Override
     public boolean edit(Organisation organisation) {
-//        try {
-//            int organisationID = Integer.parseInt(organisation.getOrganisationID())-1;
-//            Organisation prevOrganisation = organisations.get(organisationID);
-//            if (organisation.getUsername() == null){
-//                organisation.setUsername(prevOrganisation.getUsername());
-//            }
-//            if (organisation.getAddress() == null){
-//                organisation.setAddress(prevOrganisation.getAddress());
-//            }
-//            if (organisation.getEmail()==null){
-//                organisation.setEmail(prevOrganisation.getEmail());
-//            }
-//            if (organisation.getOrganisationID()== null){
-//                organisation.setOrganisationID(prevOrganisation.getOrganisationID());
-//            }
-//            if (organisation.getAccountType() == null){
-//                organisation.setAccountType(prevOrganisation.getAccountType());
-//            }
-//            if (organisation.getPassword() == null){
-//                organisation.setPassword(prevOrganisation.getPassword());
-//            }
-//            if (organisation.getPhoneNum() == null){
-//                organisation.setPhoneNum(prevOrganisation.getPhoneNum());
-//            }
-//            organisations.set(organisationID, organisation);
-//            return true;
-//        } catch (Exception e) {
+        try {
+            int organisationID = Integer.parseInt(organisation.getOrganisationID())-1;
+            Organisation prevOrganisation = organisations.get(organisationID);
+            if (organisation.getOrganisationName() == null){
+                organisation.setOrganisationName(prevOrganisation.getOrganisationName());
+            }
+            if (organisation.getCredits() == null){
+                organisation.setCredits(prevOrganisation.getCredits());
+            }
+            organisations.set(organisationID, organisation);
+            return true;
+        } catch (Exception e) {
             return false;
-//        }
+        }
     }
 
     @Override
     public boolean delete(String id) {
-        return false;
+        try {
+
+            organisations.remove(Integer.parseInt(id)-1);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
