@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +54,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.13.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -70,7 +70,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDBConnection">
+  <component name="RunManager" selected="Application.NetworkServerGUI">
     <configuration name="Mockup2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.Mockup2" />
       <module name="Electronic Asset Trading Platform" />
@@ -145,15 +145,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NetworkServerGUI" />
         <item itemvalue="JUnit.TestDBConnection" />
         <item itemvalue="JUnit.mockUserTest" />
-        <item itemvalue="Application.NetworkServerGUI" />
         <item itemvalue="Application.Mockup2" />
         <item itemvalue="JUnit.testOrganisationDatabase.testCreate" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -178,6 +178,48 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="365" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1622885398866">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="365" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1622885398866" />
+    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1622886452180">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1622886452180" />
+    <state x="421" y="50" key="FileChooserDialogImpl" timestamp="1622886450692">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="50" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622886450692" />
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1622885956877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622885956877" />
+    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1622885956877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622885956877" />
+    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1622885956877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622885956877" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1622885956877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622885956877" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1622886455497">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1622886455497" />
+    <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1622886298527">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1622886298527" />
+    <state x="91" y="1" key="new project wizard" timestamp="1622886253205">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="1" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1622886253205" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
