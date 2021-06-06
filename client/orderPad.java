@@ -112,7 +112,7 @@ public class orderPad extends JFrame{
         mainLayout.putConstraint(SpringLayout.WEST, btnOrderPad, 80, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnOrderPad, 1, SpringLayout.NORTH, MainButtonPanel);
 
-        btnOrderHistory = new JButton("History");
+        btnOrderHistory = new JButton ("History");
         MainButtonPanel.add(btnOrderHistory);
         mainLayout.putConstraint(SpringLayout.WEST, btnOrderHistory, 160, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnOrderHistory, 1, SpringLayout.NORTH, MainButtonPanel);
@@ -124,15 +124,8 @@ public class orderPad extends JFrame{
 
         btnSettings = new JButton("Settings");
         MainButtonPanel.add(btnSettings);
-//        mainLayout.putConstraint(SpringLayout.WEST, btnSettings, 60, SpringLayout.WEST, MainButtonPanel);
-//        mainLayout.putConstraint(SpringLayout.NORTH, btnSettings, 1, SpringLayout.NORTH, MainButtonPanel);
-        //mainLayout.putConstraint(SpringLayout.WEST, btnSettings, 5, SpringLayout.EAST, btnEdit);
-        //mainLayout.putConstraint(SpringLayout.WEST, btnLogOut, 1, SpringLayout.EAST, btnEdit);
         mainLayout.putConstraint(SpringLayout.WEST, btnSettings,  320, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnSettings, 1, SpringLayout.NORTH, MainButtonPanel);
-
-
-
 
 
         btnLogOut = new JButton("Logout");
@@ -140,17 +133,6 @@ public class orderPad extends JFrame{
         //mainLayout.putConstraint(SpringLayout.WEST, btnLogOut, 5, SpringLayout.EAST, btnSettings);
         mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, MainButtonPanel);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -272,7 +254,16 @@ public class orderPad extends JFrame{
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
+        addButtonListeners(new orderPad.ButtonListener());
+
     }
+
+
+
+
+
+
+
 
     private JTextArea newDisplay() {
 
@@ -334,4 +325,49 @@ public class orderPad extends JFrame{
                 new orderPad();
             }
         });
-    }}
+    }
+
+    private void addButtonListeners(ActionListener listener) {
+        btnHome.addActionListener(listener);
+        btnOrderHistory.addActionListener(listener);
+        btnOrderPad.addActionListener(listener);
+        btnEdit.addActionListener(listener);
+        btnSettings.addActionListener(listener);
+        //logout.addActionListener(listener);
+
+    }
+
+    private class ButtonListener implements ActionListener {
+
+        /**
+         * @see ActionListener#actionPerformed(ActionEvent)
+         */
+        public void actionPerformed(ActionEvent e){
+
+            JButton source = (JButton) e.getSource();
+
+            if(source == btnHome) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        new homePage();
+                        dispose();
+                    }
+                });
+            }
+            else if(source == btnSettings){
+                new addUser();
+                dispose();
+            }
+            else if(source == btnEdit){
+                new editAsset();
+                dispose();
+            }
+            else if(source == btnOrderPad){
+                new orderPad();
+                dispose();
+            }
+            else if (source == btnOrderHistory){
+                new orderHistory();
+                dispose();
+            }
+}}}

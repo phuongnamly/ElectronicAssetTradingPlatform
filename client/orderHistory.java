@@ -190,7 +190,7 @@ public class orderHistory extends JFrame{
 
 
         //Button for Home in Main Panel
-        btnHome = new JButton("Home");
+        btnHome = createButton("Home", this::homeButtonClicked);
         MainButtonPanel.add(btnHome);
         mainLayout.putConstraint(SpringLayout.WEST, btnHome, 5, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnHome, 1, SpringLayout.NORTH, MainButtonPanel);
@@ -201,17 +201,17 @@ public class orderHistory extends JFrame{
         mainLayout.putConstraint(SpringLayout.WEST, btnOrderPad, 80, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnOrderPad, 1, SpringLayout.NORTH, MainButtonPanel);
 
-        btnOrderHistory = new JButton("History");
+        btnOrderHistory = new JButton ("History");
         MainButtonPanel.add(btnOrderHistory);
         mainLayout.putConstraint(SpringLayout.WEST, btnOrderHistory, 160, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnOrderHistory, 1, SpringLayout.NORTH, MainButtonPanel);
 
-        btnEdit = new JButton("Edit");
+        btnEdit = createButton("Edit", this::editButtonClicked);
         MainButtonPanel.add(btnEdit);
         mainLayout.putConstraint(SpringLayout.WEST, btnEdit, 250, SpringLayout.WEST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnEdit, 1, SpringLayout.NORTH, MainButtonPanel);
 
-        btnSettings = new JButton("Settings");
+        btnSettings = createButton("Register", this::registerButtonClicked);
         MainButtonPanel.add(btnSettings);
 //        mainLayout.putConstraint(SpringLayout.WEST, btnSettings, 60, SpringLayout.WEST, MainButtonPanel);
 //        mainLayout.putConstraint(SpringLayout.NORTH, btnSettings, 1, SpringLayout.NORTH, MainButtonPanel);
@@ -336,25 +336,11 @@ public class orderHistory extends JFrame{
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
+        addButtonListeners(new orderHistory.ButtonListener());
     }
 
 
     ///WHEN CLICKED ORDER BUTTON WILL OPEN UP ORDER PANEL (THIS.SETVISIBLE SHOULD WORK HOWEVER IT IS NOT WANTING TO CLOSE?? Will wait until final implementation to check
-    private void orderButtonClicked (ActionEvent actionEvent){
-//        orderPad mockup4 = new orderPad();
-//        mockup4.setVisible(true);
-//        this.setVisible(false);
-//        this.dispose();
-        //This does not work, perhaps look further into that
-        new orderPad();
-        this.setVisible(false);
-        this.dispose();
-
-
-
-
-
-    }
 
     //PLEASE CHECK THIS LATER TODAY
 
@@ -377,6 +363,25 @@ public class orderHistory extends JFrame{
     private void saveAsClicked(ActionEvent actionEvent) {
         JOptionPane.showMessageDialog(this, "Are you sure you want to create new asset?",
                 "Save As Confirm", JOptionPane.OK_CANCEL_OPTION);
+    }
+
+
+
+    private void orderButtonClicked (ActionEvent actionEvent){
+        new orderPad();
+        this.dispose();
+    }
+    private void homeButtonClicked (ActionEvent actionEvent){
+        new homePage();
+        this.dispose();
+    }
+    private void editButtonClicked (ActionEvent actionEvent){
+        new editAsset();
+        this.dispose();
+    }
+    private void registerButtonClicked (ActionEvent actionEvent){
+        new addUser();
+        this.dispose();
     }
 
 
@@ -445,4 +450,56 @@ public class orderHistory extends JFrame{
                 new orderHistory();
             }
         });
-    }}
+    }    private void addButtonListeners(ActionListener listener) {
+        btnHome.addActionListener(listener);
+        btnOrderHistory.addActionListener(listener);
+        btnOrderPad.addActionListener(listener);
+        btnEdit.addActionListener(listener);
+        btnSettings.addActionListener(listener);
+        //logout.addActionListener(listener);
+
+    }
+
+    private class ButtonListener implements ActionListener {
+
+        /**
+         * @see ActionListener#actionPerformed(ActionEvent)
+         */
+        public void actionPerformed(ActionEvent e){
+
+            JButton source = (JButton) e.getSource();
+
+            if(source == btnHome) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        new homePage();
+                        dispose();
+                    }
+                });
+            }
+            else if(source == btnSettings){
+                new addUser();
+                dispose();
+            }
+            else if(source == btnEdit){
+                new editAsset();
+                dispose();
+            }
+            else if(source == btnOrderPad){
+                new orderPad();
+                dispose();
+            }
+            else if (source == btnOrderHistory){
+                new orderHistory();
+                dispose();
+            }
+        }}
+
+
+
+
+
+}
+
+
+

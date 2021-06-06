@@ -1,4 +1,4 @@
-package com.jasonshin;
+package client;
 
 
 import javax.swing.*;
@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-class Homepage extends JFrame{
+public class homePage extends JFrame{
 
     private JTextField display;
     private JLabel welcomeText;
@@ -33,7 +33,7 @@ class Homepage extends JFrame{
 
 
     // Creating a constructor for the Homepage Window
-    public Homepage() {
+    public homePage() {
 
         // Initialising new JFrame instance
         JFrame frame = new JFrame("Home");
@@ -185,6 +185,7 @@ class Homepage extends JFrame{
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
+        addButtonListeners(new homePage.ButtonListener());
     }
 
     private JTextField newDisplay() {
@@ -204,7 +205,55 @@ class Homepage extends JFrame{
 
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Homepage();
+                new homePage();
             }
         });
-    }}
+    }
+    private void addButtonListeners(ActionListener listener) {
+        btnHome.addActionListener(listener);
+        btnOrderHistory.addActionListener(listener);
+        btnOrderPad.addActionListener(listener);
+        btnEdit.addActionListener(listener);
+        btnSettings.addActionListener(listener);
+        //logout.addActionListener(listener);
+
+    }
+
+    private class ButtonListener implements ActionListener {
+
+        /**
+         * @see ActionListener#actionPerformed(ActionEvent)
+         */
+        public void actionPerformed(ActionEvent e){
+
+            JButton source = (JButton) e.getSource();
+
+            if(source == btnHome) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        new homePage();
+                        dispose();
+                    }
+                });
+            }
+            else if(source == btnSettings){
+                new addUser();
+                dispose();
+            }
+            else if(source == btnEdit){
+                new editAsset();
+                dispose();
+            }
+            else if(source == btnOrderPad){
+                new orderPad();
+                dispose();
+            }
+            else if (source == btnOrderHistory){
+                new orderHistory();
+                dispose();
+            }
+        }}
+
+
+
+}
