@@ -137,4 +137,8 @@ public class Listing implements Serializable {
 //        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");;
 //        return dateFormat.format(date);
 //    }
+    @Override
+    public  String toString(){
+        return this.assetID+this.listingID+this.organisationID+this.userID+this.currentTrade+this.tradeType+this.quantity+this.price+this.date;
+    }
 }

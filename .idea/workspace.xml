@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/ListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/ListingDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Listing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockOrganisationTest">
+  <component name="RunManager" selected="JUnit.mockListingTest.TestGetListingFromDeleteListing">
     <configuration name="mockAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -85,6 +84,53 @@
       <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
       <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockAssetTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockListingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockListingTest.TestGetListingFromDeleteListing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
+      <option name="METHOD_NAME" value="TestGetListingFromDeleteListing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockListingTest.TestGetListingFromGetListing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
+      <option name="METHOD_NAME" value="TestGetListingFromGetListing" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,61 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockOrganisationTest.TestBooleanOrganisationFromDeleteOrganisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
-      <option name="METHOD_NAME" value="TestBooleanOrganisationFromDeleteOrganisation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockOrganisationTest.TestGetOrganisationFromDeleteOrganisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
-      <option name="METHOD_NAME" value="TestGetOrganisationFromDeleteOrganisation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockOrganisationTest.TestGetOrganisationFromEditOrganisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
-      <option name="METHOD_NAME" value="TestGetOrganisationFromEditOrganisation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockListingTest.TestGetListingFromDeleteListing" />
+        <item itemvalue="JUnit.mockListingTest" />
+        <item itemvalue="JUnit.mockListingTest.TestGetListingFromGetListing" />
         <item itemvalue="JUnit.mockOrganisationTest" />
         <item itemvalue="JUnit.mockAssetTest" />
-        <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromDeleteOrganisation" />
-        <item itemvalue="JUnit.mockOrganisationTest.TestBooleanOrganisationFromDeleteOrganisation" />
-        <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromEditOrganisation" />
       </list>
     </recent_temporary>
   </component>
