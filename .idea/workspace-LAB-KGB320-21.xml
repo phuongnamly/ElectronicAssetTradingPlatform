@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tLefOO5cIlKv0OcAhEYy2Q2rAW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.13.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="server.database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.testOrganisationDatabase.testBooleanCreate">
+    <configuration name="mockListingTest.TestGetListingFromDeleteListing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
+      <option name="METHOD_NAME" value="TestGetListingFromDeleteListing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testOrganisationDatabase.testBooleanCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
+      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
+      <option name="METHOD_NAME" value="testBooleanCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testOrganisationDatabase.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
+      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
+      <option name="METHOD_NAME" value="testCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testOrganisationDatabase.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
+      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testOrganisationDatabase.testEdit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
+      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
+      <option name="METHOD_NAME" value="testEdit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.testOrganisationDatabase.testBooleanCreate" />
+        <item itemvalue="JUnit.testOrganisationDatabase.testDelete" />
+        <item itemvalue="JUnit.testOrganisationDatabase.testCreate" />
+        <item itemvalue="JUnit.testOrganisationDatabase.testEdit" />
+        <item itemvalue="JUnit.mockListingTest.TestGetListingFromDeleteListing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup" />
+      <created>1622552900130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622552900130</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1622964784240">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622964784240" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1622964784239">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1622964784239">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1622964784239">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="organisations.get(0)" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Electronic_Asset_Trading_Platform$Mockup2.ic" NAME="Mockup2 Coverage Results" MODIFIED="1621947993298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>util.*</FILTER>
+    </SUITE>
+  </component>
+</project>

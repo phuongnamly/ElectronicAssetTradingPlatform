@@ -81,7 +81,7 @@ public class JBDCListingDataSource implements ListingDataSource {
             create.setInt(2, Integer.parseInt(listing.getUserID()));
             create.setInt(3, Integer.parseInt(listing.getAssetID()));
             create.setBoolean(4, listing.getCurrentTrade());
-            create.setString(5, listing.getOrganisationID());
+            create.setString(5, listing.getTradeType());
             create.setInt(6, Integer.parseInt(listing.getQuantity()));
             create.setInt(7, Integer.parseInt(listing.getPrice()));
             create.setString(8, listing.getDate());

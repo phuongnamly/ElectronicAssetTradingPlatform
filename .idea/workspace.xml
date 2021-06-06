@@ -20,20 +20,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change beforePath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace-LAB-KGB320-21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/GenerateDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource$Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/NetworkDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Mockup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/Mockup2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Mockup4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/OrderPad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/NetworkDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCAssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCAssetDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buttonListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editAsset.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderPad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/Mockup2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/Mockup2$ButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/Mockup2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCListingDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCListingDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCUserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCUserDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/Mockup2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/OrderPad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/addUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/buttonListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/editAsset.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/homePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/orderHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/UserException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCOrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCOrganisationDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/testOrganisationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/testOrganisationDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/GenerateDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,24 +104,51 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.13.jar!/" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.4.2/junit-jupiter-5.4.2.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="server.database" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\ElectronicAssetTradingPlatform\src\client\gui" />
+      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.testOrganisationDatabase.testBooleanCreate">
-    <configuration name="mockListingTest.TestGetListingFromDeleteListing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.login">
+    <configuration name="GenerateDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.GenerateDatabase" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.gui.login" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
@@ -93,72 +157,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
-      <option name="METHOD_NAME" value="TestGetListingFromDeleteListing" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockUserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockUserTest.TestBooleanCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockUserTest" />
+      <option name="METHOD_NAME" value="TestBooleanCreateUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testOrganisationDatabase.testBooleanCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockUserTest.TestGetUserFromGetUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server.database.testDatabase.*" />
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
-      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
-      <option name="METHOD_NAME" value="testBooleanCreate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testOrganisationDatabase.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.database.testDatabase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
-      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
-      <option name="METHOD_NAME" value="testCreate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testOrganisationDatabase.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.database.testDatabase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
-      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
-      <option name="METHOD_NAME" value="testDelete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testOrganisationDatabase.testEdit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.database.testDatabase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="server.database.testDatabase" />
-      <option name="MAIN_CLASS_NAME" value="server.database.testDatabase.testOrganisationDatabase" />
-      <option name="METHOD_NAME" value="testEdit" />
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockUserTest" />
+      <option name="METHOD_NAME" value="TestGetUserFromGetUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testOrganisationDatabase.testBooleanCreate" />
-        <item itemvalue="JUnit.testOrganisationDatabase.testDelete" />
-        <item itemvalue="JUnit.testOrganisationDatabase.testCreate" />
-        <item itemvalue="JUnit.testOrganisationDatabase.testEdit" />
-        <item itemvalue="JUnit.mockListingTest.TestGetListingFromDeleteListing" />
+        <item itemvalue="Application.login" />
+        <item itemvalue="Application.GenerateDatabase" />
+        <item itemvalue="JUnit.mockUserTest" />
+        <item itemvalue="JUnit.mockUserTest.TestBooleanCreateUser" />
+        <item itemvalue="JUnit.mockUserTest.TestGetUserFromGetUser" />
       </list>
     </recent_temporary>
   </component>
@@ -201,22 +232,42 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1622964784240">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1623005910656">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005910656" />
+    <state x="421" y="83" key="FileChooserDialogImpl" timestamp="1623005686329">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
+    <state width="1237" height="40" key="GridCell.Tab.0.bottom" timestamp="1623010742072">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742072" />
     <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622964784240" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1622964784239">
+    <state width="1237" height="40" key="GridCell.Tab.0.center" timestamp="1623010742071">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742071" />
     <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1622964784239">
+    <state width="1237" height="40" key="GridCell.Tab.0.left" timestamp="1623010742071">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742071" />
     <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1622964784239">
+    <state width="1237" height="40" key="GridCell.Tab.0.right" timestamp="1623010742071">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742071" />
     <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
+    <state x="110" y="100" width="743" height="666" key="dock-window-1" timestamp="1623002289199">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="110" y="100" width="743" height="666" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623002289199" />
+    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2" timestamp="1623003940446">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623003940446" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

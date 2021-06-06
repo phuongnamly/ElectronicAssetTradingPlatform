@@ -30,8 +30,8 @@ public class User implements Comparable<User>, Serializable {
     * @param password
     * @param accountType
     */
-   public User(String userID, String organisationID, String username, String password, String email, String phoneNum, String address, String accountType) throws UserException {
-      if(UserException.validate(organisationID, username, password, email, phoneNum, address, accountType)){
+   public User(String userID, String organisationID, String username, String password, String accountType, String email, String phoneNum, String address) throws UserException {
+      if(UserException.validate(userID, organisationID, username, password, accountType, email, phoneNum, address)){
          this.userID = userID;
          this.organisationID = organisationID;
          this.username = username;

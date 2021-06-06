@@ -99,15 +99,13 @@ public class JBDCUserDataSource implements UserDataSource {
     public boolean create(User user) {
         // "REPLACE INTO user (organisation_id, username, password, account_type, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
-
-            create.setInt(0, Integer.parseInt(user.getUserID()));
             create.setInt(1, Integer.parseInt(user.getOrganisationID()));
             create.setString(2, user.getUsername());
             create.setString(3, user.getPassword());
             create.setString(4, user.getAccountType());
             create.setString(5, user.getEmail());
             create.setInt(6, Integer.parseInt(user.getPhoneNum()));
-            create.setString(7, user.getPassword());
+            create.setString(7, user.getAddress());
 
             int rowsCount = create.executeUpdate();
             return (rowsCount>0);
@@ -158,6 +156,7 @@ public class JBDCUserDataSource implements UserDataSource {
 
             if(rs.next()){
                 User user = new User();
+                user.setUserID(rs.getString("user_id"));
                 user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
@@ -184,6 +183,7 @@ public class JBDCUserDataSource implements UserDataSource {
 
             while(rs.next()){
                 User user = new User();
+                user.setUserID(rs.getString("user_id"));
                 user.setOrganisationID(rs.getString("organisation_id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));

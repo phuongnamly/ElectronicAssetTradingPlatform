@@ -1,4 +1,4 @@
-package client;
+package client.gui;
 
 import com.sun.glass.ui.Accessible;
 
@@ -58,11 +58,11 @@ public class orderHistory extends JFrame{
     //Able to edit current orders
     //Testing the JTable Features
 
-
+    JFrame frame;
 
     public orderHistory() {
 
-        JFrame frame = new JFrame("Order History");
+        frame = new JFrame("Order History");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container contentPane = frame.getContentPane();
@@ -473,25 +473,25 @@ public class orderHistory extends JFrame{
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new homePage();
-                        dispose();
+                        frame.dispose();
                     }
                 });
             }
             else if(source == btnSettings){
                 new addUser();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnEdit){
                 new editAsset();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnOrderPad){
                 new orderPad();
-                dispose();
+                frame.dispose();
             }
             else if (source == btnOrderHistory){
                 new orderHistory();
-                dispose();
+                frame.dispose();
             }
         }}
 

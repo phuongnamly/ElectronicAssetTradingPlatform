@@ -1,4 +1,4 @@
-package client;
+package client.gui;
 
 
 import javax.swing.*;
@@ -31,12 +31,14 @@ public class homePage extends JFrame{
     JButton btnSettings;
     JButton btnLogOut;
 
+    JFrame frame;
+
 
     // Creating a constructor for the Homepage Window
     public homePage() {
 
         // Initialising new JFrame instance
-        JFrame frame = new JFrame("Home");
+        frame = new JFrame("Home");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container contentPane = frame.getContentPane();
@@ -232,25 +234,25 @@ public class homePage extends JFrame{
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new homePage();
-                        dispose();
+                        frame.dispose();
                     }
                 });
             }
             else if(source == btnSettings){
                 new addUser();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnEdit){
                 new editAsset();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnOrderPad){
                 new orderPad();
-                dispose();
+                frame.dispose();
             }
             else if (source == btnOrderHistory){
                 new orderHistory();
-                dispose();
+                frame.dispose();
             }
         }}
 

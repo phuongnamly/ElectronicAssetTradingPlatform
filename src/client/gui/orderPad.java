@@ -1,4 +1,4 @@
-package client;
+package client.gui;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,12 +41,12 @@ public class orderPad extends JFrame{
     JButton btnSettings;
     JButton btnLogOut;
 
-
+    JFrame frame;
 
 
     public orderPad() {
 
-        JFrame frame = new JFrame("Ordering Tab");
+        frame = new JFrame("Ordering Tab");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container contentPane = frame.getContentPane();
@@ -350,24 +350,24 @@ public class orderPad extends JFrame{
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new homePage();
-                        dispose();
+                        frame.dispose();
                     }
                 });
             }
             else if(source == btnSettings){
                 new addUser();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnEdit){
                 new editAsset();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnOrderPad){
                 new orderPad();
-                dispose();
+                frame.dispose();
             }
             else if (source == btnOrderHistory){
                 new orderHistory();
-                dispose();
+                frame.dispose();
             }
 }}}

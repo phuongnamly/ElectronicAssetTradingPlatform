@@ -1,4 +1,4 @@
-package client;
+package client.gui;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,12 +41,13 @@ public class editAsset extends JFrame{
     JButton btnEdit; //Only for admin use??
     JButton btnSettings;
     JButton btnLogOut;
+    JFrame frame;
 
 
 
     public editAsset() {
 
-        JFrame frame = new JFrame("Asset List Page");
+        frame = new JFrame("Asset List Page");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container contentPane = frame.getContentPane();
@@ -409,29 +410,25 @@ public class editAsset extends JFrame{
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new homePage();
-                        dispose();
+                        frame.dispose();
                     }
                 });
             }
             else if(source == btnSettings){
                 new addUser();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnEdit){
                 new editAsset();
-                dispose();
+                frame.dispose();
             }
             else if(source == btnOrderPad){
                 new orderPad();
-                dispose();
+                frame.dispose();
             }
             else if (source == btnOrderHistory){
                 new orderHistory();
-                dispose();
+                frame.dispose();
             }
         }}
-
-
-
-
 }
