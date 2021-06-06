@@ -1,4 +1,4 @@
-package client.gui;
+package client;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,11 +15,10 @@ public class editAsset extends JFrame{
 
     private JTextField assetNameText;
     private JTextField startPriceText;
-    JButton buyButton;
-    JButton sellButton;
 
-
+    // use ADD_ASSET from NetworkDataSource
     JButton createAsset;
+    // use EDIT_ASSET from NetworkDataSource
     JButton editAsset;
     JButton deleteAsset;
     JButton updateAsset;
@@ -297,6 +296,7 @@ public class editAsset extends JFrame{
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
+        addButtonListeners(new editAsset.ButtonListener());
     }
 
     private JTextField newDisplay() {
@@ -385,4 +385,53 @@ public class editAsset extends JFrame{
                 new editAsset();
             }
         });
-    }}
+    }
+    private void addButtonListeners(ActionListener listener) {
+        btnHome.addActionListener(listener);
+        btnOrderHistory.addActionListener(listener);
+        btnOrderPad.addActionListener(listener);
+        btnEdit.addActionListener(listener);
+        btnSettings.addActionListener(listener);
+        //logout.addActionListener(listener);
+
+    }
+
+    private class ButtonListener implements ActionListener {
+
+        /**
+         * @see ActionListener#actionPerformed(ActionEvent)
+         */
+        public void actionPerformed(ActionEvent e){
+
+            JButton source = (JButton) e.getSource();
+
+            if(source == btnHome) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        new homePage();
+                        dispose();
+                    }
+                });
+            }
+            else if(source == btnSettings){
+                new addUser();
+                dispose();
+            }
+            else if(source == btnEdit){
+                new editAsset();
+                dispose();
+            }
+            else if(source == btnOrderPad){
+                new orderPad();
+                dispose();
+            }
+            else if (source == btnOrderHistory){
+                new orderHistory();
+                dispose();
+            }
+        }}
+
+
+
+
+}
