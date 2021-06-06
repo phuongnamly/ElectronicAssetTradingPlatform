@@ -1,21 +1,12 @@
-package client;
+package client.gui;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.Border;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.Console;
 
-
-
-public class Mockup4 extends JFrame{
+public class OrderPad extends JFrame{
 
     private JTextArea display;
 
@@ -29,7 +20,7 @@ public class Mockup4 extends JFrame{
 
 
 
-    public Mockup4() {
+    public OrderPad() {
 
         JFrame frame = new JFrame("Ordering Tab");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -221,7 +212,7 @@ public class Mockup4 extends JFrame{
 
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Mockup4();
+                new OrderPad();
             }
         });
     }}

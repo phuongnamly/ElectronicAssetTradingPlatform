@@ -1,7 +1,7 @@
 package server.database.schema;
 
-import server.database.model.entity.Organisation;
-import server.database.model.mockInterface.OrganisationDataSource;
+import client.model.entity.Organisation;
+import client.model.mockInterface.OrganisationDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class JBDCOrganisationDataSource implements OrganisationDataSource {
 
     private static final String GET_ALL_ORGANISATIONS = "SELECT * FROM organisation";
 
-    private static final String DELETE_ALL_ORGANISATIONS = "TRUNCATE TABLE organisation";
+    private static final String DELETE_ALL_ORGANISATIONS = "DELETE FROM organisation";
 
     private Connection connection;
 

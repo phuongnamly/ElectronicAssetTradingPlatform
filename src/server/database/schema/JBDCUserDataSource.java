@@ -1,7 +1,7 @@
 package server.database.schema;
 
-import server.database.model.entity.User;
-import server.database.model.mockInterface.UserDataSource;
+import client.model.entity.User;
+import client.model.mockInterface.UserDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class JBDCUserDataSource implements UserDataSource {
 
     private static final String GET_NAMES = "SELECT username FROM user";
 
-    private static final String DELETE_USERS = "TRUNCATE TABLE user";
+    private static final String DELETE_USERS = "DELETE FROM user";
 
     private Connection connection;
 

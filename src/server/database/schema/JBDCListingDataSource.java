@@ -1,7 +1,7 @@
 package server.database.schema;
 
-import server.database.model.entity.Listing;
-import server.database.model.mockInterface.ListingDataSource;
+import client.model.entity.Listing;
+import client.model.mockInterface.ListingDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class JBDCListingDataSource implements ListingDataSource {
 
     private static final String GET_ALL_LISTINGS = "SELECT * FROM listing";
 
-    private static final String DELETE_ALL_LISTINGS = "TRUNCATE TABLE listing";
+    private static final String DELETE_ALL_LISTINGS = "DELETE FROM listing";
 
 
 //    write many additional methods

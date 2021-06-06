@@ -1,6 +1,6 @@
 package server;
 //What up what up
-import client.NetworkDataSource;
+import client.gui.NetworkDataSource;
 import client.model.entity.Asset;
 import client.model.entity.Organisation;
 import client.model.entity.User;

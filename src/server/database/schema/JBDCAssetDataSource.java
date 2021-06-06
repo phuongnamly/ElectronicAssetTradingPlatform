@@ -1,7 +1,7 @@
 package server.database.schema;
 
-import server.database.model.entity.Asset;
-import server.database.model.mockInterface.AssetDataSource;
+import client.model.entity.Asset;
+import client.model.mockInterface.AssetDataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class JBDCAssetDataSource implements AssetDataSource {
 
     private static final String GET_ALL_ASSETS = "SELECT * FROM asset";
 
-    private static final String DELETE_ALL_ASSETS = "TRUNCATE TABLE asset";
+    private static final String DELETE_ALL_ASSETS = "DELETE FROM asset";
 
 
     private Connection connection;
