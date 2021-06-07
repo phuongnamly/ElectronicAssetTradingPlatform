@@ -1,6 +1,7 @@
 package client.model.mockDatabase;
 
 import client.model.entity.User;
+import client.model.exception.UserException;
 import client.model.mockInterface.UserDataSource;
 
 import java.util.ArrayList;
@@ -15,21 +16,25 @@ public class UserData implements UserDataSource {
     }
 
     @Override
-    public boolean create(User user) {
-        try {
+    public boolean create(User user) throws UserException {
+        String func = "create";
+        if (UserException.validate(func, user)){
             id++;
             user.setUserID(Integer.toString(id));
             users.add(user);
 
             return true;
-        } catch (Exception e) {
+        }
+        else{
             return false;
         }
     }
 
     @Override
-    public boolean edit(User user) {
-        try {
+    public boolean edit(User user) throws UserException {
+        String func = "editID";
+        if(UserException.validate(func, user)){
+
             int userID = Integer.parseInt(user.getUserID())-1;
             User prevUser = users.get(userID);
             if (user.getUsername() == null){
@@ -55,7 +60,8 @@ public class UserData implements UserDataSource {
             }
             users.set(userID, user);
             return true;
-        } catch (Exception e) {
+        }
+        else{
             return false;
         }
     }
@@ -81,8 +87,12 @@ public class UserData implements UserDataSource {
 
     @Override
     public ArrayList<User> getAll() {
+        ArrayList<User> listUser = new ArrayList<>();
+        for (int i=0;i< users.size();i++){
+            listUser.add(users.get(i));
+        }
 
-        return null;
+        return listUser;
     }
 
     @Override

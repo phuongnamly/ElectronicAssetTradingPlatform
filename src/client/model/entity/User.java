@@ -31,20 +31,15 @@ public class User implements Comparable<User>, Serializable {
     * @param accountType
     */
    public User(String userID, String organisationID, String username, String password, String accountType, String email, String phoneNum, String address) throws UserException {
-      if(UserException.validate(userID, organisationID, username, password, accountType, email, phoneNum, address)){
-         this.userID = userID;
-         this.organisationID = organisationID;
-         this.username = username;
-         this.password = password;
-         this.accountType = accountType;
-         //      this.accountType = accountType.values()[accountTypeIndex];
-         this.email = email;
-         this.phoneNum = phoneNum;
-         this.address = address;
-      }
-      else{
-         throw new UserException("Invalid User information");
-      }
+      this.userID = userID;
+      this.organisationID = organisationID;
+      this.username = username;
+      this.password = password;
+      this.accountType = accountType;
+      //      this.accountType = accountType.values()[accountTypeIndex];
+      this.email = email;
+      this.phoneNum = phoneNum;
+      this.address = address;
    }
 
    /**
@@ -165,7 +160,7 @@ public class User implements Comparable<User>, Serializable {
    }
 
    @Override
-   public  String toString(){
+   public String toString(){
 //      return "id: "+ this.userID+" name: " +this.username + " organisation: "+this.organisationID;
       return this.userID+this.username +this.organisationID+this.accountType+this.address+this.email+this.password+this.phoneNum;
    }
