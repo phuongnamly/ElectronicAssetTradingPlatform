@@ -19,31 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockListingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockOrganisationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockUserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Electronic Asset Trading Platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_junit_platform_junit_platform_launcher_1_4_2.xml" beforeDir="false" />
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="Change userData structure and add black box userException class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/OrganisationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/OrganisationException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/UserData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/UserData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Organisation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Organisation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/OrganisationData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/OrganisationData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/OrganisationDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/OrganisationDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/UserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/UserDataSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/model/exception/OrganisationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/OrganisationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/UserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/UserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/UserDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/OrganisationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/OrganisationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/OrganisationDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/OrganisationDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +79,54 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockUserTest">
+  <component name="RunManager" selected="JUnit.mockOrganisationException">
+    <configuration name="mockOrganisationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockOrganisationException" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockOrganisationException.TestNonIntegerCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockOrganisationException" />
+      <option name="METHOD_NAME" value="TestNonIntegerCredit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockOrganisationException.TestWrongOrganisationIDFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockOrganisationException" />
+      <option name="METHOD_NAME" value="TestWrongOrganisationIDFormat" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mockUserException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -106,38 +138,6 @@
       <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
       <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockUserException" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockUserException.TestNonIntegerPhoneNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockUserException" />
-      <option name="METHOD_NAME" value="TestNonIntegerPhoneNumber" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockUserException.TestWrongUserIDFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockUserException" />
-      <option name="METHOD_NAME" value="TestWrongUserIDFormat" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,29 +157,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockUserTest.TestBooleanUserFromEditUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockUserTest" />
-      <option name="METHOD_NAME" value="TestBooleanUserFromEditUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockOrganisationException" />
+        <item itemvalue="JUnit.mockOrganisationException.TestWrongOrganisationIDFormat" />
+        <item itemvalue="JUnit.mockOrganisationException.TestNonIntegerCredit" />
         <item itemvalue="JUnit.mockUserTest" />
         <item itemvalue="JUnit.mockUserException" />
-        <item itemvalue="JUnit.mockUserException.TestWrongUserIDFormat" />
-        <item itemvalue="JUnit.mockUserTest.TestBooleanUserFromEditUser" />
-        <item itemvalue="JUnit.mockUserException.TestNonIntegerPhoneNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +179,14 @@
       <option name="presentableId" value="Default" />
       <updated>1622552900130</updated>
     </task>
+    <task id="LOCAL-00001" summary="Change userData structure and add black box userException class">
+      <created>1623067540151</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623067540151</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +200,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change userData structure and add black box userException class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change userData structure and add black box userException class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

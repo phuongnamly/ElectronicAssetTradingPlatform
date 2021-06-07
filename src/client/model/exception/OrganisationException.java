@@ -1,5 +1,6 @@
 package client.model.exception;
 
+import client.model.entity.Organisation;
 import com.sun.org.apache.xpath.internal.operations.Or;
 
 import static utils.tryParse.TryParse.TryParseInt;
@@ -8,13 +9,13 @@ public class OrganisationException extends Exception{
     public OrganisationException(){super();}
     public OrganisationException(String message){super(message);}
 
-    public static boolean validate(String organisationID, String organisationName, String credits) throws OrganisationException{
+    public static boolean validate(String func, Organisation organisation) throws OrganisationException{
         boolean success = false;
 
         switch(func) {
             case("create"):{
                 /*Test out of range/ non integer Credit*/
-                if (TryParseInt(credits) != null){
+                if (TryParseInt(organisation.getCredits()) != null){
                     success = true;
                 }
                 else{
@@ -25,8 +26,8 @@ public class OrganisationException extends Exception{
 
             case("editID"):{
                 /*Test out of range id/ non integer/ non positive*/
-                if (organisationID != null) {
-                    if (TryParseInt(organisationID) != null && TryParseInt(organisationID) > 0) {
+                if (organisation.getOrganisationID() != null) {
+                    if (TryParseInt(organisation.getOrganisationID()) != null && TryParseInt(organisation.getOrganisationID()) > 0) {
                         success = true;
                     } else {
                         throw new OrganisationException("Organisation ID needs to be a positive integer and within integer limit");

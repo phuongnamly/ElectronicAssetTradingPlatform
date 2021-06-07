@@ -1,6 +1,8 @@
 package client.model.mockDatabase;
 
 import client.model.entity.Organisation;
+import client.model.exception.OrganisationException;
+import client.model.exception.UserException;
 import client.model.mockInterface.OrganisationDataSource;
 
 import java.util.ArrayList;
@@ -15,21 +17,23 @@ public class OrganisationData implements OrganisationDataSource {
     }
 
     @Override
-    public boolean create(Organisation organisation) {
-        try {
+    public boolean create(Organisation organisation) throws OrganisationException {
+        String func = "create";
+        if (OrganisationException.validate(func, organisation)){
             id++;
             organisation.setOrganisationID(Integer.toString(id));
             organisations.add(organisation);
 
             return true;
-        } catch (Exception e) {
+        }else{
             return false;
         }
     }
 
     @Override
-    public boolean edit(Organisation organisation) {
-        try {
+    public boolean edit(Organisation organisation) throws OrganisationException {
+        String func = "editID";
+        if (OrganisationException.validate(func, organisation)){
             int organisationID = Integer.parseInt(organisation.getOrganisationID())-1;
             Organisation prevOrganisation = organisations.get(organisationID);
             if (organisation.getOrganisationName() == null){
@@ -40,7 +44,7 @@ public class OrganisationData implements OrganisationDataSource {
             }
             organisations.set(organisationID, organisation);
             return true;
-        } catch (Exception e) {
+        } else {
             return false;
         }
     }
