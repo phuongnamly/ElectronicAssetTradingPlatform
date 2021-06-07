@@ -84,7 +84,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.login">
+  <component name="RunManager" selected="JUnit.mockAssetException">
     <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
       <module name="Electronic Asset Trading Platform" />
@@ -111,6 +111,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="mockAssetException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockAssetException" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mockOrganisationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -122,22 +137,6 @@
       <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
       <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockOrganisationTest.TestGetOrganisationFromEditOrganisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
-      <option name="METHOD_NAME" value="TestGetOrganisationFromEditOrganisation" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockAssetException" />
         <item itemvalue="Application.login" />
         <item itemvalue="Application.NetworkServerGUI" />
         <item itemvalue="JUnit.mockOrganisationTest" />
         <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromGetOrganisation" />
-        <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromEditOrganisation" />
       </list>
     </recent_temporary>
   </component>
