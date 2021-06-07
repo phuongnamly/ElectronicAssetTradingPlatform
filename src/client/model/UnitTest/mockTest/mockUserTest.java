@@ -82,7 +82,7 @@ public class mockUserTest {
 
 //    @Test
 //    void TestGetUserFromDeleteUser() throws UserException, IndexOutOfBoundsException {
-//        User user_set_orig = new User("1","1","admin", "admin", "admin@gmail.com", "987654321", "KG", "admin");
+//        User user_set_orig = new User("1","1","admin", "admin", "admin", "admin@gmail.com", "12345678", "admin");
 ////        User user_set_new = new User("1",null,"admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin");
 ////        User user_expect = new User("1","1","admin", "admin", "admin@gmail.com", "0123456789", "Garden Point", "admin");
 //        userdata.create(user_set_orig);

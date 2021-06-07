@@ -1,5 +1,7 @@
 package client.model.entity;
 
+import client.model.exception.OrganisationException;
+
 import java.io.Serializable;
 
 public class Organisation implements Serializable {
@@ -14,9 +16,15 @@ public class Organisation implements Serializable {
     }
 
     public Organisation(String organisationID, String organisationName, String credits){
-        this.organisationID = organisationID;
-        this.organisationName = organisationName;
-        this.credits = credits;
+//        if (OrganisationException.validate()_
+//        {
+//            this.organisationID = organisationID;
+//            this.organisationName = organisationName;
+//            this.credits = credits;
+//        }
+//        else{
+//
+//        }
     }
 
     /**
