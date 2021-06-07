@@ -2,6 +2,7 @@ package client.model.mockDatabase;
 
 import client.model.entity.Asset;
 import client.model.entity.Asset;
+import client.model.exception.AssetException;
 import client.model.mockInterface.AssetDataSource;
 
 import java.util.ArrayList;
@@ -30,8 +31,9 @@ public class AssetData implements AssetDataSource {
     }
 
     @Override
-    public boolean edit(Asset asset) {
-        try {
+    public boolean edit(Asset asset) throws AssetException {
+        String func = "editID";
+        if (AssetException.validate(func, asset)){
             int assetID = Integer.parseInt(asset.getAssetID())-1;
             Asset prevAsset = assets.get(assetID);
             if (asset.getAssetName() == null){
@@ -42,7 +44,7 @@ public class AssetData implements AssetDataSource {
             }
             assets.set(assetID, asset);
             return true;
-        } catch (Exception e) {
+        } else {
             return false;
         }
     }
