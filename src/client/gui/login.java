@@ -13,23 +13,21 @@ import static utils.hash.Hash.getHashedPassword;
 
 
 public class login extends JFrame{
-    private String currentUsername;
+    private static String currentUsername;
 
     /**
      * @return the username
      */
-    public String getCurrentUsernameUsername() {
+    public static String getCurrentUsernameUsername() {
         return currentUsername;
     }
 
     /**
      * @param username the name to set
      */
-    public void setCurrentUsernameUsername(String username) {
-        this.currentUsername = username;
+    public static void setCurrentUsernameUsername(String username) {
+        currentUsername = username;
     }
-
-
 
     private JTextField usernameTextField;
     private JTextField passwordTextField;
@@ -135,6 +133,11 @@ public class login extends JFrame{
         signIn.addActionListener(listener);
         signUp.addActionListener(listener);
     }
+    private void wrongDetailsClicked(ActionEvent actionEvent){
+        JOptionPane.showMessageDialog(this, "Please enter correct details!", "WARNING",
+                JOptionPane.WARNING_MESSAGE);
+
+    }
 
     public static void main(String[] args){
         SwingUtilities.invokeLater(new Runnable() {
@@ -150,7 +153,7 @@ public class login extends JFrame{
      * @version $Id: Exp $
      *
      */
-    private class ButtonListener implements ActionListener {
+    private class ButtonListener extends Component implements ActionListener {
 
         /**
          * @see ActionListener#actionPerformed(ActionEvent)
@@ -159,6 +162,7 @@ public class login extends JFrame{
             JButton source = (JButton) e.getSource();
 
             if(source == signIn) {
+
                 String username = usernameTextField.getText();
                 String password = passwordTextField.getText();
                 String hashedPassword = getHashedPassword(password);
@@ -168,6 +172,7 @@ public class login extends JFrame{
                     System.out.println("Log in successful");
                     SwingUtilities.invokeLater(new Runnable() {
                         public void run() {
+                            setCurrentUsernameUsername(username);
                             new homePage();
                             dispose();
                         }
@@ -175,7 +180,8 @@ public class login extends JFrame{
 
                 }
                 else{
-
+                    JOptionPane.showMessageDialog(this,"Please ensure you have the correct details," +
+                            "if not, please contact admin", "WARNING", JOptionPane.WARNING_MESSAGE);
                 }
 
             }else if(source == signUp){

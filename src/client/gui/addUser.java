@@ -1,11 +1,21 @@
 package client.gui;
 
+import client.gui.clientData.NetworkDataSource;
+import client.model.entity.Organisation;
+import client.model.entity.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class addUser extends JFrame{
+    NetworkDataSource data;
+
+    String userField;
+    String JFrameTile;
+    String currentUsername;
 
     private JTextArea display;
     JFrame frame;
@@ -13,8 +23,30 @@ public class addUser extends JFrame{
     JButton btnClose;
     JButton btnSave;
 
+//    // JTextFields for User objects
+    private JTextField usernameTextField;
+    private JTextField passwordTextField;
+    private String AccountChoice;
+    private String organisationID;
+    private JTextField emailTextField;
+    private JTextField phoneTextField;
+    private JTextField addressTextField;
+
     public addUser() {
-        frame = new JFrame("Register User");
+
+        // initialize database
+        data = new NetworkDataSource();
+        currentUsername = login.getCurrentUsernameUsername();
+
+        if(currentUsername.isEmpty()){
+            userField = "Register new user";
+            JFrameTile = "Register User";
+        }else{
+            userField = "Change existing details, if a field is left blank, details will not be changed";
+            JFrameTile = "Edit User";
+        }
+
+        frame = new JFrame(JFrameTile);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container contentPane = frame.getContentPane();
@@ -25,7 +57,8 @@ public class addUser extends JFrame{
         JPanel orderTable = new JPanel();
         SpringLayout tpLayout = new SpringLayout();
         orderTable.setLayout(tpLayout);
-        orderTable.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Register new user"),
+
+        orderTable.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder(userField),
                 BorderFactory.createEmptyBorder(5,5,5,5)));
         contentPane.add(orderTable);
         layout.putConstraint(SpringLayout.WEST, orderTable, 10, SpringLayout.WEST, contentPane);
@@ -52,11 +85,11 @@ public class addUser extends JFrame{
 
 
         //PLEASE ENSURE THIS GETS INPUTTED INTO TOP for proper identification. Note to self please declare the JTextField elsewhere for integration purposes
-        JTextField getUserNameText = new JTextField();
-        orderTable.add(getUserNameText);
-        tpLayout.putConstraint(SpringLayout.WEST, getUserNameText, 10, SpringLayout.EAST, getUserName);
-        tpLayout.putConstraint(SpringLayout.EAST, getUserNameText, -10, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getUserNameText, 5, SpringLayout.NORTH, orderTable);
+        usernameTextField  = new JTextField();
+        orderTable.add(usernameTextField);
+        tpLayout.putConstraint(SpringLayout.WEST, usernameTextField, 10, SpringLayout.EAST, getUserName);
+        tpLayout.putConstraint(SpringLayout.EAST, usernameTextField, -10, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, usernameTextField, 5, SpringLayout.NORTH, orderTable);
 
         JLabel getUserPassword = new JLabel("New Password: ");
         orderTable.add(getUserPassword);
@@ -64,11 +97,11 @@ public class addUser extends JFrame{
         tpLayout.putConstraint(SpringLayout.NORTH, getUserPassword, 30, SpringLayout.NORTH, orderTable);
 
 
-        JTextField getUserPasswordText = new JTextField();
-        orderTable.add(getUserPasswordText);
-        tpLayout.putConstraint(SpringLayout.WEST, getUserPasswordText, 10, SpringLayout.EAST, getUserPassword);
-        tpLayout.putConstraint(SpringLayout.EAST, getUserPasswordText, -10, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getUserPasswordText, 30, SpringLayout.NORTH, orderTable);
+        passwordTextField = new JTextField();
+        orderTable.add(passwordTextField);
+        tpLayout.putConstraint(SpringLayout.WEST, passwordTextField, 10, SpringLayout.EAST, getUserPassword);
+        tpLayout.putConstraint(SpringLayout.EAST, passwordTextField, -10, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, passwordTextField, 30, SpringLayout.NORTH, orderTable);
 
 
 
@@ -86,18 +119,25 @@ public class addUser extends JFrame{
         tpLayout.putConstraint(SpringLayout.WEST, getAccountType, 5, SpringLayout.EAST, getAccount);
         tpLayout.putConstraint(SpringLayout.EAST, getAccountType,-10, SpringLayout.EAST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, getAccountType, 50, SpringLayout.NORTH, orderTable);
+        AccountChoice = (String) getAccountType.getSelectedItem();
 
-        JLabel getOrganisation= new JLabel("Account Type: ");
+        JLabel getOrganisation= new JLabel("Organisation: ");
         orderTable.add(getOrganisation);
         tpLayout.putConstraint(SpringLayout.WEST, getOrganisation, 5, SpringLayout.WEST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, getOrganisation, 90, SpringLayout.NORTH, orderTable);
 
         //DROP DOWN PANE (INPUTED OBJECT STRING FOR TESTING PURPOSES) TO BE REMOVED DURING INTEGRATION
         //JComboBox<String> organisationList = new JComboBox<String>();
-        String[] listoforganisations = {"Bolton Clarke", "better2care", "Bluecare",
-                "myPlan Management", "Feros Care", "Anglicare", "NDIA"};
-        JComboBox organisationList = new JComboBox<String>(listoforganisations); //Move Declaration to top
+//        String[] listOfOrganisations = {"Bolton Clarke", "better2care", "Bluecare",
+//                "myPlan Management", "Feros Care", "Anglicare", "NDIA"};
+//        JComboBox organisationList = new JComboBox<String>(listOfOrganisations); //Move Declaration to top
+
+        ArrayList<Organisation> organisations = data.getOrganisations();
+        JComboBox<Organisation> organisationList = new JComboBox<Organisation>(); //Move Declaration to top
+        Organisation organisation1 = organisations.get(1);
+        organisationList.addItem(organisation1);
         orderTable.add(organisationList);
+        
         tpLayout.putConstraint(SpringLayout.WEST, organisationList, 5, SpringLayout.EAST, getOrganisation);
         tpLayout.putConstraint(SpringLayout.EAST, organisationList,-10, SpringLayout.EAST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, organisationList, 90, SpringLayout.NORTH, orderTable);
@@ -107,59 +147,36 @@ public class addUser extends JFrame{
         tpLayout.putConstraint(SpringLayout.WEST, getEmail, 5, SpringLayout.WEST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, getEmail, 130, SpringLayout.NORTH, orderTable);
 
-        JTextField getEmailText = new JTextField(); //Please change declrration
-        orderTable.add(getEmailText);
-        tpLayout.putConstraint(SpringLayout.WEST, getEmailText, 5, SpringLayout.EAST, getEmail);
-        tpLayout.putConstraint(SpringLayout.EAST, getEmailText, -250, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getEmailText, 130, SpringLayout.NORTH, orderTable);
+        emailTextField = new JTextField(); //Please change declrration
+        orderTable.add(emailTextField);
+        tpLayout.putConstraint(SpringLayout.WEST, emailTextField, 5, SpringLayout.EAST, getEmail);
+        tpLayout.putConstraint(SpringLayout.EAST, emailTextField, -250, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, emailTextField, 130, SpringLayout.NORTH, orderTable);
 
         JLabel getPhone = new JLabel("Phone: ");
         orderTable.add(getPhone);
-        tpLayout.putConstraint(SpringLayout.WEST, getPhone, 5, SpringLayout.EAST, getEmailText);
+        tpLayout.putConstraint(SpringLayout.WEST, getPhone, 5, SpringLayout.EAST, emailTextField);
         tpLayout.putConstraint(SpringLayout.NORTH, getPhone, 130, SpringLayout.NORTH, orderTable);
 
-        JTextField getPhoneNumber = new JTextField(); //Please Move Declarataion
-        orderTable.add(getPhoneNumber);
-        tpLayout.putConstraint(SpringLayout.WEST, getPhoneNumber, 5, SpringLayout.EAST, getPhone);
-        tpLayout.putConstraint(SpringLayout.EAST, getPhoneNumber, -10, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getPhoneNumber, 130, SpringLayout.NORTH, orderTable);
+        phoneTextField = new JTextField(); //Please Move Declarataion
+        orderTable.add(phoneTextField);
+        tpLayout.putConstraint(SpringLayout.WEST, phoneTextField, 5, SpringLayout.EAST, getPhone);
+        tpLayout.putConstraint(SpringLayout.EAST, phoneTextField, -10, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, phoneTextField, 130, SpringLayout.NORTH, orderTable);
 
-        JLabel getAddress = new JLabel("Home Address: ");
+        JLabel getAddress = new JLabel("Address: ");
         orderTable.add(getAddress);
         tpLayout.putConstraint(SpringLayout.WEST, getAddress, 5, SpringLayout.WEST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, getAddress, 150, SpringLayout.NORTH, orderTable);
 
-        JTextField getAddressText = new JTextField();
-        orderTable.add(getAddressText);
-        tpLayout.putConstraint(SpringLayout.WEST, getAddressText, 5, SpringLayout.EAST, getAddress);
-        tpLayout.putConstraint(SpringLayout.EAST, getAddressText, -10, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getAddressText, 150, SpringLayout.NORTH, orderTable);
-
-        JLabel getPostcode = new JLabel("Postcode: ");
-        orderTable.add(getPostcode);
-        tpLayout.putConstraint(SpringLayout.WEST, getPostcode, 5, SpringLayout.WEST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getPostcode, 180, SpringLayout.NORTH, orderTable);
-
-        JTextField getPostcodeText= new JTextField(); //Please change declrration
-        orderTable.add(getPostcodeText);
-        tpLayout.putConstraint(SpringLayout.WEST, getPostcodeText, 5, SpringLayout.EAST, getPostcode);
-        tpLayout.putConstraint(SpringLayout.EAST, getPostcodeText, -290, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, getPostcodeText, 180, SpringLayout.NORTH, orderTable);
-
-        JLabel getState = new JLabel("State: ");
-        orderTable.add(getState);
-        tpLayout.putConstraint(SpringLayout.WEST, getState, 5, SpringLayout.EAST, getPostcodeText);
-        tpLayout.putConstraint(SpringLayout.NORTH, getState, 180, SpringLayout.NORTH, orderTable);
-
-        String[] stateList = {"Madripoor", "Sokovia", "Westview", "New Asgard", "Wakanda"};
-        JComboBox stateLister = new JComboBox<String>(stateList); //Move Declaration to top
-        orderTable.add(stateLister);
-        tpLayout.putConstraint(SpringLayout.WEST, stateLister, 5, SpringLayout.EAST, getState);
-        tpLayout.putConstraint(SpringLayout.EAST, stateLister,-10, SpringLayout.EAST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, stateLister, 180, SpringLayout.NORTH, orderTable);
+        addressTextField = new JTextField();
+        orderTable.add(addressTextField);
+        tpLayout.putConstraint(SpringLayout.WEST, addressTextField, 5, SpringLayout.EAST, getAddress);
+        tpLayout.putConstraint(SpringLayout.EAST, addressTextField, -10, SpringLayout.EAST, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, addressTextField, 150, SpringLayout.NORTH, orderTable);
 
        //Button Action Listener
-        addButtonListeners(new addUser.ButtonListener());
+        addButtonListeners(new ButtonListener());
 
         /* show frame */
         frame.pack();
@@ -213,13 +230,14 @@ public class addUser extends JFrame{
             if(source == btnSave) {
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
-                        new login();
-                        dispose();
+                        if(currentUsername.isEmpty()){
+                            new login();
+                        }else{
+                            new homePage();
+                        }
+                        frame.dispose();
                     }
                 });
             }
         }}
-
-
-
 }

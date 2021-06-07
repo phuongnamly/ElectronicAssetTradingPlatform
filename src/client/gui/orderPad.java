@@ -154,8 +154,8 @@ public class orderPad extends JFrame{
                 BorderFactory.createEmptyBorder(5,5,5,5)));
         orderTable.add(orderPanel);
         tpLayout.putConstraint(SpringLayout.WEST,orderPanel, 20, SpringLayout.WEST, orderTable);
-        tpLayout.putConstraint(SpringLayout.NORTH, orderPanel, 20, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.SOUTH, orderPanel, 160, SpringLayout.NORTH, orderTable);
+        tpLayout.putConstraint(SpringLayout.NORTH, orderPanel, 2, SpringLayout.NORTH, orderTable);
+        tpLayout.putConstraint(SpringLayout.SOUTH, orderPanel, 50, SpringLayout.NORTH, orderTable);
         tpLayout.putConstraint(SpringLayout.EAST, orderPanel, 250, SpringLayout.WEST, orderTable);
 
 
@@ -233,18 +233,63 @@ public class orderPad extends JFrame{
 
 
 
+        //JASON CHANGED AREA SOUTH WEST ORDER PAD
+
         // Defining the graph area (South West)
-        JPanel graphPanel= new JPanel();
+        JPanel buyPanel= new JPanel();
         SpringLayout smoLayout = new SpringLayout();
-        graphPanel.setLayout(smoLayout);
-        graphPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Graph/Table"), BorderFactory.createEmptyBorder(5,5,5,5)));
-        orderTable.add(graphPanel);
-        tpLayout.putConstraint(SpringLayout.WEST, graphPanel, 0, SpringLayout.WEST, orderPanel);
-        tpLayout.putConstraint(SpringLayout.EAST, graphPanel, 0, SpringLayout.EAST, orderPanel);
-        tpLayout.putConstraint(SpringLayout.NORTH, graphPanel, 20, SpringLayout.SOUTH, orderPanel);
-        tpLayout.putConstraint(SpringLayout.SOUTH, graphPanel, -10, SpringLayout.SOUTH, orderTable);
+        buyPanel.setLayout(smoLayout);
+        buyPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of Buyers"), BorderFactory.createEmptyBorder(5,5,5,5)));
+        orderTable.add(buyPanel);
+        tpLayout.putConstraint(SpringLayout.WEST, buyPanel, 0, SpringLayout.WEST, orderPanel);
+        tpLayout.putConstraint(SpringLayout.EAST, buyPanel, 0, SpringLayout.EAST, orderPanel);
+        tpLayout.putConstraint(SpringLayout.NORTH, buyPanel, 5, SpringLayout.SOUTH, orderPanel);
+        tpLayout.putConstraint(SpringLayout.SOUTH, buyPanel, -115, SpringLayout.SOUTH, orderTable);
         /* ADD OTHER WIDGETS */
 
+
+        JPanel sellPanel = new JPanel();
+        SpringLayout sellLayout = new SpringLayout();
+        sellPanel.setLayout(sellLayout);
+        sellPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of Sellers"), BorderFactory.createEmptyBorder(5,5,5,5)));
+        orderTable.add(sellPanel);
+        tpLayout.putConstraint(SpringLayout.WEST, sellPanel, 0, SpringLayout.WEST, buyPanel);
+        tpLayout.putConstraint(SpringLayout.EAST, sellPanel, 0, SpringLayout.EAST, buyPanel);
+        tpLayout.putConstraint(SpringLayout.NORTH, sellPanel, 5, SpringLayout.SOUTH, buyPanel);
+        tpLayout.putConstraint(SpringLayout.SOUTH, sellPanel, 5, SpringLayout.SOUTH, orderTable);
+
+        String[] sellHeader = {"Name", "Price", "Quantity", "Type"};
+        String[][] sellOngoing = {
+                {"jshin4113", "12.32", "198", "SELL"},
+                {"thomas", "14.43", "193", "SELL"},
+                {"Nam", "15.23", "9", "SELL"},
+                {"Cimothy", "20", "341", "SELL"},
+                {"Thappell", "24", "5", "SELL"},
+
+        };
+
+        String[] buyHeader = {"Name", "Price", "Quantity", "Type"};
+        String[][] buyOngoing = {
+                {"jshin4113", "12.32", "198", "BUY"},
+                {"thomas", "14.43", "193", "BUY"},
+                {"Nam", "15.23", "9", "BUY"},
+                {"Cimothy", "20", "341", "BUY"},
+                {"Thappell", "24", "5", "BUY"},
+
+        };
+
+
+
+
+
+        JTable sellOrders = new JTable(sellOngoing, sellHeader);
+        JTable buyOrders = new JTable(buyOngoing, buyHeader);
+        JScrollPane sellScroll = new JScrollPane(sellOrders);
+        JScrollPane buyScroll = new JScrollPane(buyOrders);
+        sellScroll.setPreferredSize(new Dimension(210, 85));
+        buyScroll.setPreferredSize(new Dimension(210, 85));
+        sellPanel.add(sellScroll);
+        buyPanel.add(buyScroll);
 
         //Button Action Listener
 

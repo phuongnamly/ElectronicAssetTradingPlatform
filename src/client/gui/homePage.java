@@ -1,6 +1,9 @@
 package client.gui;
 
 
+import client.gui.clientData.NetworkDataSource;
+import client.model.entity.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,20 +11,14 @@ import java.awt.event.ActionListener;
 
 
 public class homePage extends JFrame{
+    NetworkDataSource data;
+    User user;
+    String userField;
 
     private JTextField display;
     private JLabel welcomeText;
 
     JTextArea adviceText; //Changed to JTextField
-
-    String userField;
-
-
-
-
-
-
-
 
     ///Likely create another Java Class for the JButton declarations
     JButton btnHome;
@@ -33,9 +30,12 @@ public class homePage extends JFrame{
 
     JFrame frame;
 
-
     // Creating a constructor for the Homepage Window
     public homePage() {
+        // initialize database
+        data = new NetworkDataSource();
+        String currentUsername = login.getCurrentUsernameUsername();
+        user = data.getUser(currentUsername).get(0);
 
         // Initialising new JFrame instance
         frame = new JFrame("Home");
@@ -62,26 +62,9 @@ public class homePage extends JFrame{
         layout.putConstraint(SpringLayout.SOUTH, homePanel, -50, SpringLayout.SOUTH, contentPane);
         layout.putConstraint(SpringLayout.EAST, homePanel, -10, SpringLayout.EAST, contentPane);
 
-        // Welcome Text Panel
-//        JPanel welcomeTextPane = new JPanel();
-//        SpringLayout welcomeLayout = new SpringLayout();
-//        welcomeTextPane.setLayout(welcomeLayout);
-//        contentPane.add(welcomeTextPane);
-//        welcomeLayout.putConstraint(SpringLayout.WEST, homePanel, 10, SpringLayout.WEST, contentPane);
-//        welcomeLayout.putConstraint(SpringLayout.NORTH, homePanel, 10, SpringLayout.NORTH, contentPane);
-//        welcomeLayout.putConstraint(SpringLayout.SOUTH, homePanel, 10, SpringLayout.SOUTH, contentPane);
-//        welcomeLayout.putConstraint(SpringLayout.EAST, homePanel, 10, SpringLayout.EAST, contentPane);
-//
-
-
-
-
-
         ///////Setting the Homepage Panel to introduce the user and prints out the username in JTextfield
         ///////Gives a small brief introduction to how to navigate the system
-
-
-        userField = "Jeremy Nguyen";
+        userField = user.getUsername();
         welcomeText = new JLabel();
         welcomeText.setText("Welcome back," + " " + userField + "!");
         welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
@@ -238,8 +221,12 @@ public class homePage extends JFrame{
                 });
             }
             else if(source == btnSettings){
-                new addUser();
-                frame.dispose();
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        new addUser();
+                        frame.dispose();
+                    }
+                });
             }
             else if(source == btnEdit){
                 new editAsset();
@@ -254,6 +241,7 @@ public class homePage extends JFrame{
                 frame.dispose();
             }
             else if (source == btnLogOut){
+                login.setCurrentUsernameUsername("");
                 new login();
                 frame.dispose();
             }

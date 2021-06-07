@@ -168,7 +168,7 @@ public class NetworkDataSource {
     }
 
 
-    public User getUser(String name) {
+    public ArrayList<User> getUser(String name) {
         try {
             // tell the server to expect a person's name, and send us back their details
             outputStream.writeObject(Command.GET_USER);
@@ -178,7 +178,7 @@ public class NetworkDataSource {
             outputStream.flush();
 
             // read the person's details back from the server
-            return (User) inputStream.readObject();
+            return (ArrayList<User>) inputStream.readObject();
         } catch (IOException | ClassNotFoundException | ClassCastException e) {
             e.printStackTrace();
             return null;

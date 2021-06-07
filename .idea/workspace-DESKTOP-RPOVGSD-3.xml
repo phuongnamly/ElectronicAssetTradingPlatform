@@ -81,14 +81,14 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\ElectronicAssetTradingPlatform\src\client\gui" />
-      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="server.database" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\ElectronicAssetTradingPlatform\src\client\gui" />
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
@@ -204,30 +204,34 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005910656" />
+    <state x="420" y="242" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1623062420097">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="242" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1623062420097" />
     <state x="421" y="83" key="FileChooserDialogImpl" timestamp="1623005686329">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
-    <state width="1237" height="105" key="GridCell.Tab.0.bottom" timestamp="1623067024018">
+    <state width="1228" height="105" key="GridCell.Tab.0.bottom" timestamp="1623062322121">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="105" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623067024018" />
-    <state width="1237" height="105" key="GridCell.Tab.0.center" timestamp="1623067024017">
+    <state width="1228" height="105" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623062322121" />
+    <state width="1228" height="105" key="GridCell.Tab.0.center" timestamp="1623062322120">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="105" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623067024017" />
-    <state width="1237" height="105" key="GridCell.Tab.0.left" timestamp="1623067024016">
+    <state width="1228" height="105" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623062322120" />
+    <state width="1228" height="105" key="GridCell.Tab.0.left" timestamp="1623062322119">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="105" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623067024016" />
-    <state width="1237" height="105" key="GridCell.Tab.0.right" timestamp="1623067024017">
+    <state width="1228" height="105" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623062322119" />
+    <state width="1228" height="105" key="GridCell.Tab.0.right" timestamp="1623062322120">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="105" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623067024017" />
+    <state width="1228" height="105" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623062322120" />
     <state x="110" y="100" width="743" height="666" key="dock-window-1" timestamp="1623002289199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
