@@ -19,10 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="- Add black box exception for Asset - Thomas">
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="- Fix minor compatibility error with Asset Exception - Thomas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockListingException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockListingException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockOrganisationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockOrganisationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/ListingException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/ListingException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/OrganisationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/OrganisationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/ListingData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/ListingData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/ListingDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/ListingDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockListingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockListingException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockOrganisationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockOrganisationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/ListingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/ListingException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/model/exception/OrganisationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/OrganisationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/UserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/ListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/ListingDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,48 +85,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockAssetTest">
-    <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.gui.login" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockAssetException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockAssetException" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.mockListingTest">
     <configuration name="mockAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -130,7 +101,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockOrganisationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockListingException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockListingException" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockListingException.TestNonIntegerPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockListingException" />
+      <option name="METHOD_NAME" value="TestNonIntegerPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockListingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockOrganisationException.TestNonIntegerCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
@@ -140,18 +157,19 @@
       </extension>
       <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
       <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockOrganisationException" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="TestNonIntegerCredit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockListingTest" />
+        <item itemvalue="JUnit.mockListingException" />
+        <item itemvalue="JUnit.mockListingException.TestNonIntegerPrice" />
+        <item itemvalue="JUnit.mockOrganisationException.TestNonIntegerCredit" />
         <item itemvalue="JUnit.mockAssetTest" />
-        <item itemvalue="JUnit.mockAssetException" />
-        <item itemvalue="JUnit.mockOrganisationException" />
-        <item itemvalue="Application.login" />
-        <item itemvalue="Application.NetworkServerGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623073518840</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Fix minor compatibility error with Asset Exception - Thomas">
+      <created>1623073741173</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623073741173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +224,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Add, fix and update editAsset.java" />
     <MESSAGE value="- Add black box exception for Asset - Thomas" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add black box exception for Asset - Thomas" />
+    <MESSAGE value="- Fix minor compatibility error with Asset Exception - Thomas" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fix minor compatibility error with Asset Exception - Thomas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -218,11 +244,6 @@
           <url>file://$PROJECT_DIR$/src/client/gui/clientData/NetworkDataSource.java</url>
           <line>180</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/model/mockDatabase/OrganisationData.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

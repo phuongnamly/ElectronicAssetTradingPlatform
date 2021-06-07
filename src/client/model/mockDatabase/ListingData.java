@@ -3,6 +3,8 @@ package client.model.mockDatabase;
 import client.model.entity.Listing;
 //import client.model.entity.User;
 import client.model.entity.User;
+import client.model.exception.ListingException;
+import client.model.exception.OrganisationException;
 import client.model.mockInterface.ListingDataSource;
 
 import java.util.ArrayList;
@@ -16,21 +18,23 @@ public class ListingData implements ListingDataSource {
         id = 0;
     }
     @Override
-    public boolean create(Listing listing) {
-        try {
+    public boolean create(Listing listing) throws ListingException {
+        String func = "create";
+        if (ListingException.validate(func, listing)){
             id++;
             listing.setUserID(Integer.toString(id));
             listings.add(listing);
 
             return true;
-        } catch (Exception e) {
+        } else {
             return false;
         }
     }
 
     @Override
-    public boolean edit(Listing listing) {
-        try {
+    public boolean edit(Listing listing) throws ListingException {
+        String func = "editID";
+        if (ListingException.validate(func, listing)){
             int listingID = Integer.parseInt(listing.getListingID())-1;
             Listing prevListing = listings.get(listingID);
 //            if (listing.getCurrentTrade() == null){
@@ -59,7 +63,7 @@ public class ListingData implements ListingDataSource {
             }
             listings.set(listingID, listing);
             return true;
-        } catch (Exception e) {
+        } else{
             return false;
         }
     }
