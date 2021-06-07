@@ -338,28 +338,6 @@ public class orderPad extends JFrame{
         JButton btn = ((JButton) actionEvent.getSource());
         display.setText(btn.getText().trim());
     }
-
-//    private void assetSelectClick (ActionEvent actionEvent) {
-//        Object[] assetValuesList = {"StarkCoin", "Bitconnect", "Dogecoin REEE", "NamCoin", "ThomasDollar", "SelwynPound", "Jasonuro"};
-//        String initAsset = "Jasonuro";
-//        Object SelectedAsset = JOptionPane.showInputDialog(this, "Select Asset to Edit",
-//                "Editing Details", JOptionPane.QUESTION_MESSAGE, null, assetValuesList, initAsset);
-//
-//        JTextField editingName = new JTextField(10);
-//        editingName = newDisplay();
-//        editingName.setText(SelectedAsset.toString());
-//        JTextField editingStartPrice = new JTextField(10);
-//
-//        JPanel editBoxPanel = new JPanel();
-//        editBoxPanel.add(new JLabel("Edit Name:"));
-//        editBoxPanel.add(editingName);
-//        editBoxPanel.add(Box.createVerticalStrut(15)); // a spacer
-//        editBoxPanel.add(new JLabel("Edit Start Price:"));
-//        editBoxPanel.add(editingStartPrice);
-//        JOptionPane.showConfirmDialog(this, editBoxPanel, "Please Edit Details", JOptionPane.OK_CANCEL_OPTION);
-//    }
-
-
     private JTextField newDisplay() {
 
         display = new JTextField();
