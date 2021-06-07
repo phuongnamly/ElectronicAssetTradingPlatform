@@ -38,6 +38,7 @@ public class JBDCListingDataSource implements ListingDataSource {
 
     private static final String DELETE_ALL_LISTINGS = "DELETE FROM listing";
 
+    private static final String GET_ALL_LISTINGS_BASED_ON_CURRENT = "SELECT * FROM listing WHERE current_trade=?";
 
 //    write many additional methods
 //    private static final String GET_ALL_LISTINGS = "SELECT * FROM WHERE current_trade=?";
@@ -54,6 +55,8 @@ public class JBDCListingDataSource implements ListingDataSource {
 
     private PreparedStatement getAll;
 
+    private PreparedStatement getAllCurrent;
+
     private PreparedStatement deleteAll;
 
 
@@ -69,6 +72,7 @@ public class JBDCListingDataSource implements ListingDataSource {
             get = connection.prepareStatement(GET_LISTING);
             getAll = connection.prepareStatement(GET_ALL_LISTINGS);
             deleteAll = connection.prepareStatement(DELETE_ALL_LISTINGS);
+            getAllCurrent = connection.prepareStatement(GET_ALL_LISTINGS_BASED_ON_CURRENT);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

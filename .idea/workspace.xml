@@ -20,57 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace-LAB-KGB320-21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/GenerateDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buttonListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/editAsset.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderPad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2$ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup4$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/Mockup4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/Mockup2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/Mockup2$ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/Mockup2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/OrderPad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockUserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCListingDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCListingDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCUserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCUserDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/Mockup2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/OrderPad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/addUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/buttonListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/editAsset.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/homePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/orderHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/clientData/NetworkDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/homePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/homePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/UserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/testDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/GenerateDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,12 +91,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.gui.login" />
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.gui.*" />
+          <option name="PATTERN" value="client.gui.clientData.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -179,29 +148,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockUserTest.TestGetUserFromGetUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockUserTest" />
-      <option name="METHOD_NAME" value="TestGetUserFromGetUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.login" />
+        <item itemvalue="Application.NetworkServerGUI" />
         <item itemvalue="Application.GenerateDatabase" />
         <item itemvalue="JUnit.mockUserTest" />
         <item itemvalue="JUnit.mockUserTest.TestBooleanCreateUser" />
-        <item itemvalue="JUnit.mockUserTest.TestGetUserFromGetUser" />
       </list>
     </recent_temporary>
   </component>
@@ -240,26 +193,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
-    <state width="1237" height="40" key="GridCell.Tab.0.bottom" timestamp="1623010742072">
+    <state width="1237" height="95" key="GridCell.Tab.0.bottom" timestamp="1623044895734">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="40" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742072" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622964784240" />
-    <state width="1237" height="40" key="GridCell.Tab.0.center" timestamp="1623010742071">
+    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
+    <state width="1237" height="95" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623044895734" />
+    <state width="1237" height="95" key="GridCell.Tab.0.center" timestamp="1623044895733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="40" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742071" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
-    <state width="1237" height="40" key="GridCell.Tab.0.left" timestamp="1623010742071">
+    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
+    <state width="1237" height="95" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623044895733" />
+    <state width="1237" height="95" key="GridCell.Tab.0.left" timestamp="1623044895731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="40" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742071" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
-    <state width="1237" height="40" key="GridCell.Tab.0.right" timestamp="1623010742071">
+    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
+    <state width="1237" height="95" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623044895731" />
+    <state width="1237" height="95" key="GridCell.Tab.0.right" timestamp="1623044895733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="40" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623010742071" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622964784239" />
+    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
+    <state width="1237" height="95" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623044895733" />
     <state x="110" y="100" width="743" height="666" key="dock-window-1" timestamp="1623002289199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -268,8 +221,26 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623003940446" />
+    <state x="451" y="62" width="587" height="618" key="find.popup" timestamp="1623039828359">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="451" y="62" width="587" height="618" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1623039828359" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java</url>
+          <line>184</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="organisations.get(0)" />

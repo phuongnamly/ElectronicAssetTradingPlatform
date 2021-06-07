@@ -1,5 +1,7 @@
 package client.gui;
 
+import client.gui.clientData.NetworkDataSource;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,16 +13,36 @@ import static utils.hash.Hash.getHashedPassword;
 
 
 public class login extends JFrame{
+    private String currentUsername;
+
+    /**
+     * @return the username
+     */
+    public String getCurrentUsernameUsername() {
+        return currentUsername;
+    }
+
+    /**
+     * @param username the name to set
+     */
+    public void setCurrentUsernameUsername(String username) {
+        this.currentUsername = username;
+    }
+
+
+
     private JTextField usernameTextField;
     private JTextField passwordTextField;
     JButton signIn;
     JButton signUp;
-//
-//    NetworkDataSource data;
+
+    NetworkDataSource data;
 
     public login (){
         super("Homepage Trading App");
 
+        currentUsername = "";
+        // if(str != null && !str.isEmpty())
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(500, 500));
         setBackground(Color.LIGHT_GRAY);
@@ -96,8 +118,8 @@ public class login extends JFrame{
 
         setVisible(true);
 
-        // initialize database
-//        data = new NetworkDataSource();
+//         initialize database
+        data = new NetworkDataSource();
     }
 
     private void signinButtonClick(ActionEvent actionEvent){
@@ -137,28 +159,25 @@ public class login extends JFrame{
             JButton source = (JButton) e.getSource();
 
             if(source == signIn) {
-                SwingUtilities.invokeLater(new Runnable() {
-                    public void run() {
-                        new homePage();
-                        dispose();
-                    }
-                });
+                String username = usernameTextField.getText();
+                String password = passwordTextField.getText();
+                String hashedPassword = getHashedPassword(password);
 
-//
-//                String username = usernameTextField.getText();
-//                String password = passwordTextField.getText();
-//                String hashedPassword = getHashedPassword(password);
-//
-//                if(data.login(username, hashedPassword)){
-//                    // go to home page here
-//
-//                    System.out.println("Log in successful");
-//                     new homePage();
-//                     dispose();
-//                }
-//                else{
-//
-//                }
+                if(data.login(username, hashedPassword)){
+                    // go to home page here
+                    System.out.println("Log in successful");
+                    SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            new homePage();
+                            dispose();
+                        }
+                    });
+
+                }
+                else{
+
+                }
+
             }else if(source == signUp){
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {

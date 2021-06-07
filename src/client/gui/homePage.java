@@ -217,8 +217,7 @@ public class homePage extends JFrame{
         btnOrderPad.addActionListener(listener);
         btnEdit.addActionListener(listener);
         btnSettings.addActionListener(listener);
-        //logout.addActionListener(listener);
-
+        btnLogOut.addActionListener(listener);
     }
 
     private class ButtonListener implements ActionListener {
@@ -252,6 +251,10 @@ public class homePage extends JFrame{
             }
             else if (source == btnOrderHistory){
                 new orderHistory();
+                frame.dispose();
+            }
+            else if (source == btnLogOut){
+                new login();
                 frame.dispose();
             }
         }}

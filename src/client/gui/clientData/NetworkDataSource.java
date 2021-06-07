@@ -1,4 +1,4 @@
-package client.gui;
+package client.gui.clientData;
 
 import client.model.entity.Asset;
 import client.model.entity.User;

@@ -146,7 +146,7 @@ public class User implements Comparable<User>, Serializable {
     * @param address the address to set
     */
    public void setAddress(String address) {
-      this.password = address;
+      this.address = address;
    }
 
    /**
