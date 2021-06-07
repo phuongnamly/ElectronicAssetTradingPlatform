@@ -15,7 +15,7 @@ public class UserException extends Exception{
         switch(func) {
             case("create"):{
                 /*Test out of range/ non integer phone number*/
-                if (TryParseInt(user.getPhoneNum()) != null){
+                if (user.getPhoneNum()==null || TryParseInt(user.getPhoneNum()) != null){
                     success = true;
                 }
                 else{

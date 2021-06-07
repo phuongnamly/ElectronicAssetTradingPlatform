@@ -24,7 +24,7 @@ public class mockOrganisationException {
     @Test
     void TestNonIntegerCredit() throws OrganisationException {
         Assertions.assertThrows(OrganisationException.class, () -> {
-            organisationdata.create(new Organisation("1","Tesla","true"));
+            organisationdata.create(new Organisation("1","Tesla","Hello"));
         });
     }
 

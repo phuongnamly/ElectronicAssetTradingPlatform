@@ -15,7 +15,7 @@ public class OrganisationException extends Exception{
         switch(func) {
             case("create"):{
                 /*Test out of range/ non integer Credit*/
-                if (TryParseInt(organisation.getCredits()) != null){
+                if (organisation.getCredits()==null || TryParseInt(organisation.getCredits()) != null){
                     success = true;
                 }
                 else{
