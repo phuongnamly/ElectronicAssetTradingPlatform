@@ -3,12 +3,15 @@ package client.gui;
 import client.gui.clientData.NetworkDataSource;
 import client.model.entity.Organisation;
 import client.model.entity.User;
+import client.model.exception.UserException;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+
+import static utils.hash.Hash.getHashedPassword;
 
 public class addUser extends JFrame{
     NetworkDataSource data;
@@ -26,8 +29,8 @@ public class addUser extends JFrame{
 //    // JTextFields for User objects
     private JTextField usernameTextField;
     private JTextField passwordTextField;
-    private String AccountChoice;
-    private String organisationID;
+    private String accountTypeText;
+    private String organisationIDText;
     private JTextField emailTextField;
     private JTextField phoneTextField;
     private JTextField addressTextField;
@@ -119,7 +122,7 @@ public class addUser extends JFrame{
         tpLayout.putConstraint(SpringLayout.WEST, getAccountType, 5, SpringLayout.EAST, getAccount);
         tpLayout.putConstraint(SpringLayout.EAST, getAccountType,-10, SpringLayout.EAST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, getAccountType, 50, SpringLayout.NORTH, orderTable);
-        AccountChoice = (String) getAccountType.getSelectedItem();
+        accountTypeText = (String) getAccountType.getSelectedItem();
 
         JLabel getOrganisation= new JLabel("Organisation: ");
         orderTable.add(getOrganisation);
@@ -137,6 +140,8 @@ public class addUser extends JFrame{
         Organisation organisation1 = organisations.get(1);
         organisationList.addItem(organisation1);
         orderTable.add(organisationList);
+        Organisation selectedOrganisation = (Organisation) organisationList.getSelectedItem();
+        organisationIDText = selectedOrganisation.getOrganisationID();
         
         tpLayout.putConstraint(SpringLayout.WEST, organisationList, 5, SpringLayout.EAST, getOrganisation);
         tpLayout.putConstraint(SpringLayout.EAST, organisationList,-10, SpringLayout.EAST, orderTable);
@@ -231,6 +236,11 @@ public class addUser extends JFrame{
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         if(currentUsername.isEmpty()){
+                            try {
+                                data.addUser(new User("", organisationIDText,usernameTextField.getText(), getHashedPassword(passwordTextField.getText()), accountTypeText,emailTextField.getText(), phoneTextField.getText(), addressTextField.getText()));
+                            } catch (UserException userException) {
+                                userException.printStackTrace();
+                            }
                             new login();
                         }else{
                             new homePage();
