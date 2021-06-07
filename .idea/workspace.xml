@@ -21,7 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/addUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/addUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockAssetException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockAssetException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/AssetException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/AssetException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/AssetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/AssetData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/AssetDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/AssetDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/AssetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/AssetException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/AssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/AssetDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +79,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.login">
+  <component name="RunManager" selected="JUnit.mockAssetTest">
     <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
       <module name="Electronic Asset Trading Platform" />
@@ -99,22 +106,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockOrganisationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockAssetException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockAssetException" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockOrganisationTest.TestGetOrganisationFromEditOrganisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
@@ -123,40 +130,38 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
-      <option name="METHOD_NAME" value="TestGetOrganisationFromEditOrganisation" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockAssetTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockOrganisationTest.TestGetOrganisationFromGetOrganisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockOrganisationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockOrganisationTest" />
-      <option name="METHOD_NAME" value="TestGetOrganisationFromGetOrganisation" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockOrganisationException" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockAssetTest" />
+        <item itemvalue="JUnit.mockAssetException" />
+        <item itemvalue="JUnit.mockOrganisationException" />
         <item itemvalue="Application.login" />
         <item itemvalue="Application.NetworkServerGUI" />
-        <item itemvalue="JUnit.mockOrganisationTest" />
-        <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromGetOrganisation" />
-        <item itemvalue="JUnit.mockOrganisationTest.TestGetOrganisationFromEditOrganisation" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -168,6 +173,14 @@
       <option name="presentableId" value="Default" />
       <updated>1622552900130</updated>
     </task>
+    <task id="LOCAL-00001" summary="- Add, fix and update editAsset.java">
+      <created>1623070447632</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623070447632</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,47 +195,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1623005910656">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005910656" />
-    <state x="421" y="83" key="FileChooserDialogImpl" timestamp="1623005686329">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1623069380138">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623069380138" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1623069380137">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623069380137" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1623069380137">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623069380137" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1623069380137">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623069380137" />
-    <state x="110" y="100" width="743" height="666" key="dock-window-1" timestamp="1623002289199">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="110" y="100" width="743" height="666" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623002289199" />
-    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2" timestamp="1623003940446">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623003940446" />
-    <state x="451" y="62" width="587" height="618" key="find.popup" timestamp="1623039828359">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="451" y="62" width="587" height="618" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1623039828359" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- Add, fix and update editAsset.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add, fix and update editAsset.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
