@@ -50,14 +50,14 @@ public class mockOrganisationTest {
     @Test
     void TestBooleanOrganisationFromEditOrganisation() throws OrganisationException{
         organisationdata.create(new Organisation("1","Thomas Company", "100000"));
-        assertTrue(organisationdata.edit(new Organisation("1","Thomas Company 2 ", null)));
+        assertTrue(organisationdata.edit(new Organisation("1","Thomas Company 2 ", "20000")));
     }
 
     @Test
     void TestGetOrganisationFromEditOrganisation() throws OrganisationException {
         Organisation organisation_set_orig = new Organisation("1","Thomas Company", "100000");
-        Organisation organisation_set_new = new Organisation("1","Thomas Company 2 ", null);
-        Organisation organisation_expect = new Organisation("1","Thomas Company 2 ", "100000");
+        Organisation organisation_set_new = new Organisation("1","Thomas Company 2 ", "20000");
+        Organisation organisation_expect = new Organisation("1","Thomas Company 2 ", "20000");
         organisationdata.create(organisation_set_orig);
         organisationdata.edit(organisation_set_new);
         ArrayList<Organisation> organisation_get = organisationdata.get("1");

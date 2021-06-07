@@ -16,15 +16,9 @@ public class Organisation implements Serializable {
     }
 
     public Organisation(String organisationID, String organisationName, String credits){
-//        if (OrganisationException.validate()_
-//        {
-//            this.organisationID = organisationID;
-//            this.organisationName = organisationName;
-//            this.credits = credits;
-//        }
-//        else{
-//
-//        }
+        this.organisationID = organisationID;
+        this.organisationName = organisationName;
+        this.credits = credits;
     }
 
     /**
