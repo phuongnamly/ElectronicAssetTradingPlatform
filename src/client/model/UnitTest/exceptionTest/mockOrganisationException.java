@@ -1,7 +1,6 @@
 package client.model.UnitTest.exceptionTest;
 
 import client.model.entity.Organisation;
-import client.model.entity.User;
 import client.model.exception.OrganisationException;
 import client.model.mockDatabase.OrganisationData;
 import org.junit.jupiter.api.AfterEach;

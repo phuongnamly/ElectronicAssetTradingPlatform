@@ -19,16 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="- Add black box exception for Asset - Thomas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockAssetException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockAssetException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/AssetException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/AssetException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/AssetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/AssetData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/AssetDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/AssetDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/AssetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/AssetException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/AssetDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/AssetDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockOrganisationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockOrganisationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/OrganisationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/OrganisationException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623070447632</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- Add black box exception for Asset - Thomas">
+      <created>1623073518840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623073518840</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +198,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Add, fix and update editAsset.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add, fix and update editAsset.java" />
+    <MESSAGE value="- Add black box exception for Asset - Thomas" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add black box exception for Asset - Thomas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

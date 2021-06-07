@@ -1,7 +1,7 @@
 package client.model.exception;
 
 import client.model.entity.Organisation;
-import com.sun.org.apache.xpath.internal.operations.Or;
+//import com.sun.org.apache.xpath.internal.operations.Or;
 
 import static utils.tryParse.TryParse.TryParseInt;
 
