@@ -14,6 +14,9 @@ import java.util.ArrayList;
 
 import static utils.hash.Hash.getHashedPassword;
 
+/**
+ * This class is for adding User
+ * */
 public class addUser extends JFrame{
     NetworkDataSource data;
     User user;

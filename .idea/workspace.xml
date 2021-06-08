@@ -20,55 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/client/model/entity/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCInventoryDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockInventoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/InventoryData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/clientData/NetworkDataSource$Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/clientData/NetworkDataSource$Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/clientData/NetworkDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/clientData/NetworkDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockAssetException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/exceptionTest/mockAssetException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockAssetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockAssetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockListingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockListingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockOrganisationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockOrganisationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/UnitTest/mockTest/mockUserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Asset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Asset.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Listing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Listing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Organisation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/Organisation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/ListingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/UserException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/AssetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/AssetData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/ListingData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/ListingData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCListingDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCUserDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCUserDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/GenerateDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/testDatabase/GenerateDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/addUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/addUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/clientData/NetworkDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/clientData/NetworkDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockAssetException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockListingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockListingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockAssetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockAssetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockListingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockOrganisationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockOrganisationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Listing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/ListingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/ListingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/UserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/AssetData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/ListingData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCListingDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/testDatabase/GenerateDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/testDatabase/GenerateDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,33 +84,7 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockListingTest">
-    <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.gui.login" />
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.mockInventoryTest">
     <configuration name="mockAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -158,6 +96,37 @@
       <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
       <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockAssetTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockInventoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockInventoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mockInventoryTest.TestGetInventoryFromGetInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockInventoryTest" />
+      <option name="METHOD_NAME" value="TestGetInventoryFromGetInventory" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,15 +163,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockInventoryTest" />
+        <item itemvalue="JUnit.mockInventoryTest.TestGetInventoryFromGetInventory" />
         <item itemvalue="JUnit.mockListingTest" />
         <item itemvalue="JUnit.mockListingException" />
         <item itemvalue="JUnit.mockAssetTest" />
-        <item itemvalue="Application.login" />
-        <item itemvalue="Application.NetworkServerGUI" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -228,72 +197,12 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1623122675807">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005910656" />
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1623122675807" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623123960231">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1623123960231" />
-    <state x="421" y="83" key="FileChooserDialogImpl" timestamp="1623005686329">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
-    <state width="1237" height="83" key="GridCell.Tab.0.bottom" timestamp="1623124059496">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="83" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623124059496" />
-    <state width="1237" height="83" key="GridCell.Tab.0.center" timestamp="1623124059496">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="83" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623124059496" />
-    <state width="1237" height="83" key="GridCell.Tab.0.left" timestamp="1623124059496">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="83" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623124059496" />
-    <state width="1237" height="83" key="GridCell.Tab.0.right" timestamp="1623124059496">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="83" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623124059496" />
-    <state x="121" y="51" key="MergeDialog" timestamp="1623076861608">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="121" y="51" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1623076861608" />
-    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1623076864856">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1623076864856" />
-    <state x="110" y="100" width="743" height="666" key="dock-window-1" timestamp="1623002289199">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="110" y="100" width="743" height="666" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623002289199" />
-    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2" timestamp="1623003940446">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623003940446" />
-    <state x="451" y="62" width="587" height="618" key="find.popup" timestamp="1623039828359">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="451" y="62" width="587" height="618" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1623039828359" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/server/database/schema/JBDCUserDataSource.java</url>
-          <line>249</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/client/gui/addUser.java</url>
-          <line>128</line>
+          <line>131</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
