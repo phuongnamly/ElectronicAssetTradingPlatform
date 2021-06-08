@@ -1,18 +1,22 @@
 package client.gui;
 
-
 import client.gui.clientData.NetworkDataSource;
+import client.model.entity.Inventory;
+import client.model.entity.Organisation;
 import client.model.entity.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 
 public class homePage extends JFrame{
     NetworkDataSource data;
     User user;
+    Organisation organisation;
+    ArrayList<Inventory> inventoryList;
     String userField;
 
     private JTextField display;
@@ -36,6 +40,9 @@ public class homePage extends JFrame{
         data = new NetworkDataSource();
         String currentUsername = login.getCurrentUsernameUsername();
         user = data.getUser(currentUsername).get(0);
+//        organisation = data.getOrganisation(user.getOrganisationID()).get(0);
+//        inventoryList = data.getInventoriesbyOrganisationId(user.getOrganisationID());
+
 
         // Initialising new JFrame instance
         frame = new JFrame("Home");
@@ -66,57 +73,10 @@ public class homePage extends JFrame{
         ///////Gives a small brief introduction to how to navigate the system
         userField = user.getUsername();
         welcomeText = new JLabel();
-        welcomeText.setText("Welcome back," + " " + userField + "!");
+        welcomeText.setText("Welcome back," + " " + userField);
         welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
         homePanel.add(welcomeText);
         tpLayout.putConstraint(SpringLayout.NORTH, welcomeText, 5, SpringLayout.NORTH, homePanel);
-
-
-
-        adviceText = new JTextArea();
-        homePanel.add(adviceText);
-
-        adviceText.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-        adviceText.setText("Hello There. Welcome to our Electronic Asset Trading Platform!                              " +
-                "If you are new to this, please don't be afraid, we have some info for you see!" +
-                "                                                                              " +
-                "                                                            " +
-                "1. To place an order, please click on the 'Order' button in the Main panel. Once arrived, " +
-                "please choose the asset you wish to trade, select either BUY/SELL and input your price" +
-                " into 'Limit', which is the price you wish to purchase or sell the asset at." +
-                "                                                                         " +
-                "                                                                         " +
-                "2. Click review to process. NOTE: Order may not go thru immediately" +
-                "                                                                         " +
-                "                                                                         " +
-
-                "3. To view, edit and see the history of orders, head to 'Order History'. " +
-                "Find ones you wish to view. " +
-                "ADMIN ONLY given special access to edit and update asset in 'Edit'.      HAPPY HUNTING!"
-        );
-        adviceText.setEditable(false);
-        adviceText.setLineWrap(true);
-        adviceText.setColumns(45);
-        adviceText.setRows(12);
-        adviceText.setWrapStyleWord(true);
-
-        tpLayout.putConstraint(SpringLayout.NORTH, adviceText, 40, SpringLayout.NORTH, welcomeText);
-//        tpLayout.putConstraint(SpringLayout.EAST, adviceText, 1, SpringLayout.EAST, homePanel);
-//        tpLayout.putConstraint(SpringLayout.WEST, adviceText, 5, SpringLayout.WEST, homePanel);
-//        tpLayout.putConstraint(SpringLayout.SOUTH, adviceText, -30, SpringLayout.SOUTH, homePanel);
-
-
-        //tpLayout.putConstraint(SpringLayout.WEST, adviceText, 5, SpringLayout.WEST, homePanel);
-
-
-
-
-
-
-
-
-
-
 
         // Creating Navigation Panel
         JPanel navPane = new JPanel();
@@ -166,6 +126,35 @@ public class homePage extends JFrame{
         mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, navPane);
         mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, navPane);
 
+        // where to show organisation credit and assets
+        //JPanel for the order view Table and to edit
+        JPanel orderListPanel = new JPanel();
+        SpringLayout listLayout = new SpringLayout();
+        orderListPanel.setLayout(listLayout);
+        orderListPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of orders"),
+                BorderFactory.createEmptyBorder(5,5,5,5)));
+        homePanel.add(orderListPanel);
+
+        tpLayout.putConstraint(SpringLayout.WEST, orderListPanel, 2, SpringLayout.WEST, homePanel);
+        tpLayout.putConstraint(SpringLayout.NORTH, orderListPanel, 120, SpringLayout.NORTH, homePanel);
+        tpLayout.putConstraint(SpringLayout.SOUTH, orderListPanel, -10, SpringLayout.SOUTH, homePanel);
+        tpLayout.putConstraint(SpringLayout.EAST, orderListPanel, -2, SpringLayout.EAST, homePanel);
+
+
+
+        //NOTE STRING VIEWORDER TO BE REPLACED DURING INTEGRATION, TEMP replacement to test JTable/ScrollPane
+        String[] header = {"Asset Name", "Asset Type","Quantity"};
+        String[][] viewOrder = {{"jshin4113", "jasonDollar","BUY"},
+                {"ASAF","SelwynPound", "SELL"},
+                {"ASAF","SelwynPound", "SELL"},
+        };
+
+
+        JTable listOrders = new JTable(viewOrder, header);
+        JScrollPane scrollOrder = new JScrollPane(listOrders);
+        scrollOrder.setPreferredSize(new Dimension(480, 130));
+
+        orderListPanel.add(scrollOrder);
         // Compile frame
         frame.pack();
         frame.setSize(550,475);

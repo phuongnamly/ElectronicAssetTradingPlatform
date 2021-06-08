@@ -20,10 +20,10 @@ public class JBDCListingDataSource implements ListingDataSource {
                     "  `date` DATETIME,\n" +
                     "  PRIMARY KEY (`listing_id`),\n" +
                     "  FOREIGN KEY (`inventory_id`) REFERENCES `inventory`(`inventory_id`),\n" +
-                    "  FOREIGN KEY (user_id) REFERENCES user(user_id),\n" +
+                    "  FOREIGN KEY (user_id) REFERENCES user(user_id)\n" +
                     ");";
 
-    private static final String CREATE_LISTING = "REPLACE INTO listing (inventory_id, user_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    private static final String CREATE_LISTING = "REPLACE INTO listing (inventory_id, user_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
     private static final String EDIT_LISTING = "UPDATE listing SET current_trade = ?, trade_type = ?, quantity = ?, price = ?, date = ? WHERE listing_id = ?";
 

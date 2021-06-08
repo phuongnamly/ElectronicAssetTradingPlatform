@@ -5,10 +5,7 @@ import client.model.entity.Asset;
 import client.model.entity.Inventory;
 import client.model.entity.Organisation;
 import client.model.entity.User;
-import server.database.schema.JBDCAssetDataSource;
-import server.database.schema.JBDCListingDataSource;
-import server.database.schema.JBDCOrganisationDataSource;
-import server.database.schema.JBDCUserDataSource;
+import server.database.schema.*;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -38,6 +35,7 @@ public class Server {
      */
     private JBDCAssetDataSource assetDatabase;
     private JBDCListingDataSource listingDatabase;
+    private JBDCInventoryDataSource inventoryDatabase;
     private JBDCOrganisationDataSource organisationDatabase;
     private JBDCUserDataSource userDatabase;
 
@@ -282,6 +280,25 @@ public class Server {
             }
             break;
 
+            case GET_ORGANISATION:{
+                final String organisation_id = (String) inputStream.readObject();
+
+                synchronized (organisationDatabase) {
+                    // synchronize both the get as well as the send, that way
+                    // we don't send a half updated person
+                    final ArrayList<Organisation> organisations = organisationDatabase.get(organisation_id);
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(organisations);
+
+                    if (organisations != null)
+                        System.out.println(String.format("Sent the organisation to client %s",
+                                socket.toString()));
+                }
+                outputStream.flush();
+            }
+            break;
+
             case GET_ORGANISATIONS:{
                 synchronized (organisationDatabase) {
                     // synchronize both the get as well as the send, that way
@@ -331,6 +348,23 @@ public class Server {
                 outputStream.flush();
             }
 
+            case GET_INVENTORIES_BY_ORGANISATION_ID:{
+                final String organisation_id = (String) inputStream.readObject();
+
+                synchronized (inventoryDatabase) {
+                    // synchronize both the get as well as the send, that way
+                    // we don't send a half updated person
+                    final ArrayList<Inventory> inventories = inventoryDatabase.getAllbyOrganisationID(organisation_id);
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(inventories);
+
+                    if (inventories != null)
+                        System.out.println(String.format("Sent all inventories to client %s",
+                                socket.toString()));
+                }
+                outputStream.flush();
+            }
         }
     }
 
