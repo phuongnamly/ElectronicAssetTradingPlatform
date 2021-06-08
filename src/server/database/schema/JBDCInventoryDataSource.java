@@ -15,7 +15,7 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
                     "  `organisation_id` INTEGER,\n" +
                     "  `asset_id` INTEGER,\n" +
                     "  `quantity` INTEGER,\n" +
-                    "  PRIMARY KEY (`inventory_id`)\n" +
+                    "  PRIMARY KEY (`inventory_id`),\n" +
                     "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`),\n" +
                     "  FOREIGN KEY (`asset_id`) REFERENCES `asset`(`asset_id`)\n" +
                     ");";
@@ -30,7 +30,11 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
 
     private static final String GET_ALL = "SELECT * FROM inventory";
 
+    private static final String GET_ALL_BY_ORGANISATION_ID = "SELECT * FROM inventory WHERE organisation_id=?";
+
     private static final String DELETE_ALL = "DELETE FROM inventory";
+
+    private static final String GET_ASSET_NAME = "SELECT * FROM inventory INNER JOIN asset ON inventory.asset_id = asset.asset_id";
 
     private Connection connection;
 
@@ -43,6 +47,10 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
     private PreparedStatement get;
 
     private PreparedStatement getAll;
+
+    private PreparedStatement getAllByOrganisationID;
+
+    private PreparedStatement getAssetName;
 
     private PreparedStatement deleteAll;
 
@@ -57,7 +65,9 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
             delete = connection.prepareStatement(DELETE);
             get = connection.prepareStatement(GET);
             getAll = connection.prepareStatement(GET_ALL);
-            deleteAll = connection.prepareStatement(DELETE_ALL);
+            getAllByOrganisationID = connection.prepareStatement(GET_ALL_BY_ORGANISATION_ID);
+            getAssetName = connection.prepareStatement(GET_ALL_BY_ORGANISATION_ID);
+            deleteAll = connection.prepareStatement(GET_ASSET_NAME);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -113,6 +123,7 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
 
             if(rs.next()){
                 Inventory inventory = new Inventory();
+                inventory.setInventoryID(rs.getString("inventory_id"));
                 inventory.setOrganisationID(rs.getString("organisation_id"));
                 inventory.setAssetID(rs.getString("asset_id"));
                 inventory.setQuantity(rs.getString("quantity"));
@@ -135,8 +146,9 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
             int index = 0;
             rs = getAll.executeQuery();
 
-            if(rs.next()){
+            while(rs.next()){
                 Inventory inventory = new Inventory();
+                inventory.setInventoryID(rs.getString("inventory_id"));
                 inventory.setOrganisationID(rs.getString("organisation_id"));
                 inventory.setAssetID(rs.getString("asset_id"));
                 inventory.setQuantity(rs.getString("quantity"));
@@ -160,5 +172,30 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
             ex.printStackTrace();
             return false;
         }
+    }
+
+    public ArrayList<Inventory> getAllbyOrganisationID(String organisation_id) {
+        ArrayList<Inventory> inventories = new ArrayList<>();
+        ResultSet rs = null;
+        try {
+            getAllByOrganisationID.setString(1, organisation_id);
+            int index = 0;
+            rs = getAllByOrganisationID.executeQuery();
+            rs = getAssetName.executeQuery();
+
+            while(rs.next()){
+                Inventory inventory = new Inventory();
+                inventory.setAssetID(rs.getString("asset_name"));
+                inventory.setOrganisationID(rs.getString("asset_type"));
+                inventory.setQuantity(rs.getString("quantity"));
+                inventories.add(inventory);
+                index++;
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return inventories;
     }
 }

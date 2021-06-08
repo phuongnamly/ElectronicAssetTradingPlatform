@@ -46,6 +46,14 @@ public class NetworkDataSource {
         DELETE_ORGANISATION,
         GET_ORGANISATION,
         GET_ORGANISATIONS,
+
+        // Inventory
+        ADD_INVENTORY,
+        EDIT_INVENTORY,
+        DELETE_INVENTORY,
+        GET_INVENTORY,
+        GET_INVENTORIES,
+        GET_INVENTORIES_BY_ORGANISATION_ID
     }
 
     public NetworkDataSource() {
@@ -292,6 +300,23 @@ public class NetworkDataSource {
         }
     }
 
+    public ArrayList<Organisation> getOrganisation(String id) {
+        try {
+            // tell the server to expect a person's name, and send us back their details
+            outputStream.writeObject(Command.GET_ORGANISATION);
+            outputStream.writeObject(id);
+
+            // flush because if we don't, the request might not get sent yet, and we're waiting for a response
+            outputStream.flush();
+
+            // read the person's details back from the server
+            return (ArrayList<Organisation>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException | ClassCastException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public ArrayList<Organisation> getOrganisations(){
         try {
             outputStream.writeObject(Command.GET_ORGANISATIONS);
@@ -351,5 +376,21 @@ public class NetworkDataSource {
         }
     }
 
+    // Inventory
+    public ArrayList<Inventory> getInventoriesByOrganisationId(String id) {
+        try {
+            // tell the server to expect a person's name, and send us back their details
+            outputStream.writeObject(Command.GET_INVENTORIES_BY_ORGANISATION_ID);
+            outputStream.writeObject(id);
 
+            // flush because if we don't, the request might not get sent yet, and we're waiting for a response
+            outputStream.flush();
+
+            // read the person's details back from the server
+            return (ArrayList<Inventory>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException | ClassCastException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

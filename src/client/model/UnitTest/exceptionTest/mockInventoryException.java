@@ -25,16 +25,16 @@ public class mockInventoryException {
 
     /* Test out of range/ non integer phone number*/
     @Test
-    void TestNonIntegerPhoneNumber() throws InventoryException {
+    void TestNonIntegerQuantity() throws InventoryException {
         Assertions.assertThrows(InventoryException.class, () -> {
-            inventorydata.create(new Inventory("1","2","3","10000"));
+            inventorydata.create(new Inventory("1","2","3","hfffj"));
         });
     }
 
     /*Test out of range id/ non integer/ non positive for edit*/
     @Test
     void TestWrongInventoryIDFormat() throws InventoryException {
-        Assertions.assertThrows(UserException.class, () -> {
+        Assertions.assertThrows(InventoryException.class, () -> {
             inventorydata.edit(new Inventory("-1","2","3","10000"));
             inventorydata.edit(new Inventory(null,"2","3","10000"));
             inventorydata.edit(new Inventory("10000000000000","2","3","10000"));

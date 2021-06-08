@@ -75,7 +75,7 @@ public class addUser extends JFrame{
         layout.putConstraint(SpringLayout.SOUTH, orderTable, -50, SpringLayout.SOUTH, contentPane);
         layout.putConstraint(SpringLayout.EAST, orderTable, -10, SpringLayout.EAST, contentPane);
 
-        btnClose = createButton("Close", this::closeButtonClicked);
+        btnClose = new JButton("Close");
         contentPane.add(btnClose);
         layout.putConstraint(SpringLayout.NORTH, btnClose, 10, SpringLayout.SOUTH, orderTable);
         layout.putConstraint(SpringLayout.SOUTH, btnClose, -10, SpringLayout.SOUTH, contentPane);
@@ -125,14 +125,14 @@ public class addUser extends JFrame{
         String[] adminOrMember;
         if(currentUsername.isEmpty())
         {
-            adminOrMember = new String[]{"Member"};
+            adminOrMember = new String[]{"member"};
         }
         else{
-            if(user.getAccountType().equals("Admin")){
-                adminOrMember = new String[]{"Admin", "Member"};
+            if(user.getAccountType().equals("admin")){
+                adminOrMember = new String[]{"admin", "member"};
             }
             else{
-               adminOrMember = new String[]{"Member"};
+               adminOrMember = new String[]{"member"};
             }
         }
 
@@ -148,16 +148,9 @@ public class addUser extends JFrame{
         tpLayout.putConstraint(SpringLayout.WEST, getOrganisation, 5, SpringLayout.WEST, orderTable);
         tpLayout.putConstraint(SpringLayout.NORTH, getOrganisation, 90, SpringLayout.NORTH, orderTable);
 
-        //DROP DOWN PANE (INPUTED OBJECT STRING FOR TESTING PURPOSES) TO BE REMOVED DURING INTEGRATION
-        //JComboBox<String> organisationList = new JComboBox<String>();
-//        String[] listOfOrganisations = {"Bolton Clarke", "better2care", "Bluecare",
-//                "myPlan Management", "Feros Care", "Anglicare", "NDIA"};
-//        JComboBox organisationList = new JComboBox<String>(listOfOrganisations); //Move Declaration to top
-
         ArrayList<Organisation> organisations = data.getOrganisations();
-        JComboBox<Organisation> organisationList = new JComboBox<Organisation>(); //Move Declaration to top
-        Organisation organisation1 = organisations.get(1);
-        organisationList.addItem(organisation1);
+        Organisation[] organisationArray = organisations.toArray(new Organisation[0]);
+        JComboBox<Organisation> organisationList = new JComboBox<Organisation>(organisationArray); //Move Declaration to top
         orderTable.add(organisationList);
         Organisation selectedOrganisation = (Organisation) organisationList.getSelectedItem();
         organisationIDText = selectedOrganisation.getOrganisationID();
@@ -240,6 +233,7 @@ public class addUser extends JFrame{
     }
     private void addButtonListeners(ActionListener listener) {
         btnSave.addActionListener(listener);
+        btnClose.addActionListener(listener);
     }
 
     private class ButtonListener extends Component implements ActionListener {
@@ -294,6 +288,25 @@ public class addUser extends JFrame{
                         JOptionPane.showMessageDialog(this,userException.getMessage(), "WARNING", JOptionPane.WARNING_MESSAGE);
                         userException.printStackTrace();
                     }
+                }
+            }
+            else if(source == btnClose){
+                if(!login.getCurrentUsernameUsername().isEmpty())
+                {
+                    SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            new homePage();
+                            frame.dispose();
+                        }
+                    });
+                }
+                else{
+                    SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            new login();
+                            frame.dispose();
+                        }
+                    });
                 }
             }
         }}

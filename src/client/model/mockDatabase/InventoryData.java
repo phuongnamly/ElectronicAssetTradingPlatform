@@ -15,14 +15,15 @@ public class InventoryData implements InventoryDataSource {
     }
 
     @Override
-    public boolean create(Inventory inventory) {
-        try {
+    public boolean create(Inventory inventory) throws InventoryException {
+        if (InventoryException.validate("create", inventory)){
             id++;
             inventory.setInventoryID(Integer.toString(id));
             inventories.add(inventory);
 
             return true;
-        } catch (Exception e) {
+        }
+        else {
             return false;
         }
     }

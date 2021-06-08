@@ -1,13 +1,15 @@
 package client.gui;
 
-
 import client.gui.clientData.NetworkDataSource;
+import client.model.entity.Inventory;
+import client.model.entity.Organisation;
 import client.model.entity.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * This class is the GUI for the homepage
@@ -15,6 +17,8 @@ import java.awt.event.ActionListener;
 public class homePage extends JFrame{
     NetworkDataSource data;
     User user;
+    Organisation organisation;
+    ArrayList<Inventory> inventoryList;
     String userField;
 
     private JTextField display;
@@ -38,6 +42,9 @@ public class homePage extends JFrame{
         data = new NetworkDataSource();
         String currentUsername = login.getCurrentUsernameUsername();
         user = data.getUser(currentUsername).get(0);
+        organisation = data.getOrganisation(user.getOrganisationID()).get(0);
+        inventoryList = data.getInventoriesByOrganisationId(user.getOrganisationID());
+
 
         // Initialising new JFrame instance
         frame = new JFrame("Home");
@@ -67,58 +74,11 @@ public class homePage extends JFrame{
         ///////Setting the Homepage Panel to introduce the user and prints out the username in JTextfield
         ///////Gives a small brief introduction to how to navigate the system
         userField = user.getUsername();
-        welcomeText = new JLabel();
-        welcomeText.setText("Welcome back," + " " + userField + "!");
-        welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
-        homePanel.add(welcomeText);
-        tpLayout.putConstraint(SpringLayout.NORTH, welcomeText, 5, SpringLayout.NORTH, homePanel);
-
-
-
-        adviceText = new JTextArea();
-        homePanel.add(adviceText);
-
-        adviceText.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-        adviceText.setText("Hello There. Welcome to our Electronic Asset Trading Platform!                              " +
-                "If you are new to this, please don't be afraid, we have some info for you see!" +
-                "                                                                              " +
-                "                                                            " +
-                "1. To place an order, please click on the 'Order' button in the Main panel. Once arrived, " +
-                "please choose the asset you wish to trade, select either BUY/SELL and input your price" +
-                " into 'Limit', which is the price you wish to purchase or sell the asset at." +
-                "                                                                         " +
-                "                                                                         " +
-                "2. Click review to process. NOTE: Order may not go thru immediately" +
-                "                                                                         " +
-                "                                                                         " +
-
-                "3. To view, edit and see the history of orders, head to 'Order History'. " +
-                "Find ones you wish to view. " +
-                "ADMIN ONLY given special access to edit and update asset in 'Edit'.      HAPPY HUNTING!"
-        );
-        adviceText.setEditable(false);
-        adviceText.setLineWrap(true);
-        adviceText.setColumns(45);
-        adviceText.setRows(12);
-        adviceText.setWrapStyleWord(true);
-
-        tpLayout.putConstraint(SpringLayout.NORTH, adviceText, 40, SpringLayout.NORTH, welcomeText);
-//        tpLayout.putConstraint(SpringLayout.EAST, adviceText, 1, SpringLayout.EAST, homePanel);
-//        tpLayout.putConstraint(SpringLayout.WEST, adviceText, 5, SpringLayout.WEST, homePanel);
-//        tpLayout.putConstraint(SpringLayout.SOUTH, adviceText, -30, SpringLayout.SOUTH, homePanel);
-
-
-        //tpLayout.putConstraint(SpringLayout.WEST, adviceText, 5, SpringLayout.WEST, homePanel);
-
-
-
-
-
-
-
-
-
-
+//        welcomeText = new JLabel();
+//        welcomeText.setText("Welcome back," + " " + userField);
+//        welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
+//        homePanel.add(welcomeText);
+//        tpLayout.putConstraint(SpringLayout.NORTH, welcomeText, 5, SpringLayout.NORTH, homePanel);
 
         // Creating Navigation Panel
         JPanel navPane = new JPanel();
@@ -168,6 +128,54 @@ public class homePage extends JFrame{
         mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, navPane);
         mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, navPane);
 
+        // Section for welcome subtext
+        JLabel subtextLabel = new JLabel();
+        JPanel subtextPanel = new JPanel();
+        SpringLayout subtextLayout = new SpringLayout();
+        String subtext = "Welcome back, "+userField+ ". Your organisation have " + organisation.getCredits()+" credits.";
+        subtextLabel.setText(subtext);
+        subtextPanel.add(subtextLabel);
+        homePanel.add(subtextPanel);
+
+
+        // where to show organisation credit and assets
+        //JPanel for the order view Table and to edit
+        JPanel orderListPanel = new JPanel();
+        SpringLayout listLayout = new SpringLayout();
+        orderListPanel.setLayout(listLayout);
+        orderListPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of assets"),
+                BorderFactory.createEmptyBorder(5,5,5,5)));
+        homePanel.add(orderListPanel);
+
+        tpLayout.putConstraint(SpringLayout.WEST, orderListPanel, 2, SpringLayout.WEST, homePanel);
+        tpLayout.putConstraint(SpringLayout.NORTH, orderListPanel, 120, SpringLayout.NORTH, homePanel);
+        tpLayout.putConstraint(SpringLayout.SOUTH, orderListPanel, -10, SpringLayout.SOUTH, homePanel);
+        tpLayout.putConstraint(SpringLayout.EAST, orderListPanel, -2, SpringLayout.EAST, homePanel);
+
+
+
+        //NOTE STRING VIEWORDER TO BE REPLACED DURING INTEGRATION, TEMP replacement to test JTable/ScrollPane
+        String[] header = {"Asset Name","Asset Type","Quantity"};
+
+        // https://stackoverflow.com/questions/12559287/how-to-set-a-custom-object-in-a-jtable-row
+        String[][] inventoryData = new String[inventoryList.size()][header.length];
+        int i = 0;
+        for (Inventory inventory : inventoryList) {
+            String[] data = new String[header.length];
+            data[0] = inventory.getAssetID();
+            data[1] = inventory.getOrganisationID();
+            data[2] = inventory.getQuantity();
+            inventoryData[i] = data;
+            i++;
+        }
+
+
+            //
+        JTable listOrders = new JTable(inventoryData, header);
+        JScrollPane scrollOrder = new JScrollPane(listOrders);
+        scrollOrder.setPreferredSize(new Dimension(480, 130));
+
+        orderListPanel.add(scrollOrder);
         // Compile frame
         frame.pack();
         frame.setSize(550,475);
@@ -249,6 +257,76 @@ public class homePage extends JFrame{
             }
         }}
 
-
-
+//    private class VstTableItemModel extends AbstractTableModel {
+//
+//        private List<User> users;
+//
+//        public VstTableItemModel(List<User> users) {
+//
+//            this.users = new ArrayList<User>(users);
+//
+//        }
+//
+//        @Override
+//        public int getRowCount() {
+//            return users.size();
+//        }
+//
+//        @Override
+//        public int getColumnCount() {
+//            return 6;
+//        }
+//
+//        @Override
+//        public Object getValueAt(int rowIndex, int columnIndex) {
+//
+//            Object value = "??";
+//            User user = users.get(rowIndex);
+//            switch (columnIndex) {
+//                case 0:
+//                    value = user.getUserUsername();
+//                    break;
+//                case 1:
+//                    value = user.getUserName();
+//                    break;
+//                case 2:
+//                    value = user.getUserPhone();
+//                    break;
+//                case 3:
+//                    value = user.getUserNic();
+//                    break;
+//                case 4:
+//                    value = user.getUserAddress();
+//                    break;
+//                case 5:
+//                    value = user.getUserEmail();
+//                    break;
+//            }
+//
+//            return value;
+//
+//        }
+//
+//        @Override
+//        public Class<?> getColumnClass(int columnIndex) {
+//            return // Return the class that best represents the column...
+//        }
+//
+//    /* Override this if you want the values to be editable...
+//    @Override
+//    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+//        //....
+//    }
+//    */
+//
+//        /**
+//         * This will return the user at the specified row...
+//         * @param row
+//         * @return
+//         */
+//        public User getUserAt(int row) {
+//            return users.get(row);
+//        }
+//
+//    }
 }

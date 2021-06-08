@@ -1,5 +1,14 @@
 package client.gui;
 
+////////////////////IMPORTANT!!!!!!!!!!!///////////
+///Please read this
+////editAsset.java contains features for BOTH editing assets and organisations
+
+import client.gui.addUser;
+import client.gui.homePage;
+import client.gui.orderHistory;
+import client.gui.orderPad;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -205,101 +214,96 @@ public class editAsset extends JFrame{
         ///////////////////////////////Creating new asset
 
         //PART FOR CREATE NEW ORGANISATION
-        JPanel createOrgPanel = new JPanel();
+        JPanel editAssetPanel = new JPanel();
         SpringLayout smoLayout = new SpringLayout();
-        createOrgPanel.setLayout(smoLayout);
-        createOrgPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Create New Organisation"),
+        editAssetPanel.setLayout(smoLayout);
+        editAssetPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("EDIT/DELETE Asset"),
                 BorderFactory.createEmptyBorder(5,5,5,5)));
-        orderTable.add(createOrgPanel);
-        tpLayout.putConstraint(SpringLayout.WEST, createOrgPanel, 0, SpringLayout.WEST, orderPanel);
-        tpLayout.putConstraint(SpringLayout.EAST, createOrgPanel, 0, SpringLayout.EAST, orderPanel);
-        tpLayout.putConstraint(SpringLayout.NORTH, createOrgPanel, 20, SpringLayout.SOUTH, orderPanel);
-        tpLayout.putConstraint(SpringLayout.SOUTH, createOrgPanel, -10, SpringLayout.SOUTH, orderTable);
+        orderTable.add(editAssetPanel);
+        tpLayout.putConstraint(SpringLayout.WEST, editAssetPanel, 0, SpringLayout.WEST, orderPanel);
+        tpLayout.putConstraint(SpringLayout.EAST, editAssetPanel, 0, SpringLayout.EAST, orderPanel);
+        tpLayout.putConstraint(SpringLayout.NORTH, editAssetPanel, 20, SpringLayout.SOUTH, orderPanel);
+        tpLayout.putConstraint(SpringLayout.SOUTH, editAssetPanel, -10, SpringLayout.SOUTH, orderTable);
 
-
-        //Filling in the JLabels and JTextfields input createOrgPanel Finish later during integration
-//        JLabel newAssetName = new JLabel("Name:");
-//        orderPanel.add(newAssetName);
-//        orderLayout.putConstraint(SpringLayout.WEST, newAssetName, 5, SpringLayout.WEST, orderPanel);
-//        orderLayout.putConstraint(SpringLayout.NORTH, newAssetName, 5, SpringLayout.NORTH, orderPanel);
-//
-//
-//        //Input the JTextfields at the top and implement functions given by Nam and Thomas
-//        assetNameText = new JTextField();
-//        orderPanel.add(assetNameText);
-//        orderLayout.putConstraint(SpringLayout.WEST, assetNameText, 10, SpringLayout.EAST, newAssetName);
-//        orderLayout.putConstraint(SpringLayout.EAST, assetNameText, -10, SpringLayout.EAST, orderPanel);
-//        orderLayout.putConstraint(SpringLayout.NORTH, assetNameText, 3, SpringLayout.NORTH, orderPanel);
-//
-//        JLabel startPrice  = new JLabel("Start Price:");
-//        orderPanel.add(startPrice);
-//        orderLayout.putConstraint(SpringLayout.WEST, startPrice, 3, SpringLayout.WEST, newAssetName);
-//        orderLayout.putConstraint(SpringLayout.NORTH, startPrice, 40, SpringLayout.NORTH, assetNameText);
-//
-//        //Declared it as a private limit textfield
-//        startPriceText = new JTextField();
-//        orderPanel.add(startPriceText);
-//        orderLayout.putConstraint(SpringLayout.WEST, startPriceText, 10, SpringLayout.EAST, startPrice);
-//        orderLayout.putConstraint(SpringLayout.EAST, startPriceText, 5, SpringLayout.EAST, orderPanel);
-//        orderLayout.putConstraint(SpringLayout.NORTH, startPriceText, 40, SpringLayout.NORTH, orderPanel);
-//
-//
-//        saveNew = createButton("Save As", this::saveAsClicked);
-//        orderPanel.add(saveNew);
-//        orderLayout.putConstraint(SpringLayout.WEST, saveNew, 110, SpringLayout.WEST, startPrice);
-//        orderLayout.putConstraint(SpringLayout.NORTH, saveNew, 3, SpringLayout.SOUTH, startPriceText);
-//
-
-////////////////////////////////////Finished creating new asset
-
-
-
-
-
-
-
-
-
-
-
-
-        ///Defining the Order Pad Panel (North  West - Middle) ///////////// ORDER PAD AND BUTTONS
-        JPanel orderPad = new JPanel();
-        SpringLayout padLayout = new SpringLayout();
-        orderPad.setLayout(padLayout);
-        orderPad.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Asset Options"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-        orderTable.add(orderPad);
-        tpLayout.putConstraint(SpringLayout.WEST, orderPad, 20, SpringLayout.EAST, orderPanel);
-        tpLayout.putConstraint(SpringLayout.NORTH, orderPad, 20, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.SOUTH, orderPad, 280, SpringLayout.NORTH, orderTable);
-        tpLayout.putConstraint(SpringLayout.EAST, orderPad, -20, SpringLayout.EAST, orderTable);
-        //Creating widgets and buttons for Order Pad
-
-
-        //EDIT ASSET BUTTON
         editAsset = createButton("Edit Asset", this::editButtonClick);
-        orderPad.add(editAsset);
-        padLayout.putConstraint(SpringLayout.WEST, editAsset, 5, SpringLayout.WEST, orderPad);
-        padLayout.putConstraint(SpringLayout.NORTH, editAsset, 5, SpringLayout.NORTH, orderPad);
+        editAssetPanel.add(editAsset);
+        smoLayout.putConstraint(SpringLayout.WEST, editAsset, 5, SpringLayout.WEST, editAssetPanel);
+        smoLayout.putConstraint(SpringLayout.NORTH, editAsset, 5, SpringLayout.NORTH, editAssetPanel);
 
         deleteAsset = createButton("Delete Asset", this::deleteButtonClick);
-        orderPad.add(deleteAsset);
-        padLayout.putConstraint(SpringLayout.WEST, deleteAsset, 5, SpringLayout.WEST, orderPad);
-        padLayout.putConstraint(SpringLayout.NORTH, deleteAsset, 50, SpringLayout.NORTH, orderPad);
+        editAssetPanel.add(deleteAsset);
+        smoLayout.putConstraint(SpringLayout.WEST, deleteAsset, 5, SpringLayout.WEST, editAssetPanel);
+        smoLayout.putConstraint(SpringLayout.NORTH, deleteAsset, 35, SpringLayout.NORTH, editAssetPanel);
+        
+        ///Red
+        JPanel createEditOrg = new JPanel();
+        SpringLayout padLayout = new SpringLayout();
+        createEditOrg.setLayout(padLayout);
+        createEditOrg.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("Organisation Details"),
+                BorderFactory.createEmptyBorder(5,5,5,5)));
+        orderTable.add(createEditOrg);
+        tpLayout.putConstraint(SpringLayout.WEST, createEditOrg, 20, SpringLayout.EAST, orderPanel);
+        tpLayout.putConstraint(SpringLayout.NORTH, createEditOrg, 20, SpringLayout.NORTH, orderTable);
+        tpLayout.putConstraint(SpringLayout.SOUTH, createEditOrg, 280, SpringLayout.NORTH, orderTable);
+        tpLayout.putConstraint(SpringLayout.EAST, createEditOrg, -20, SpringLayout.EAST, orderTable);
+        //Creating widgets and buttons for Order Pad
+
+        //Move JButton declaration to the top
+        JButton editOrg = createButton("Edit Organisation", this::editOrgClick);
+        createEditOrg.add(editOrg);
+        padLayout.putConstraint(SpringLayout.WEST, editOrg, 5, SpringLayout.WEST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, editOrg, 165, SpringLayout.NORTH, createEditOrg);
+
+        //Move JButton declaration to the top
+        JButton deleteOrg = createButton("Delete Organisation", this::deleteOrgClick);
+        createEditOrg.add(deleteOrg);
+        padLayout.putConstraint(SpringLayout.WEST, deleteOrg, 5, SpringLayout.WEST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, deleteOrg, 200, SpringLayout.NORTH, createEditOrg);
+
+
+        JLabel getOrganisationName = new JLabel(" New Name:" );
+        createEditOrg.add(getOrganisationName);
+        padLayout.putConstraint(SpringLayout.WEST, getOrganisationName, 5, SpringLayout.WEST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, getOrganisationName, 5, SpringLayout.NORTH, createEditOrg);
+
+
+        //PLEASE ENSURE THIS GETS INPUTTED INTO TOP for proper identification. Note to self please declare the JTextField elsewhere for integration purposes
+        JTextField getOrganisationText = new JTextField();
+        createEditOrg.add(getOrganisationText);
+        padLayout.putConstraint(SpringLayout.WEST, getOrganisationText, 10, SpringLayout.EAST, getOrganisationName);
+        padLayout.putConstraint(SpringLayout.EAST, getOrganisationText, -10, SpringLayout.EAST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, getOrganisationText, 5, SpringLayout.NORTH, createEditOrg);
+
+        JLabel getCredit = new JLabel("New Credit: ");
+        createEditOrg.add(getCredit);
+        padLayout.putConstraint(SpringLayout.WEST, getCredit, 5, SpringLayout.WEST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, getCredit, 35, SpringLayout.NORTH, createEditOrg);
+
+
+        JTextField getCreditText = new JTextField();
+        createEditOrg.add(getCreditText);
+        padLayout.putConstraint(SpringLayout.WEST, getCreditText, 10, SpringLayout.EAST, getCredit);
+        padLayout.putConstraint(SpringLayout.EAST, getCreditText, -10, SpringLayout.EAST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, getCreditText, 35, SpringLayout.NORTH, createEditOrg);
+
+
+        //Declare JButton up top
+        JButton btn_create = createButton("Create Organisation", this::createOrgClicked);
+        createEditOrg.add(btn_create);
+        padLayout.putConstraint(SpringLayout.WEST, btn_create, 5, SpringLayout.WEST, createEditOrg);
+        padLayout.putConstraint(SpringLayout.NORTH, btn_create, 60, SpringLayout.NORTH, createEditOrg);
 
 
 
 
-        //Button Action Listener
-
+///////////////////////////////////////////////////////////For nAM TO find
 
 
         /* show frame */
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
-        addButtonListeners(new editAsset.ButtonListener());
+        addButtonListeners(new ButtonListener());
     }
 
     private JTextField newDisplay() {
@@ -321,9 +325,6 @@ public class editAsset extends JFrame{
         JOptionPane.showMessageDialog(this, "Are you sure you want to create new asset?",
                 "Save As Confirm", JOptionPane.OK_CANCEL_OPTION);
     }
-
-
-
 
 
 
@@ -357,6 +358,58 @@ public class editAsset extends JFrame{
                 "Confirm", JOptionPane.WARNING_MESSAGE);
 
     }
+
+    private void editOrgClick (ActionEvent actionEvent) {
+        Object[] organisationList = {"Bolton Clarke", "NDIA", "Feros Care", "myGen Physio", "better2care", "myPlan Manager", "Anglicare"};
+        String initOrganisation = "NDIA";
+        Object SelectedOrganisation = JOptionPane.showInputDialog(this, "Select Organisation to Edit",
+                "Editing Details", JOptionPane.QUESTION_MESSAGE, null, organisationList, initOrganisation);
+
+        JTextField editingName = new JTextField(10);
+        editingName = newDisplay();
+        editingName.setText(SelectedOrganisation.toString());
+        JTextField editingStartPrice = new JTextField(10);
+
+        JPanel editBoxPanel = new JPanel();
+        editBoxPanel.add(new JLabel("Edit Name:"));
+        editBoxPanel.add(editingName);
+        editBoxPanel.add(Box.createVerticalStrut(15)); // a spacer
+        editBoxPanel.add(new JLabel("Organisation Credit:"));
+        editBoxPanel.add(editingStartPrice);
+        JOptionPane.showConfirmDialog(this, editBoxPanel, "Please Edit Details", JOptionPane.OK_CANCEL_OPTION);
+    }
+
+    private void deleteOrgClick(ActionEvent actionEvent){
+        Object[] assetValuesList = {"Bolton Clarke", "NDIA", "Feros Care", "myGen Physio", "better2care", "myPlan Manager", "Anglicare"};
+        String initAsset = "NDIA";
+        Object SelectedAsset = JOptionPane.showInputDialog(this, "Select organisation to delete",
+                "Organisation Delete", JOptionPane.QUESTION_MESSAGE, null, assetValuesList, initAsset);
+
+        JOptionPane.showMessageDialog(this, "Are you sure you want to delete?",
+                "Confirm", JOptionPane.WARNING_MESSAGE);
+
+    }
+
+    private void createOrgClicked(ActionEvent actionEvent) {
+        JOptionPane.showMessageDialog(this, "Are you sure you want to create new organisation and credit balance?",
+                "Confirm New Organisation", JOptionPane.OK_CANCEL_OPTION);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private void closeButtonClicked(ActionEvent actionEvent) {
         JOptionPane.showMessageDialog(this, "Closed",
@@ -433,4 +486,8 @@ public class editAsset extends JFrame{
                 frame.dispose();
             }
         }}
+
+
+
+
 }
