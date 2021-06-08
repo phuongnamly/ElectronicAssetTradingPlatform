@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockInventoryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/InventoryData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/InventoryData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/InventoryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/InventoryData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/editAsset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/editAsset.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +161,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -195,65 +187,6 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1623122675807">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005910656" />
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1623122675807" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623123960231">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1623123960231" />
-    <state x="421" y="83" key="FileChooserDialogImpl" timestamp="1623005686329">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
-    <state width="1237" height="119" key="GridCell.Tab.0.bottom" timestamp="1623137493350">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623137493350" />
-    <state width="1237" height="119" key="GridCell.Tab.0.center" timestamp="1623137493349">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623137493349" />
-    <state width="1237" height="119" key="GridCell.Tab.0.left" timestamp="1623137493349">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623137493349" />
-    <state width="1237" height="119" key="GridCell.Tab.0.right" timestamp="1623137493350">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623137493350" />
-    <state x="121" y="51" key="MergeDialog" timestamp="1623076861608">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="121" y="51" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1623076861608" />
-    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1623076864856">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1623076864856" />
-    <state x="110" y="100" width="743" height="666" key="dock-window-1" timestamp="1623002289199">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="110" y="100" width="743" height="666" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623002289199" />
-    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2" timestamp="1623003940446">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-870" y="32" width="886" height="638" maximized="true" key="dock-window-2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623003940446" />
-    <state x="451" y="62" width="587" height="618" key="find.popup" timestamp="1623039828359">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="451" y="62" width="587" height="618" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1623039828359" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1623127181843">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1623127181843" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -264,7 +197,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/server/Server.java</url>
-          <line>351</line>
+          <line>386</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>

@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 /**
  * This class is the GUI for editing Asset panel
  * */
+
 public class editAsset extends JFrame{
 
     private JTextField display;
