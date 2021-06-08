@@ -359,11 +359,12 @@ public class Server {
                     // send the client back the person's details, or null
                     outputStream.writeObject(inventories);
 
+                    outputStream.flush();
+
                     if (inventories != null)
                         System.out.println(String.format("Sent all inventories to client %s",
                                 socket.toString()));
                 }
-                outputStream.flush();
             }
         }
     }
@@ -386,6 +387,7 @@ public class Server {
         userDatabase = new JBDCUserDataSource();
         assetDatabase = new JBDCAssetDataSource();
         listingDatabase = new JBDCListingDataSource();
+        inventoryDatabase = new JBDCInventoryDataSource();
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             serverSocket.setSoTimeout(SOCKET_ACCEPT_TIMEOUT);

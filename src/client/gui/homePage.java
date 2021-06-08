@@ -40,8 +40,8 @@ public class homePage extends JFrame{
         data = new NetworkDataSource();
         String currentUsername = login.getCurrentUsernameUsername();
         user = data.getUser(currentUsername).get(0);
-//        organisation = data.getOrganisation(user.getOrganisationID()).get(0);
-//        inventoryList = data.getInventoriesbyOrganisationId(user.getOrganisationID());
+        organisation = data.getOrganisation(user.getOrganisationID()).get(0);
+        inventoryList = data.getInventoriesByOrganisationId(user.getOrganisationID());
 
 
         // Initialising new JFrame instance
@@ -72,11 +72,11 @@ public class homePage extends JFrame{
         ///////Setting the Homepage Panel to introduce the user and prints out the username in JTextfield
         ///////Gives a small brief introduction to how to navigate the system
         userField = user.getUsername();
-        welcomeText = new JLabel();
-        welcomeText.setText("Welcome back," + " " + userField);
-        welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
-        homePanel.add(welcomeText);
-        tpLayout.putConstraint(SpringLayout.NORTH, welcomeText, 5, SpringLayout.NORTH, homePanel);
+//        welcomeText = new JLabel();
+//        welcomeText.setText("Welcome back," + " " + userField);
+//        welcomeText.setFont(new Font("Comic Sans", Font.PLAIN, 25));
+//        homePanel.add(welcomeText);
+//        tpLayout.putConstraint(SpringLayout.NORTH, welcomeText, 5, SpringLayout.NORTH, homePanel);
 
         // Creating Navigation Panel
         JPanel navPane = new JPanel();
@@ -126,12 +126,22 @@ public class homePage extends JFrame{
         mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, navPane);
         mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, navPane);
 
+        // Section for welcome subtext
+        JLabel subtextLabel = new JLabel();
+        JPanel subtextPanel = new JPanel();
+        SpringLayout subtextLayout = new SpringLayout();
+        String subtext = "Welcome back, "+userField+ " .Your organisation have " + organisation.getCredits()+" credits.";
+        subtextLabel.setText(subtext);
+        subtextPanel.add(subtextLabel);
+        homePanel.add(subtextPanel);
+
+
         // where to show organisation credit and assets
         //JPanel for the order view Table and to edit
         JPanel orderListPanel = new JPanel();
         SpringLayout listLayout = new SpringLayout();
         orderListPanel.setLayout(listLayout);
-        orderListPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of orders"),
+        orderListPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createTitledBorder("List of assets"),
                 BorderFactory.createEmptyBorder(5,5,5,5)));
         homePanel.add(orderListPanel);
 
@@ -143,14 +153,26 @@ public class homePage extends JFrame{
 
 
         //NOTE STRING VIEWORDER TO BE REPLACED DURING INTEGRATION, TEMP replacement to test JTable/ScrollPane
-        String[] header = {"Asset Name", "Asset Type","Quantity"};
+        String[] header = {"Asset Name","Quantity"};
         String[][] viewOrder = {{"jshin4113", "jasonDollar","BUY"},
                 {"ASAF","SelwynPound", "SELL"},
                 {"ASAF","SelwynPound", "SELL"},
         };
 
+        // https://stackoverflow.com/questions/12559287/how-to-set-a-custom-object-in-a-jtable-row
+        String[][] inventoryData = new String[inventoryList.size()][header.length];
+        int i = 0;
+        for (Inventory inventory : inventoryList) {
+            String[] data = new String[header.length];
+            data[0] = inventory.getAssetID();
+            data[1] = inventory.getQuantity();
+            inventoryData[i] = data;
+            i++;
+        }
 
-        JTable listOrders = new JTable(viewOrder, header);
+
+            //
+        JTable listOrders = new JTable(inventoryData, header);
         JScrollPane scrollOrder = new JScrollPane(listOrders);
         scrollOrder.setPreferredSize(new Dimension(480, 130));
 
@@ -236,6 +258,76 @@ public class homePage extends JFrame{
             }
         }}
 
-
-
+//    private class VstTableItemModel extends AbstractTableModel {
+//
+//        private List<User> users;
+//
+//        public VstTableItemModel(List<User> users) {
+//
+//            this.users = new ArrayList<User>(users);
+//
+//        }
+//
+//        @Override
+//        public int getRowCount() {
+//            return users.size();
+//        }
+//
+//        @Override
+//        public int getColumnCount() {
+//            return 6;
+//        }
+//
+//        @Override
+//        public Object getValueAt(int rowIndex, int columnIndex) {
+//
+//            Object value = "??";
+//            User user = users.get(rowIndex);
+//            switch (columnIndex) {
+//                case 0:
+//                    value = user.getUserUsername();
+//                    break;
+//                case 1:
+//                    value = user.getUserName();
+//                    break;
+//                case 2:
+//                    value = user.getUserPhone();
+//                    break;
+//                case 3:
+//                    value = user.getUserNic();
+//                    break;
+//                case 4:
+//                    value = user.getUserAddress();
+//                    break;
+//                case 5:
+//                    value = user.getUserEmail();
+//                    break;
+//            }
+//
+//            return value;
+//
+//        }
+//
+//        @Override
+//        public Class<?> getColumnClass(int columnIndex) {
+//            return // Return the class that best represents the column...
+//        }
+//
+//    /* Override this if you want the values to be editable...
+//    @Override
+//    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+//        //....
+//    }
+//    */
+//
+//        /**
+//         * This will return the user at the specified row...
+//         * @param row
+//         * @return
+//         */
+//        public User getUserAt(int row) {
+//            return users.get(row);
+//        }
+//
+//    }
 }

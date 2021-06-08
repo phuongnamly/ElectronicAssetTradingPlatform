@@ -34,6 +34,8 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
 
     private static final String DELETE_ALL = "DELETE FROM inventory";
 
+    private static final String GET_ASSETS = "SELECT  FROM deparments d INNER JOIN employees e ON d.id = e.department_id.\n";
+
     private Connection connection;
 
     private PreparedStatement create;

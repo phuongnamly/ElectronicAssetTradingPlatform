@@ -20,7 +20,7 @@ public class JBDCOrganisationDataSource implements OrganisationDataSource {
 
     private static final String CREATE_ORGANISATION = "REPLACE INTO organisation (organisation_name, credits) VALUES (?, ?);";
 
-    private static final String EDIT_ORGANISATION = "UPDATE organisation SET organisation_name = ?, credits = ? WHERE organisation_id=? = ?";
+    private static final String EDIT_ORGANISATION = "UPDATE organisation SET organisation_name = ?, credits = ? WHERE organisation_id=?";
 
     private static final String DELETE_ORGANISATION = "DELETE FROM organisation WHERE organisation_id=?";
 

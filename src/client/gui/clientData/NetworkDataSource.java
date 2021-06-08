@@ -377,7 +377,7 @@ public class NetworkDataSource {
     }
 
     // Inventory
-    public ArrayList<Inventory> getInventoriesbyOrganisationId(String id) {
+    public ArrayList<Inventory> getInventoriesByOrganisationId(String id) {
         try {
             // tell the server to expect a person's name, and send us back their details
             outputStream.writeObject(Command.GET_INVENTORIES_BY_ORGANISATION_ID);
