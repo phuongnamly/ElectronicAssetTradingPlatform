@@ -20,7 +20,9 @@ import java.awt.event.ActionListener;
 import java.io.Console;
 import java.util.ArrayList;
 
-
+/**
+ * This class is the ordering tab for user
+ * */
 public class orderPad extends JFrame{
     NetworkDataSource data;
     User user;

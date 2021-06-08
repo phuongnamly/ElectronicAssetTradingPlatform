@@ -10,7 +10,9 @@ import java.awt.event.ActionListener;
 import static utils.hash.Hash.getHashedPassword;
 
 //import static utils.hash.Hash.getHashedPassword;
-
+/**
+ * This class is for the login page
+ * */
 
 public class login extends JFrame{
     private static String currentUsername;

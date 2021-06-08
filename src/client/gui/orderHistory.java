@@ -10,6 +10,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 
+/**
+ * This class is for viewing history or orders
+ * */
 public class orderHistory extends JFrame{
 
     private JTextField display;
