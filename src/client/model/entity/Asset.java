@@ -2,6 +2,10 @@ package client.model.entity;
 
 import java.io.Serializable;
 
+
+/**
+ * This class is the asset class with simple get/set methods
+ * */
 public class Asset implements Serializable {
     private static final long serialVersionUID = 332082608397623483L;
     private String assetID;

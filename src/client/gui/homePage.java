@@ -9,7 +9,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * This class is the GUI for the homepage
+ * */
 public class homePage extends JFrame{
     NetworkDataSource data;
     User user;

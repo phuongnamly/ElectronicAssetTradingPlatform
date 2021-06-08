@@ -19,11 +19,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-add mockInventory, Inventory Data and exception - Thomas">
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockInventoryException.java" afterDir="false" />
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="- Added comment for gui and enum class - Thomas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$ButtonListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/editAsset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$ButtonListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderPad$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderPad$ButtonListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderPad$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/orderPad$ButtonListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/editAsset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/editAsset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/homePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/homePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/orderHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/orderHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/orderPad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/orderPad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Asset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Listing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/Organisation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +103,33 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockInventoryException">
+  <component name="RunManager" selected="Application.orderPad">
+    <configuration name="orderHistory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.gui.orderHistory" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="orderPad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.gui.orderPad" />
+      <module name="Electronic Asset Trading Platform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mockInventoryException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
@@ -122,43 +176,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockListingException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockListingException" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mockListingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Electronic Asset Trading Platform" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.orderPad" />
+        <item itemvalue="Application.orderHistory" />
         <item itemvalue="JUnit.mockInventoryException" />
         <item itemvalue="JUnit.mockInventoryTest" />
         <item itemvalue="JUnit.mockInventoryTest.TestGetInventoryFromGetInventory" />
-        <item itemvalue="JUnit.mockListingTest" />
-        <item itemvalue="JUnit.mockListingException" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623135399592</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- add blackbox exception for inventory - Thomas">
+      <created>1623136930387</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623136930387</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,7 +229,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-add mockInventory, Inventory Data and exception - Thomas" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add mockInventory, Inventory Data and exception - Thomas" />
+    <MESSAGE value="- add blackbox exception for inventory - Thomas" />
+    <MESSAGE value="- Added comment for gui and enum class - Thomas" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added comment for gui and enum class - Thomas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -210,7 +243,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/client/gui/homePage.java</url>
-          <line>225</line>
+          <line>227</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>

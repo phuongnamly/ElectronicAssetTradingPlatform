@@ -14,7 +14,9 @@ import java.awt.event.ActionListener;
 import java.io.Console;
 
 
-
+/**
+ * This class is the ordering tab for user
+ * */
 public class orderPad extends JFrame{
 
     private JTextArea display;

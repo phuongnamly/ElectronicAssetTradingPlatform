@@ -2,12 +2,16 @@ package client.model.entity;
 
 import java.io.Serializable;
 
+/**
+ * This class is the listing class with simple get/set methods
+ * */
+
 public class Listing implements Serializable {
     private static final long serialVersionUID = 332082608397623483L;
 
     private String listingID;
     private String inventoryID;
-    private String userID;;
+    private String userID;
     private boolean currentTrade;
     private String tradeType;
     private String quantity;
@@ -21,7 +25,7 @@ public class Listing implements Serializable {
     public Listing(String listingID, String inventoryID, String userID, boolean currentTrade, String tradeType, String quantity, String price, String date){
         this.listingID = listingID;
         this.inventoryID = inventoryID;
-        this.userID = userID;;
+        this.userID = userID;
         this.currentTrade = currentTrade;
         this.tradeType = tradeType;
         this.quantity = quantity;

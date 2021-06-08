@@ -5,11 +5,8 @@ import client.model.exception.UserException;
 import java.io.Serializable;
 
 /**
- * Stores address details for a person.
- * 
- * @author Malcolm Corney
- * @version $Id: Exp $
- */
+ * This class is the user class with simple get/set methods
+ * */
 public class User implements Comparable<User>, Serializable {
 
    private String userID;

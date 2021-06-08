@@ -4,6 +4,9 @@ import client.model.exception.OrganisationException;
 
 import java.io.Serializable;
 
+/**
+ * This class is the organisation class with simple get/set methods
+ * */
 public class Organisation implements Serializable {
     private static final long serialVersionUID = 332082608397623483L;
 
