@@ -130,7 +130,7 @@ public class homePage extends JFrame{
         JLabel subtextLabel = new JLabel();
         JPanel subtextPanel = new JPanel();
         SpringLayout subtextLayout = new SpringLayout();
-        String subtext = "Welcome back, "+userField+ " .Your organisation have " + organisation.getCredits()+" credits.";
+        String subtext = "Welcome back, "+userField+ ". Your organisation have " + organisation.getCredits()+" credits.";
         subtextLabel.setText(subtext);
         subtextPanel.add(subtextLabel);
         homePanel.add(subtextPanel);
@@ -153,11 +153,7 @@ public class homePage extends JFrame{
 
 
         //NOTE STRING VIEWORDER TO BE REPLACED DURING INTEGRATION, TEMP replacement to test JTable/ScrollPane
-        String[] header = {"Asset Name","Quantity"};
-        String[][] viewOrder = {{"jshin4113", "jasonDollar","BUY"},
-                {"ASAF","SelwynPound", "SELL"},
-                {"ASAF","SelwynPound", "SELL"},
-        };
+        String[] header = {"Asset Name","Asset Type","Quantity"};
 
         // https://stackoverflow.com/questions/12559287/how-to-set-a-custom-object-in-a-jtable-row
         String[][] inventoryData = new String[inventoryList.size()][header.length];
@@ -165,7 +161,8 @@ public class homePage extends JFrame{
         for (Inventory inventory : inventoryList) {
             String[] data = new String[header.length];
             data[0] = inventory.getAssetID();
-            data[1] = inventory.getQuantity();
+            data[1] = inventory.getOrganisationID();
+            data[2] = inventory.getQuantity();
             inventoryData[i] = data;
             i++;
         }
