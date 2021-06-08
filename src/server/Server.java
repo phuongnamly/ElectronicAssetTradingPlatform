@@ -347,6 +347,18 @@ public class Server {
                 }
                 outputStream.flush();
             }
+            break;
+
+            case GET_ASSETS: {
+                synchronized (assetDatabase) {
+                    final ArrayList<Asset> assets = assetDatabase.getAll();
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(assets);
+                }
+                outputStream.flush();
+            }
+            break;
 
             case GET_INVENTORIES_BY_ORGANISATION_ID:{
                 final String organisation_id = (String) inputStream.readObject();
@@ -354,7 +366,7 @@ public class Server {
                 synchronized (inventoryDatabase) {
                     // synchronize both the get as well as the send, that way
                     // we don't send a half updated person
-                    final ArrayList<Inventory> inventories = inventoryDatabase.getAllbyOrganisationID(organisation_id);
+                    final ArrayList<Inventory> inventories = inventoryDatabase.getAllByOrganisationID(organisation_id);
 
                     // send the client back the person's details, or null
                     outputStream.writeObject(inventories);
@@ -365,7 +377,27 @@ public class Server {
                         System.out.println(String.format("Sent all inventories to client %s",
                                 socket.toString()));
                 }
+                break;
             }
+
+            case GET_LISTING_BY_ASSET: {
+                final Asset asset = (Asset) inputStream.readObject();
+
+                synchronized (assetDatabase) {
+                    // synchronize both the get as well as the send, that way
+                    // we don't send a half updated person
+                    final ArrayList<Asset> assets = assetDatabase.getAllListingByAsset(asset);
+
+                    // send the client back the person's details, or null
+                    outputStream.writeObject(assets);
+
+                    if (assets != null)
+                        System.out.println(String.format("Sent the assets to client %s",
+                                socket.toString()));
+                }
+                outputStream.flush();
+            }
+            break;
         }
     }
 

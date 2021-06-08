@@ -34,7 +34,7 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
 
     private static final String DELETE_ALL = "DELETE FROM inventory";
 
-    private static final String GET_ASSET_NAME = "SELECT * FROM inventory INNER JOIN asset ON inventory.asset_id = asset.asset_id";
+    private static final String GET_ASSET_NAME = "SELECT asset.asset_type, asset.asset_name, asset.asset_id, inventory.asset_id, inventory.quantity,inventory.organisation_id FROM inventory INNER JOIN asset ON inventory.asset_id = asset.asset_id where inventory.organisation_id=? ";
 
     private Connection connection;
 
@@ -66,8 +66,8 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
             get = connection.prepareStatement(GET);
             getAll = connection.prepareStatement(GET_ALL);
             getAllByOrganisationID = connection.prepareStatement(GET_ALL_BY_ORGANISATION_ID);
-            getAssetName = connection.prepareStatement(GET_ALL_BY_ORGANISATION_ID);
-            deleteAll = connection.prepareStatement(GET_ASSET_NAME);
+            getAssetName = connection.prepareStatement(GET_ASSET_NAME);
+            deleteAll = connection.prepareStatement(DELETE_ALL);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -174,20 +174,19 @@ public class JBDCInventoryDataSource implements InventoryDataSource {
         }
     }
 
-    public ArrayList<Inventory> getAllbyOrganisationID(String organisation_id) {
+    public ArrayList<Inventory> getAllByOrganisationID(String organisation_id) {
         ArrayList<Inventory> inventories = new ArrayList<>();
         ResultSet rs = null;
         try {
-            getAllByOrganisationID.setString(1, organisation_id);
+            getAssetName.setString(1, organisation_id);
             int index = 0;
-            rs = getAllByOrganisationID.executeQuery();
             rs = getAssetName.executeQuery();
 
             while(rs.next()){
                 Inventory inventory = new Inventory();
-                inventory.setAssetID(rs.getString("asset_name"));
-                inventory.setOrganisationID(rs.getString("asset_type"));
-                inventory.setQuantity(rs.getString("quantity"));
+                inventory.setAssetName(rs.getString("asset.asset_name"));
+                inventory.setAssetType(rs.getString("asset.asset_type"));
+                inventory.setQuantity(rs.getString("inventory.quantity"));
                 inventories.add(inventory);
                 index++;
             }

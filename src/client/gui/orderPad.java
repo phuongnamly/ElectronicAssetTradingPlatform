@@ -1,5 +1,11 @@
 package client.gui;
 
+import client.gui.clientData.NetworkDataSource;
+import client.model.entity.Asset;
+import client.model.entity.Inventory;
+import client.model.entity.Organisation;
+import client.model.entity.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,10 +18,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Console;
-
+import java.util.ArrayList;
 
 
 public class orderPad extends JFrame{
+    NetworkDataSource data;
+    User user;
+    String currentUsername;
+    String assetIDText;
 
     private JTextArea display;
 
@@ -45,6 +55,9 @@ public class orderPad extends JFrame{
 
 
     public orderPad() {
+        // initialize database
+        data = new NetworkDataSource();
+        currentUsername = login.getCurrentUsernameUsername();
 
         frame = new JFrame("Ordering Tab");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -134,18 +147,6 @@ public class orderPad extends JFrame{
         mainLayout.putConstraint(SpringLayout.EAST, btnLogOut, 10 , SpringLayout.EAST, MainButtonPanel);
         mainLayout.putConstraint(SpringLayout.NORTH, btnLogOut, 1, SpringLayout.NORTH, MainButtonPanel);
 
-
-
-
-
-
-
-
-
-
-
-
-
         //Defining the OrderPad Printout
         JPanel orderPanel = new JPanel();
         SpringLayout orderLayout = new SpringLayout();
@@ -178,8 +179,20 @@ public class orderPad extends JFrame{
         padLayout.putConstraint(SpringLayout.WEST, assetName, 5, SpringLayout.WEST, orderPad);
         padLayout.putConstraint(SpringLayout.NORTH, assetName, 5, SpringLayout.NORTH, orderPad);
 
-        JComboBox<String> assetListBox = new JComboBox<String>();
+//        ArrayList<Organisation> organisations = data.getOrganisations();
+//        Organisation[] organisationArray = organisations.toArray(new Organisation[0]);
+//        JComboBox<Organisation> organisationList = new JComboBox<Organisation>(organisationArray); //Move Declaration to top
+//        orderTable.add(organisationList);
+//        Organisation selectedOrganisation = (Organisation) organisationList.getSelectedItem();
+//        organisationIDText = selectedOrganisation.getOrganisationID();
+
+        ArrayList<Asset> assets = data.getAssets();
+        Asset[] assetArray = assets.toArray(new Asset[0]);
+        JComboBox<Asset> assetListBox = new JComboBox<Asset>(assetArray); //Move Declaration to top
         orderPad.add(assetListBox);
+        Asset selectedOrganisation = (Asset) assetListBox.getSelectedItem();
+        assetIDText = selectedOrganisation.getAssetID();
+
         padLayout.putConstraint(SpringLayout.WEST, assetListBox, 10, SpringLayout.EAST, assetName);
         padLayout.putConstraint(SpringLayout.EAST, assetListBox, -10, SpringLayout.EAST, orderPad);
         padLayout.putConstraint(SpringLayout.NORTH, assetListBox, 3, SpringLayout.NORTH, orderPad);
@@ -258,15 +271,21 @@ public class orderPad extends JFrame{
         tpLayout.putConstraint(SpringLayout.NORTH, sellPanel, 5, SpringLayout.SOUTH, buyPanel);
         tpLayout.putConstraint(SpringLayout.SOUTH, sellPanel, 5, SpringLayout.SOUTH, orderTable);
 
-        String[] sellHeader = {"Name", "Price", "Quantity", "Type"};
-        String[][] sellOngoing = {
-                {"jshin4113", "12.32", "198", "SELL"},
-                {"thomas", "14.43", "193", "SELL"},
-                {"Nam", "15.23", "9", "SELL"},
-                {"Cimothy", "20", "341", "SELL"},
-                {"Thappell", "24", "5", "SELL"},
+        String[] sellHeader = {"Price", "Quantity", "Type"};
 
-        };
+        ArrayList<Asset> assetList = data.getListingsByAsset(new Asset());
+        // https://stackoverflow.com/questions/12559287/how-to-set-a-custom-object-in-a-jtable-row
+        String[][] sellOngoing = new String[assetList.size()][sellHeader.length];
+
+        int i = 0;
+        for (Asset asset : assetList) {
+            String[] data = new String[sellHeader.length];
+            data[0] = asset.getAssetType();
+            data[1] = asset.getAssetName();
+            data[2] = asset.getQuantity();
+            sellOngoing[i] = data;
+            i++;
+        }
 
         String[] buyHeader = {"Name", "Price", "Quantity", "Type"};
         String[][] buyOngoing = {
@@ -299,16 +318,9 @@ public class orderPad extends JFrame{
         frame.pack();
         frame.setSize(550,475);
         frame.setVisible(true);
-        addButtonListeners(new orderPad.ButtonListener());
+        addButtonListeners(new ButtonListener());
 
     }
-
-
-
-
-
-
-
 
     private JTextArea newDisplay() {
 
@@ -338,13 +350,6 @@ public class orderPad extends JFrame{
         JButton btn = ((JButton) actionEvent.getSource());
         display.setText(btn.getText().trim());
     }
-
-
-
-
-
-
-
 
     private JButton createButton(String str, ActionListener listener){
         //Create the JbUTTTON

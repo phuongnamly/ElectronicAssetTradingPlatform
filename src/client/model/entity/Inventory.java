@@ -8,6 +8,8 @@ public class Inventory implements Serializable {
     private String organisationID;
     private String assetID;
     private String quantity;
+    private String assetType;
+    private String assetName;
 
     public Inventory(){
 
@@ -49,6 +51,26 @@ public class Inventory implements Serializable {
      * @param assetID the asset ID to set
      */
     public void setAssetID(String assetID) { this.assetID = assetID; }
+
+    /**
+     * @return the asset type
+     */
+    public String getAssetType() { return assetType; }
+
+    /**
+     * @param assetType the asset type to set
+     */
+    public void setAssetType(String assetType) { this.assetType = assetType; }
+
+    /**
+     * @return the asset name
+     */
+    public String getAssetName() { return assetName; }
+
+    /**
+     * @param assetName the asset name to set
+     */
+    public void setAssetName(String assetName) { this.assetName = assetName; }
 
     /**
      * @return the quantity

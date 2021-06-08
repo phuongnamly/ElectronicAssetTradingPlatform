@@ -6,7 +6,13 @@ public class Asset implements Serializable {
     private static final long serialVersionUID = 332082608397623483L;
     private String assetID;
     private String assetType;
-    private String assetName;
+    private String assetName;;
+    private boolean currentTrade;
+    private String tradeType;
+    private String quantity;
+    private String price;
+    private String date;
+
 
     public Asset(){
 
@@ -46,6 +52,57 @@ public class Asset implements Serializable {
      * @param assetName the asset name to set
      */
     public void setAssetName(String assetName) { this.assetName = assetName; }
+
+
+    /**
+     * @return the trade status
+     */
+    public boolean getCurrentTrade() { return currentTrade; }
+
+    /**
+     * @param currentTrade the trade status
+     */
+    public void setCurrentTrade(boolean currentTrade) { this.currentTrade = currentTrade; }
+
+    /**
+     * @return the trade type
+     */
+    public String getTradeType() { return tradeType; }
+
+    /**
+     * @param tradeType the trade type to set
+     */
+    public void setTradeType(String tradeType) { this.tradeType = tradeType; }
+
+    /**
+     * @return the quantity
+     */
+    public String getQuantity() { return quantity; }
+
+    /**
+     * @param quantity the quantity to set
+     */
+    public void setQuantity(String quantity) { this.quantity = quantity; }
+
+    /**
+     * @return the price
+     */
+    public String getPrice() { return price; }
+
+    /**
+     * @param price the price to set
+     */
+    public void setPrice(String price) { this.price = price; }
+
+    /**
+     * @return the trade date
+     */
+    public String getDate() { return date; }
+
+    /**
+     * @param date the trade date to set
+     */
+    public void setDate(String date) { this.date = date; }
     public  String toStringAllFields(){
         return this.assetID+this.assetType+this.assetName;
     }

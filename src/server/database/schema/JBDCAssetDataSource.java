@@ -1,6 +1,7 @@
 package server.database.schema;
 
 import client.model.entity.Asset;
+import client.model.entity.Inventory;
 import client.model.mockInterface.AssetDataSource;
 
 import java.sql.*;
@@ -29,6 +30,8 @@ public class JBDCAssetDataSource implements AssetDataSource {
 
     private static final String DELETE_ALL_ASSETS = "DELETE FROM asset";
 
+    private static final String GET_LISTINGS = "SELECT listing.current_trade, listing.quantity, listing.price, listing.date, listing.inventory_id, inventory.inventory_id, inventory.asset_id, asset.asset_id FROM ((listing INNER JOIN inventory ON listing.inventory_id = inventory.inventory_id) INNER JOIN asset ON inventory.asset_id=asset.asset_id) where asset_id=? and listing.current_trade=? ";
+
 
     private Connection connection;
 
@@ -44,6 +47,8 @@ public class JBDCAssetDataSource implements AssetDataSource {
 
     private PreparedStatement deleteAll;
 
+    private PreparedStatement getlistings;
+
 
     public JBDCAssetDataSource() {
         connection = DBConnection.getInstance();
@@ -57,7 +62,7 @@ public class JBDCAssetDataSource implements AssetDataSource {
             get = connection.prepareStatement(GET_ASSET);
             getAll = connection.prepareStatement(GET_ALL_ASSETS);
             deleteAll = connection.prepareStatement(DELETE_ALL_ASSETS);
-
+            getlistings = connection.prepareStatement(GET_LISTINGS);
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -151,5 +156,33 @@ public class JBDCAssetDataSource implements AssetDataSource {
             ex.printStackTrace();
             return false;
         }
+    }
+
+    public ArrayList<Asset> getAllListingByAsset(Asset keyAsset) {
+//        private static final String GET_LISTINGS = "SELECT listing.current_trade, listing.quantity, listing.price, listing.date, listing.inventory_id, inventory.inventory_id, inventory.asset_id, asset.asset_id FROM ((listing INNER JOIN inventory ON listing.inventory_id = inventory.inventory_id) INNER JOIN asset ON inventory.asset_id=asset.asset_id) where asset_id=? and listing.current_trade=? ";
+
+        ArrayList<Asset> assets = new ArrayList<>();
+        ResultSet rs = null;
+        try {
+            getlistings.setString(1, keyAsset.getAssetID());
+            getlistings.setBoolean(2, keyAsset.getCurrentTrade());
+
+            int index = 0;
+            rs = getlistings.executeQuery();
+
+            while(rs.next()){
+                Asset asset = new Asset();
+                asset.setQuantity(rs.getString("listing.quantity"));
+                asset.setPrice(rs.getString("listing.price"));
+                asset.setDate(rs.getString("listing.date"));
+                assets.add(asset);
+                index++;
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return assets;
     }
 }

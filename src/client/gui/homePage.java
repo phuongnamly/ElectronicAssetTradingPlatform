@@ -160,8 +160,8 @@ public class homePage extends JFrame{
         int i = 0;
         for (Inventory inventory : inventoryList) {
             String[] data = new String[header.length];
-            data[0] = inventory.getAssetID();
-            data[1] = inventory.getOrganisationID();
+            data[0] = inventory.getAssetType();
+            data[1] = inventory.getAssetName();
             data[2] = inventory.getQuantity();
             inventoryData[i] = data;
             i++;

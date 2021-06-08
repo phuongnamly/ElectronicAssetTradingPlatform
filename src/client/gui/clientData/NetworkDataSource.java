@@ -33,6 +33,8 @@ public class NetworkDataSource {
         EDIT_ASSET,
         DELETE_ASSET,
         GET_ASSET,
+        GET_ASSETS,
+        GET_LISTING_BY_ASSET,
 
         //Listing
         ADD_LISTING,
@@ -376,6 +378,18 @@ public class NetworkDataSource {
         }
     }
 
+    public ArrayList<Asset> getAssets(){
+        try {
+            outputStream.writeObject(Command.GET_ASSETS);
+            outputStream.flush();
+
+            return (ArrayList<Asset>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException | ClassCastException e) {
+            e.printStackTrace();
+            return new ArrayList<Asset>();
+        }
+    }
+
     // Inventory
     public ArrayList<Inventory> getInventoriesByOrganisationId(String id) {
         try {
@@ -388,6 +402,23 @@ public class NetworkDataSource {
 
             // read the person's details back from the server
             return (ArrayList<Inventory>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException | ClassCastException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ArrayList<Asset> getListingsByAsset(Asset asset) {
+        try {
+            // tell the server to expect a person's name, and send us back their details
+            outputStream.writeObject(Command.GET_LISTING_BY_ASSET);
+            outputStream.writeObject(asset);
+
+            // flush because if we don't, the request might not get sent yet, and we're waiting for a response
+            outputStream.flush();
+
+            // read the person's details back from the server
+            return (ArrayList<Asset>) inputStream.readObject();
         } catch (IOException | ClassNotFoundException | ClassCastException e) {
             e.printStackTrace();
             return null;
