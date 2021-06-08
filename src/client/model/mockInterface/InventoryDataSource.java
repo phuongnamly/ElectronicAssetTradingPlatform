@@ -7,7 +7,7 @@ import client.model.exception.InventoryException;
 import java.util.ArrayList;
 
 public interface InventoryDataSource {
-    boolean create(Inventory inventory);
+    boolean create(Inventory inventory) throws InventoryException;
     boolean edit(Inventory inventory) throws InventoryException;
     boolean delete(String id);
     ArrayList<Inventory> get(String id);

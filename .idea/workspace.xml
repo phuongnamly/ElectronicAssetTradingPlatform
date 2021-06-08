@@ -20,22 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
+      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockInventoryException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage$ButtonListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/homePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCInventoryDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/server/database/schema/JBDCInventoryDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/homePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/homePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/database/schema/JBDCInventoryDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/database/schema/JBDCInventoryDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/InventoryData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockDatabase/InventoryData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockDatabase/InventoryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/InventoryData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,60 +80,71 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.login">
-    <configuration name="GenerateDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.mariadDB.GenerateDatabase" />
+  <component name="RunManager" selected="JUnit.mockInventoryTest">
+    <configuration name="mockInventoryException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utils.mariadDB.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockInventoryException" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkServerGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.NetworkServerGUI" />
+    <configuration name="mockInventoryException.TestNonIntegerPhoneNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockInventoryException" />
+      <option name="METHOD_NAME" value="TestNonIntegerPhoneNumber" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="editAsset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.gui.editAsset" />
+    <configuration name="mockInventoryException.TestNonIntegerQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.gui.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockInventoryException" />
+      <option name="METHOD_NAME" value="TestNonIntegerQuantity" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.gui.login" />
+    <configuration name="mockInventoryException.TestWrongInventoryIDFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.gui.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockInventoryException" />
+      <option name="METHOD_NAME" value="TestWrongInventoryIDFormat" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mockListingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mockInventoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
@@ -149,7 +153,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockListingTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockInventoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.login" />
-        <item itemvalue="Application.NetworkServerGUI" />
-        <item itemvalue="Application.editAsset" />
-        <item itemvalue="Application.GenerateDatabase" />
-        <item itemvalue="JUnit.mockListingTest" />
+        <item itemvalue="JUnit.mockInventoryTest" />
+        <item itemvalue="JUnit.mockInventoryException" />
+        <item itemvalue="JUnit.mockInventoryException.TestNonIntegerQuantity" />
+        <item itemvalue="JUnit.mockInventoryException.TestNonIntegerPhoneNumber" />
+        <item itemvalue="JUnit.mockInventoryException.TestWrongInventoryIDFormat" />
       </list>
     </recent_temporary>
   </component>
@@ -205,26 +209,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="83" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623005686329" />
-    <state width="1237" height="119" key="GridCell.Tab.0.bottom" timestamp="1623136936926">
+    <state width="1237" height="119" key="GridCell.Tab.0.bottom" timestamp="1623137493350">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623136936926" />
-    <state width="1237" height="119" key="GridCell.Tab.0.center" timestamp="1623136936926">
+    <state width="1237" height="119" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623137493350" />
+    <state width="1237" height="119" key="GridCell.Tab.0.center" timestamp="1623137493349">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623136936926" />
-    <state width="1237" height="119" key="GridCell.Tab.0.left" timestamp="1623136936926">
+    <state width="1237" height="119" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623137493349" />
+    <state width="1237" height="119" key="GridCell.Tab.0.left" timestamp="1623137493349">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623136936926" />
-    <state width="1237" height="119" key="GridCell.Tab.0.right" timestamp="1623136936926">
+    <state width="1237" height="119" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623137493349" />
+    <state width="1237" height="119" key="GridCell.Tab.0.right" timestamp="1623137493350">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1623011183165" />
-    <state width="1237" height="119" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623136936926" />
+    <state width="1237" height="119" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623137493350" />
     <state x="121" y="51" key="MergeDialog" timestamp="1623076861608">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
