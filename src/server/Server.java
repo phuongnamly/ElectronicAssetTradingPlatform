@@ -2,6 +2,7 @@ package server;
 //What up what up
 import client.gui.clientData.NetworkDataSource;
 import client.model.entity.Asset;
+import client.model.entity.Inventory;
 import client.model.entity.Organisation;
 import client.model.entity.User;
 import server.database.schema.JBDCAssetDataSource;
@@ -136,6 +137,7 @@ public class Server {
             case ADD_USER: {
                 // client is sending us a new person
                 final User user = (User) inputStream.readObject();
+
                 synchronized (userDatabase) {
                     outputStream.writeBoolean(userDatabase.create(user));
                 }

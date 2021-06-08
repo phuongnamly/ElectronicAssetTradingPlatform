@@ -6,9 +6,8 @@ public class Listing implements Serializable {
     private static final long serialVersionUID = 332082608397623483L;
 
     private String listingID;
-    private String organisationID;
-    private String userID;
-    private String assetID;
+    private String inventoryID;
+    private String userID;;
     private boolean currentTrade;
     private String tradeType;
     private String quantity;
@@ -19,11 +18,10 @@ public class Listing implements Serializable {
 
     }
 
-    public Listing(String listingID, String organisationID, String userID, String assetID, boolean currentTrade, String tradeType, String quantity, String price, String date){
+    public Listing(String listingID, String inventoryID, String userID, boolean currentTrade, String tradeType, String quantity, String price, String date){
         this.listingID = listingID;
-        this.organisationID = organisationID;
+        this.inventoryID = inventoryID;
         this.userID = userID;;
-        this.assetID = assetID;
         this.currentTrade = currentTrade;
         this.tradeType = tradeType;
         this.quantity = quantity;
@@ -34,12 +32,12 @@ public class Listing implements Serializable {
     /**
      * @return the organisation ID
      */
-    public String getOrganisationID() { return organisationID; }
+    public String getInventoryID() { return inventoryID; }
 
     /**
-     * @param organisationID the organisation ID to set
+     * @param inventoryID the organisation ID to set
      */
-    public void setOrganisationID(String organisationID) { this.organisationID = organisationID; }
+    public void setInventoryID(String inventoryID) { this.inventoryID = inventoryID; }
 
     /**
      * @return the listing ID
@@ -60,16 +58,6 @@ public class Listing implements Serializable {
      * @param userID the user ID to set
      */
     public void setUserID(String userID) { this.userID = userID; }
-
-    /**
-     * @return the asset ID
-     */
-    public String getAssetID() { return assetID; }
-
-    /**
-     * @param assetID the asset ID to set
-     */
-    public void setAssetID(String assetID) { this.assetID = assetID; }
 
     /**
      * @return the trade status
@@ -137,8 +125,12 @@ public class Listing implements Serializable {
 //        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");;
 //        return dateFormat.format(date);
 //    }
+    public  String toStringAllFields(){
+        return this.listingID+this.inventoryID +this.userID+this.currentTrade+this.tradeType+this.quantity+this.price+this.date;
+    }
+
     @Override
-    public  String toString(){
-        return this.assetID+this.listingID+this.organisationID+this.userID+this.currentTrade+this.tradeType+this.quantity+this.price+this.date;
+    public String toString() {
+        return super.toString();
     }
 }

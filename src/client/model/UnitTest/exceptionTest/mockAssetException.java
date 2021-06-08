@@ -1,6 +1,7 @@
 package client.model.UnitTest.exceptionTest;
 
 import client.model.entity.Asset;
+import client.model.entity.Inventory;
 import client.model.exception.AssetException;
 import client.model.mockDatabase.AssetData;
 import org.junit.jupiter.api.AfterEach;

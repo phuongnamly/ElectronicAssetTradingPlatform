@@ -1,7 +1,6 @@
 package client.model.mockDatabase;
 
 import client.model.entity.Asset;
-import client.model.entity.Asset;
 import client.model.exception.AssetException;
 import client.model.mockInterface.AssetDataSource;
 

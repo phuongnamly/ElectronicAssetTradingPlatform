@@ -15,11 +15,22 @@ public class UserException extends Exception{
         switch(func) {
             case("create"):{
                 /*Test out of range/ non integer phone number*/
-                if (user.getPhoneNum()==null || TryParseInt(user.getPhoneNum()) != null){
-                    success = true;
+                if (user.getUsername().isEmpty()){
+                    throw new UserException("Username is empty");
+                }else if(user.getPassword().isEmpty()){
+                    throw new UserException("Password is empty");
+                }
+                else if(user.getEmail().isEmpty()){
+                    throw new UserException("Email is empty");
+                }
+                else if(user.getAddress().isEmpty()){
+                    throw new UserException("Address is empty");
+                }
+                else if (TryParseInt(user.getPhoneNum()) == null) {
+                    throw new UserException("Phone number needs to be an int and within integer limit");
                 }
                 else{
-                    throw new UserException("Phone number needs to be an int and within integer limit");
+                    success = true;
                 }
             }
             break;

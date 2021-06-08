@@ -9,12 +9,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static utils.hash.Hash.getHashedPassword;
 
 public class addUser extends JFrame{
     NetworkDataSource data;
+    User user;
 
     String userField;
     String JFrameTile;
@@ -47,6 +49,7 @@ public class addUser extends JFrame{
         }else{
             userField = "Change existing details, if a field is left blank, details will not be changed";
             JFrameTile = "Edit User";
+            user = data.getUser(currentUsername).get(0);
         }
 
         frame = new JFrame(JFrameTile);
@@ -116,7 +119,20 @@ public class addUser extends JFrame{
 
         //DROP DOWN PANE (INPUTED OBJECT STRING FOR TESTING PURPOSES) TO BE REMOVED DURING INTEGRATION
         //JComboBox<String> organisationList = new JComboBox<String>();
-        String[] adminOrMember = {"Admin", "Member"};
+        String[] adminOrMember;
+        if(currentUsername.isEmpty())
+        {
+            adminOrMember = new String[]{"Member"};
+        }
+        else{
+            if(user.getAccountType().equals("Admin")){
+                adminOrMember = new String[]{"Admin", "Member"};
+            }
+            else{
+               adminOrMember = new String[]{"Member"};
+            }
+        }
+
         JComboBox getAccountType = new JComboBox<String>(adminOrMember); //Move Declaration to top
         orderTable.add(getAccountType);
         tpLayout.putConstraint(SpringLayout.WEST, getAccountType, 5, SpringLayout.EAST, getAccount);
@@ -223,7 +239,7 @@ public class addUser extends JFrame{
         btnSave.addActionListener(listener);
     }
 
-    private class ButtonListener implements ActionListener {
+    private class ButtonListener extends Component implements ActionListener {
 
         /**
          * @see ActionListener#actionPerformed(ActionEvent)
@@ -233,21 +249,49 @@ public class addUser extends JFrame{
             JButton source = (JButton) e.getSource();
 
             if(source == btnSave) {
-                SwingUtilities.invokeLater(new Runnable() {
-                    public void run() {
-                        if(currentUsername.isEmpty()){
-                            try {
-                                data.addUser(new User("", organisationIDText,usernameTextField.getText(), getHashedPassword(passwordTextField.getText()), accountTypeText,emailTextField.getText(), phoneTextField.getText(), addressTextField.getText()));
-                            } catch (UserException userException) {
-                                userException.printStackTrace();
-                            }
-                            new login();
-                        }else{
-                            new homePage();
+                if(currentUsername.isEmpty()){
+                    try {
+                        if(data.addUser(new User("", organisationIDText,usernameTextField.getText(), getHashedPassword(passwordTextField.getText()), accountTypeText,emailTextField.getText(), phoneTextField.getText(), addressTextField.getText()))){
+                            JOptionPane.showMessageDialog(this,usernameTextField.getText() + " has been added to the database", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+                            SwingUtilities.invokeLater(new Runnable() {
+                                public void run() {
+                                    new login();
+                                    frame.dispose();
+                                }
+                            });
                         }
-                        frame.dispose();
+                    } catch (UserException | IOException | ClassCastException userException) {
+                        JOptionPane.showMessageDialog(this,userException.getMessage(), "WARNING", JOptionPane.WARNING_MESSAGE);
+                        userException.printStackTrace();
                     }
-                });
+
+                }else{
+                    try {
+                        String username = usernameTextField.getText();
+                        String password = passwordTextField.getText();
+                        if(!password.isEmpty())
+                        {
+                            password = getHashedPassword(password);
+                        }
+                        if(data.editUser(new User(user.getUserID(), organisationIDText,username, password, accountTypeText,emailTextField.getText(), phoneTextField.getText(), addressTextField.getText()))){
+                            JOptionPane.showMessageDialog(this,"Current user has been edited", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+                            if(!username.isEmpty())
+                            {
+                                login.setCurrentUsernameUsername(username);
+
+                            }
+                            SwingUtilities.invokeLater(new Runnable() {
+                                public void run() {
+                                    new homePage();
+                                    frame.dispose();
+                                }
+                            });
+                        }
+                    } catch (UserException | IOException | ClassCastException userException) {
+                        JOptionPane.showMessageDialog(this,userException.getMessage(), "WARNING", JOptionPane.WARNING_MESSAGE);
+                        userException.printStackTrace();
+                    }
+                }
             }
         }}
 }

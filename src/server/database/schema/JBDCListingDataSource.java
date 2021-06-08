@@ -11,22 +11,19 @@ public class JBDCListingDataSource implements ListingDataSource {
     public static final String CREATE_TABLE_LISTING =
             "CREATE TABLE IF NOT EXISTS `listing` (\n" +
                     "  `listing_id` INTEGER /*!40101 AUTO_INCREMENT */ NOT NULL UNIQUE, \n" +
-                    "  `organisation_id` INTEGER,\n" +
+                    "  `inventory_id` INTEGER,\n" +
                     "  `user_id` INTEGER,\n" +
-                    "  `asset_id` INTEGER,\n" +
                     "  `current_trade` BOOLEAN,\n" +
                     "  `trade_type` ENUM('BUY','SELL'),\n" +
                     "  `quantity` INTEGER,\n" +
                     "  `price` INTEGER,\n" +
                     "  `date` DATETIME,\n" +
                     "  PRIMARY KEY (`listing_id`),\n" +
-                    "  FOREIGN KEY (`organisation_id`) REFERENCES `organisation`(`organisation_id`),\n" +
+                    "  FOREIGN KEY (`inventory_id`) REFERENCES `inventory`(`inventory_id`),\n" +
                     "  FOREIGN KEY (user_id) REFERENCES user(user_id),\n" +
-                    "  FOREIGN KEY (`asset_id`) REFERENCES `asset`(`asset_id`)\n" +
                     ");";
 
-
-    private static final String CREATE_LISTING = "REPLACE INTO listing (organisation_id, user_id, asset_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    private static final String CREATE_LISTING = "REPLACE INTO listing (inventory_id, user_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 
     private static final String EDIT_LISTING = "UPDATE listing SET current_trade = ?, trade_type = ?, quantity = ?, price = ?, date = ? WHERE listing_id = ?";
 
@@ -79,16 +76,15 @@ public class JBDCListingDataSource implements ListingDataSource {
     }
 
     public boolean create(Listing listing) {
-//        private static final String CREATE_LISTING = "REPLACE INTO listing (organisation_id, user_id, asset_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+//        private static final String CREATE_LISTING = "REPLACE INTO listing (inventory_id, user_id, current_trade, trade_type, quantity, price, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
-            create.setInt(1, Integer.parseInt(listing.getOrganisationID()));
+            create.setInt(1, Integer.parseInt(listing.getInventoryID()));
             create.setInt(2, Integer.parseInt(listing.getUserID()));
-            create.setInt(3, Integer.parseInt(listing.getAssetID()));
-            create.setBoolean(4, listing.getCurrentTrade());
-            create.setString(5, listing.getTradeType());
-            create.setInt(6, Integer.parseInt(listing.getQuantity()));
-            create.setInt(7, Integer.parseInt(listing.getPrice()));
-            create.setString(8, listing.getDate());
+            create.setBoolean(3, listing.getCurrentTrade());
+            create.setString(4, listing.getTradeType());
+            create.setInt(5, Integer.parseInt(listing.getQuantity()));
+            create.setInt(6, Integer.parseInt(listing.getPrice()));
+            create.setString(7, listing.getDate());
             int rowsCount = create.executeUpdate();
             return (rowsCount>0);
         } catch (SQLException ex) {
@@ -135,9 +131,8 @@ public class JBDCListingDataSource implements ListingDataSource {
             if(rs.next()){
                 Listing listing = new Listing();
                 listing.setListingID(rs.getString("listing_id"));
-                listing.setOrganisationID(rs.getString("organisation_id"));
+                listing.setInventoryID(rs.getString("inventory_id"));
                 listing.setUserID(rs.getString("user_id"));
-                listing.setAssetID(rs.getString("asset_id"));
                 listing.setCurrentTrade(rs.getBoolean("current_trade"));
                 listing.setTradeType(rs.getString("trade_type"));
                 listing.setQuantity(rs.getString("quantity"));
@@ -164,9 +159,8 @@ public class JBDCListingDataSource implements ListingDataSource {
             while (rs.next()){
                 Listing listing = new Listing();
                 listing.setListingID(rs.getString("listing_id"));
-                listing.setOrganisationID(rs.getString("organisation_id"));
+                listing.setInventoryID(rs.getString("inventory_id"));
                 listing.setUserID(rs.getString("user_id"));
-                listing.setAssetID(rs.getString("asset_id"));
                 listing.setCurrentTrade(rs.getBoolean("current_trade"));
                 listing.setTradeType(rs.getString("trade_type"));
                 listing.setQuantity(rs.getString("quantity"));

@@ -2,9 +2,7 @@ package client.model.mockDatabase;
 
 import client.model.entity.Listing;
 //import client.model.entity.User;
-import client.model.entity.User;
 import client.model.exception.ListingException;
-import client.model.exception.OrganisationException;
 import client.model.mockInterface.ListingDataSource;
 
 import java.util.ArrayList;
@@ -46,14 +44,11 @@ public class ListingData implements ListingDataSource {
             if (listing.getQuantity()==null){
                 listing.setQuantity(prevListing.getQuantity());
             }
-            if (listing.getOrganisationID()== null){
-                listing.setOrganisationID(prevListing.getOrganisationID());
+            if (listing.getInventoryID()== null){
+                listing.setInventoryID(prevListing.getInventoryID());
             }
             if (listing.getUserID()== null){
                 listing.setUserID(prevListing.getUserID());
-            }
-            if (listing.getAssetID()== null){
-                listing.setAssetID(prevListing.getAssetID());
             }
             if (listing.getPrice() == null){
                 listing.setPrice(prevListing.getPrice());

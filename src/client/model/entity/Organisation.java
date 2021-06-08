@@ -51,9 +51,12 @@ public class Organisation implements Serializable {
      */
     public void setCredits(String credits) { this.credits = credits; }
 
-    @Override
-    public  String toString(){
+    public  String toStringAllFields(){
         return this.organisationID+this.organisationName+this.credits;
     }
 
+    @Override
+    public String toString() {
+        return this.organisationName;
+    }
 }

@@ -1,8 +1,10 @@
 package client.gui.clientData;
 
 import client.model.entity.Asset;
+import client.model.entity.Inventory;
 import client.model.entity.User;
 import client.model.entity.Organisation;
+import client.model.exception.UserException;
 
 import java.io.*;
 import java.net.Socket;
@@ -12,7 +14,6 @@ public class NetworkDataSource {
     private Socket socket;
     private ObjectOutputStream outputStream;
     private ObjectInputStream inputStream;
-
 
     /**
      * These are the commands which will be sent across the network connection.
@@ -97,19 +98,46 @@ public class NetworkDataSource {
         }
     }
 
-    public void addUser(User u) {
-        if (u == null)
+    public boolean addUser(User user) throws IOException, UserException, ClassCastException {
+        if (user == null)
             throw new IllegalArgumentException("User cannot be null");
 
-        try {
+        String func = "create";
+        if (UserException.validate(func, user)){ ;
             // tell the server to expect a person's details
             outputStream.writeObject(Command.ADD_USER);
 
             // send the actual data
-            outputStream.writeObject(u);
+            outputStream.writeObject(user);
             outputStream.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+            return dataInputStream.readBoolean();
+        }
+        else{
+            return false;
+        }
+    }
+
+    public boolean editUser(User user) throws IOException, UserException, ClassCastException {
+        if (user == null)
+            throw new IllegalArgumentException("User cannot be null");
+
+        String func = "editID";
+        if (UserException.validate(func, user)){ ;
+            // tell the server to expect a person's details
+            outputStream.writeObject(Command.EDIT_USER);
+
+            // send the actual data
+            outputStream.writeObject(user);
+            outputStream.flush();
+
+            DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+            return dataInputStream.readBoolean();
+        }
+        else{
+            return false;
         }
     }
 
@@ -201,7 +229,6 @@ public class NetworkDataSource {
     public boolean addOrganisation(String organisationName, String credits) {
         try {
             outputStream.writeObject(Command.ADD_ORGANISATION);
-            // List<String>
             Organisation organisation = new Organisation();
             organisation.setOrganisationName(organisationName);
             organisation.setCredits(credits);

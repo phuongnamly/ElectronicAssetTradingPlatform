@@ -1,9 +1,6 @@
 package server.database.testDatabase;
 
-import client.model.entity.Asset;
-import client.model.entity.Listing;
-import client.model.entity.Organisation;
-import client.model.entity.User;
+import client.model.entity.*;
 import client.model.exception.UserException;
 import server.database.schema.JBDCAssetDataSource;
 import server.database.schema.JBDCListingDataSource;
@@ -86,26 +83,26 @@ public class GenerateDatabase {
     }
 
     private static void GenerateListings() {
-        ArrayList<User> users = userDatabase.getAll();
-        ArrayList<Asset> assets = assetDatabase.getAll();
-        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(0).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(1).getAssetID(),true,"BUY","1","150","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(2).getAssetID(),true,"BUY","10","250","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(3).getAssetID(),true,"SELL","1","350","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(4).getAssetID(),true,"SELL","10","450","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(3).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(4).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(0).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(1).getAssetID(),true,"SELL","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(2).getAssetID(),true,"SELL","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(7).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(8).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(9).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(10).getAssetID(),true,"SELL","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(11).getAssetID(),true,"SELL","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(10).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(11).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(7).getAssetID(),true,"SELL","10","50","1000-01-01 00:00:00"));
-        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(8).getAssetID(),true,"SELL","1","50","1000-01-01 00:00:00"));
+//        ArrayList<User> users = userDatabase.getAll();
+//        ArrayList<Asset> assets = assetDatabase.getAll();
+//        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(0).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(1).getAssetID(),true,"BUY","1","150","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(2).getAssetID(),true,"BUY","10","250","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(3).getAssetID(),true,"SELL","1","350","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(5).getOrganisationID(),users.get(5).getUserID(),assets.get(4).getAssetID(),true,"SELL","10","450","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(3).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(4).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(0).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(1).getAssetID(),true,"SELL","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(6).getOrganisationID(),users.get(6).getUserID(),assets.get(2).getAssetID(),true,"SELL","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(7).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(8).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(9).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(10).getAssetID(),true,"SELL","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(7).getOrganisationID(),users.get(7).getUserID(),assets.get(11).getAssetID(),true,"SELL","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(10).getAssetID(),true,"BUY","1","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(11).getAssetID(),true,"BUY","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(7).getAssetID(),true,"SELL","10","50","1000-01-01 00:00:00"));
+//        listingDatabase.create(new Listing("",users.get(8).getOrganisationID(),users.get(8).getUserID(),assets.get(8).getAssetID(),true,"SELL","1","50","1000-01-01 00:00:00"));
     }
 }

@@ -37,7 +37,7 @@ public class mockUserTest {
         User user_set = new User("1",null,"admin", "admin", "admin","admin@gmail.com", "0123456789", "Garden Point");
         userdata.create(user_set);
         ArrayList<User> user_get = userdata.get("1");
-        assertEquals(user_set.toString(), user_get.get(0).toString());
+        assertEquals(user_set.toStringAllFields(), user_get.get(0).toStringAllFields());
     }
 
     //    Test create user
@@ -51,7 +51,7 @@ public class mockUserTest {
         User user_set = new User("1",null,"admin", "admin", "admin","admin@gmail.com", "0123456789", "Garden Point");
         userdata.create(user_set);
         ArrayList<User> user_get = userdata.get("1");
-        assertEquals(user_set.toString(), user_get.get(0).toString());
+        assertEquals(user_set.toStringAllFields(), user_get.get(0).toStringAllFields());
     }
 
 //    Test Edit User
@@ -70,7 +70,7 @@ public class mockUserTest {
         userdata.edit(user_set_new);
         ArrayList<User> user_get = userdata.get("1");
 
-        assertEquals(user_get.get(0).toString(),user_expect.toString());
+        assertEquals(user_get.get(0).toStringAllFields(),user_expect.toStringAllFields());
     }
 
 //    Test delete user

@@ -2,6 +2,7 @@ package client.model.UnitTest.mockTest;
 
 
 import client.model.entity.Asset;
+
 import client.model.exception.AssetException;
 import client.model.mockDatabase.AssetData;
 import org.junit.jupiter.api.AfterEach;
@@ -33,7 +34,7 @@ public class mockAssetTest {
         Asset asset_set = new Asset("1","Thomas Company", "Stock");
         assetdata.create(asset_set);
         ArrayList<Asset> asset_get = assetdata.get("1");
-        assertEquals(asset_set.toString(), asset_get.get(0).toString());
+        assertEquals(asset_set.toStringAllFields(), asset_get.get(0).toStringAllFields());
     }
 
     //    Test create asset
@@ -47,7 +48,7 @@ public class mockAssetTest {
         Asset asset_set = new Asset("1","Thomas Company", "100000");
         assetdata.create(asset_set);
         ArrayList<Asset> asset_get = assetdata.get("1");
-        assertEquals(asset_set.toString(), asset_get.get(0).toString());
+        assertEquals(asset_set.toStringAllFields(), asset_get.get(0).toStringAllFields());
     }
     //    Test Edit Asset
     @Test
@@ -65,7 +66,7 @@ public class mockAssetTest {
         assetdata.edit(asset_set_new);
         ArrayList<Asset> asset_get = assetdata.get("1");
 
-        assertEquals(asset_get.get(0).toString(),asset_expect.toString());
+        assertEquals(asset_get.get(0).toStringAllFields(),asset_expect.toStringAllFields());
     }
 
     //    Test delete asset

@@ -159,11 +159,14 @@ public class User implements Comparable<User>, Serializable {
       return this.username.compareTo(other.username);
    }
 
-   @Override
-   public String toString(){
+   public String toStringAllFields(){
 //      return "id: "+ this.userID+" name: " +this.username + " organisation: "+this.organisationID;
       return this.userID+this.username +this.organisationID+this.accountType+this.address+this.email+this.password+this.phoneNum;
    }
 
+   @Override
+   public String toString() {
+      return this.username;
+   }
 }
 

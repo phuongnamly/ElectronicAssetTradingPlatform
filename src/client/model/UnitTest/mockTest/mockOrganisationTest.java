@@ -30,7 +30,7 @@ public class mockOrganisationTest {
         Organisation organisation_set = new Organisation("1","Thomas Company", "100000");
         organisationdata.create(organisation_set);
         ArrayList<Organisation> organisation_get = organisationdata.get("1");
-        assertEquals(organisation_set.toString(), organisation_get.get(0).toString());
+        assertEquals(organisation_set.toStringAllFields(), organisation_get.get(0).toStringAllFields());
     }
 
     //    Test create organisation
@@ -44,7 +44,7 @@ public class mockOrganisationTest {
         Organisation organisation_set = new Organisation("1","Thomas Company", "100000");
         organisationdata.create(organisation_set);
         ArrayList<Organisation> organisation_get = organisationdata.get("1");
-        assertEquals(organisation_set.toString(), organisation_get.get(0).toString());
+        assertEquals(organisation_set.toStringAllFields(), organisation_get.get(0).toStringAllFields());
     }
     //    Test Edit Organisation
     @Test
@@ -62,7 +62,7 @@ public class mockOrganisationTest {
         organisationdata.edit(organisation_set_new);
         ArrayList<Organisation> organisation_get = organisationdata.get("1");
 
-        assertEquals(organisation_get.get(0).toString(),organisation_expect.toString());
+        assertEquals(organisation_get.get(0).toStringAllFields(),organisation_expect.toStringAllFields());
     }
 
     //    Test delete organisatoin

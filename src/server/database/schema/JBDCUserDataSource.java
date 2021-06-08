@@ -33,6 +33,8 @@ public class JBDCUserDataSource implements UserDataSource {
 
     private static final String GET_USER = "SELECT * FROM user WHERE username=?";
 
+    private static final String GET_USER_BY_ID = "SELECT * FROM user WHERE user_id=?";
+
     private static final String GET_ALL_USERS = "SELECT * FROM user";
 
     private static final String COUNT_ROWS = "SELECT COUNT(*) FROM user";
@@ -51,6 +53,8 @@ public class JBDCUserDataSource implements UserDataSource {
 
     private PreparedStatement get;
 
+    private PreparedStatement getUserByID;
+
     private PreparedStatement getAll;
 
     private PreparedStatement deleteAll;
@@ -68,6 +72,7 @@ public class JBDCUserDataSource implements UserDataSource {
             edit = connection.prepareStatement(EDIT_USER);
             delete = connection.prepareStatement(DELETE_USER);
             get = connection.prepareStatement(GET_USER);
+            getUserByID = connection.prepareStatement(GET_USER_BY_ID);
             getAll = connection.prepareStatement(GET_ALL_USERS);
             rowCount = connection.prepareStatement(COUNT_ROWS);
             getNameList = connection.prepareStatement(GET_NAMES);
@@ -117,21 +122,52 @@ public class JBDCUserDataSource implements UserDataSource {
 
     public boolean edit(User user) {
         // "UPDATE user SET organisation_id = ?, username = ?, password = ?, account_type = ?, email = ?, phone = ?, address = ? WHERE user_id = ?";
-        try {
-            edit.setInt(1, Integer.parseInt(user.getOrganisationID()));
-            edit.setString(2, user.getUsername());
-            edit.setString(3, user.getPassword());
-            edit.setString(4, user.getAccountType());
-            edit.setString(5, user.getEmail());
-            edit.setInt(6, Integer.parseInt(user.getPhoneNum()));
-            edit.setString(7, user.getAddress());
-            edit.setInt(8, Integer.parseInt(user.getUserID()));
 
-            int rowsCount = edit.executeUpdate();
-            return (rowsCount>0);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        ArrayList<User> users = getById(user.getUserID());
+
+        User prevUser = users.get(0);
+        if (user.getUsername().isEmpty()){
+            user.setUsername(prevUser.getUsername());
+        }
+        if (user.getAddress().isEmpty()){
+            user.setAddress(prevUser.getAddress());
+        }
+        if (user.getEmail().isEmpty()){
+            user.setEmail(prevUser.getEmail());
+        }
+        if (user.getOrganisationID().isEmpty()){
+            user.setOrganisationID(prevUser.getOrganisationID());
+        }
+        if (user.getAccountType().isEmpty()){
+            user.setAccountType(prevUser.getAccountType());
+        }
+        if (user.getPassword().isEmpty()){
+            user.setPassword(prevUser.getPassword());
+        }
+        if (user.getPhoneNum().isEmpty()){
+            user.setPhoneNum(prevUser.getPhoneNum());
+        }
+
+        if(users.size() == 0){
             return false;
+        }
+        else{
+            try {
+                edit.setInt(1, Integer.parseInt(user.getOrganisationID()));
+                edit.setString(2, user.getUsername());
+                edit.setString(3, user.getPassword());
+                edit.setString(4, user.getAccountType());
+                edit.setString(5, user.getEmail());
+                edit.setInt(6, Integer.parseInt(user.getPhoneNum()));
+                edit.setString(7, user.getAddress());
+                edit.setInt(8, Integer.parseInt(user.getUserID()));
+
+                int rowsCount = edit.executeUpdate();
+                return (rowsCount>0);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+                return false;
+            }
         }
     }
 
@@ -153,6 +189,35 @@ public class JBDCUserDataSource implements UserDataSource {
             get.setString(1, username);
             int index = 0;
             rs = get.executeQuery();
+
+            if(rs.next()){
+                User user = new User();
+                user.setUserID(rs.getString("user_id"));
+                user.setOrganisationID(rs.getString("organisation_id"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setAccountType(rs.getString("account_type"));
+                user.setEmail(rs.getString("email"));
+                user.setPhoneNum((rs.getString("phone")));
+                user.setAddress(rs.getString("address"));
+
+                users.add(user);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return users;
+    }
+
+    public ArrayList<User> getById(String id) {
+        ArrayList<User>  users = new ArrayList<>();
+        ResultSet rs = null;
+        try {
+            getUserByID.setInt(1, Integer.parseInt(id));
+            int index = 0;
+            rs = getUserByID.executeQuery();
 
             if(rs.next()){
                 User user = new User();

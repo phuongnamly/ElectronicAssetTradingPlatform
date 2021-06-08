@@ -23,11 +23,11 @@ public class ListingException extends Exception{
         else{
             throw new ListingException("Quantity needs to be an int and within integer limit");
         }
-        if (listing.getOrganisationID() == null || TryParseInt(listing.getOrganisationID()) != null){
+        if (listing.getInventoryID() == null || TryParseInt(listing.getInventoryID()) != null){
             success = true;
         }
         else{
-            throw new ListingException("OrganisationID needs to be an int and within integer limit");
+            throw new ListingException("InventoryID needs to be an int and within integer limit");
         }
         /*Test out of range/ non integer Credit*/
         if (listing.getPrice() == null || TryParseInt(listing.getPrice()) != null){
@@ -60,12 +60,6 @@ public class ListingException extends Exception{
         }
         else{
             throw new ListingException("Quantity needs to be an int and within integer limit");
-        }
-        if (listing.getAssetID() == null || TryParseInt(listing.getAssetID()) != null){
-            success = true;
-        }
-        else{
-            throw new ListingException("AssetID needs to be an int and within integer limit");
         }
 
         switch(func) {
