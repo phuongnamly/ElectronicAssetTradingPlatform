@@ -2,6 +2,7 @@ package client.model.UnitTest.mockTest;
 
 
 import client.model.entity.Asset;
+
 import client.model.exception.AssetException;
 import client.model.mockDatabase.AssetData;
 import org.junit.jupiter.api.AfterEach;
@@ -14,47 +15,46 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class mockAssetTest {
-    AssetData testAssetSourcedata;
+    AssetData assetdata;
 
     @BeforeEach
     void setup() {
-        testAssetSourcedata = new AssetData();
+        assetdata = new AssetData();
     }
 
     @AfterEach
     void tearDown() {
-        testAssetSourcedata.deleteAll();
+        assetdata.deleteAll();
     }
 
-  //Testing get asset with throws assetexception
+    //    Test get asset
 
     @Test
     void TestGetAssetFromGetAsset() throws AssetException {
-        Asset asset_set = new Asset("1","Thomas Company", "13513");
-
-        testAssetSourcedata.create(asset_set);
-        ArrayList<Asset> asset_get = testAssetSourcedata.get("1");
-        assertEquals(asset_set.toString(), asset_get.get(0).toString());
+        Asset asset_set = new Asset("1","Thomas Company", "Stock");
+        assetdata.create(asset_set);
+        ArrayList<Asset> asset_get = assetdata.get("1");
+        assertEquals(asset_set.toStringAllFields(), asset_get.get(0).toStringAllFields());
     }
 
     //    Test create asset
     @Test
     void TestBooleanCreateAsset() throws AssetException {
-        assertTrue(testAssetSourcedata.create(new Asset("1","Jason Company", "100530")));
+        assertTrue(assetdata.create(new Asset("1","Thomas Company", "100000")));
     }
 
     @Test
     void TestGetAssetFromCreateAsset() throws AssetException {
         Asset asset_set = new Asset("1","Thomas Company", "100000");
-        testAssetSourcedata.create(asset_set);
-        ArrayList<Asset> asset_get = testAssetSourcedata.get("1");
-        assertEquals(asset_set.toString(), asset_get.get(0).toString());
+        assetdata.create(asset_set);
+        ArrayList<Asset> asset_get = assetdata.get("1");
+        assertEquals(asset_set.toStringAllFields(), asset_get.get(0).toStringAllFields());
     }
-
+    //    Test Edit Asset
     @Test
     void TestBooleanAssetFromEditAsset() throws AssetException{
-        testAssetSourcedata.create(new Asset("1","Jason Company", "100000"));
-        assertTrue(testAssetSourcedata.edit(new Asset("1","Jason Company 2 ", null)));
+        assetdata.create(new Asset("1","Thomas Company", "100000"));
+        assertTrue(assetdata.edit(new Asset("1","Thomas Company 2 ", null)));
     }
 
     @Test
@@ -62,20 +62,17 @@ public class mockAssetTest {
         Asset asset_set_orig = new Asset("1","Thomas Company", "100000");
         Asset asset_set_new = new Asset("1","Thomas Company 2 ", null);
         Asset asset_expect = new Asset("1","Thomas Company 2 ", "100000");
-        testAssetSourcedata.create(asset_set_orig);
-        testAssetSourcedata.edit(asset_set_new);
-        //Removed arraylist?
+        assetdata.create(asset_set_orig);
+        assetdata.edit(asset_set_new);
+        ArrayList<Asset> asset_get = assetdata.get("1");
 
-        assertEquals(asset_get.get(0).toString(),asset_expect.toString());
+        assertEquals(asset_get.get(0).toStringAllFields(),asset_expect.toStringAllFields());
     }
 
-///TESTING TO SEES IF IT WORKS
-    //PLEASE CHANGES LATER
-
+    //    Test delete asset
+    @Test
     void TestBooleanAssetFromDeleteAsset() throws AssetException{
-        testAssetSourcedata.create(new Asset("1","Thomas Company", "100000"));
-        assertTrue(testAssetSourcedata.delete("1"));
+        assetdata.create(new Asset("1","Thomas Company", "100000"));
+        assertTrue(assetdata.delete("1"));
     }
 
-
-}
