@@ -4,6 +4,9 @@ import client.model.entity.Listing;
 
 import static utils.tryParse.TryParse.TryParseInt;
 
+/**
+ * This is the class for creating specific exceptions for listing
+ */
 public class ListingException extends Exception{
     public ListingException(){super();}
     public ListingException(String message){super(message);}

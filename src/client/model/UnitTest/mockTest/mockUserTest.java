@@ -12,6 +12,9 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
+/**
+ * This is the class for testing mock user CRUD functions
+ */
 public class mockUserTest {
     UserData userdata;
 

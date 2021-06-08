@@ -4,6 +4,9 @@ import client.model.entity.User;
 
 import static utils.tryParse.TryParse.TryParseInt;
 
+/**
+ * This is the class for creating specific exceptions for user
+ */
 //https://www.javatpoint.com/custom-exception
 public class UserException extends Exception{
     public UserException(){super();}

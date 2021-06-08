@@ -3,6 +3,9 @@ import client.model.entity.Inventory;
 
 import static utils.tryParse.TryParse.TryParseInt;
 
+/**
+ * This is the class for creating specific exceptions for inventory
+ */
 public class InventoryException extends Exception {
     public InventoryException(){super();}
     public InventoryException(String message){super(message);}

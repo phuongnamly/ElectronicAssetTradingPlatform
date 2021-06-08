@@ -5,6 +5,11 @@ import client.model.mockInterface.InventoryDataSource;
 
 import java.util.ArrayList;
 
+
+/**
+ * This is the class for testing mock inventory exception
+ * Creates ArrayList<Inventory> users instead of database
+ */
 public class InventoryData implements InventoryDataSource {
     ArrayList<Inventory> inventories;
     int id;

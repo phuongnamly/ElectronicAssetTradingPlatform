@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * This is the JBDC class for user table
+ */
 public class JBDCUserDataSource implements UserDataSource {
 
     public static final String CREATE_TABLE =

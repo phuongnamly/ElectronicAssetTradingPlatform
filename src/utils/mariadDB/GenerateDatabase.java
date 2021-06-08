@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 import static utils.hash.Hash.getHashedPassword;
 
+/**
+ * This is the utils class for generating database for MariaDB
+ */
 public class GenerateDatabase {
     static private JBDCUserDataSource userDatabase;
     static private JBDCOrganisationDataSource organisationDatabase;
@@ -89,17 +92,17 @@ public class GenerateDatabase {
         inventoryDatabase.create(new Inventory( "", organisations.get(0).getOrganisationID(), assets.get(1).getAssetID(), "50"));
         inventoryDatabase.create(new Inventory( "", organisations.get(0).getOrganisationID(), assets.get(2).getAssetID(), "150"));
         inventoryDatabase.create(new Inventory( "", organisations.get(0).getOrganisationID(), assets.get(3).getAssetID(), "500"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(1).getOrganisationID(), assets.get(1).getAssetID(), "50"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(1).getOrganisationID(), assets.get(2).getAssetID(), "150"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(1).getOrganisationID(), assets.get(3).getAssetID(), "200"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(2).getOrganisationID(), assets.get(1).getAssetID(), "50"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(2).getOrganisationID(), assets.get(2).getAssetID(), "150"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(2).getOrganisationID(), assets.get(3).getAssetID(), "200"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(3).getOrganisationID(), assets.get(4).getAssetID(), "50"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(3).getOrganisationID(), assets.get(5).getAssetID(), "150"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(3).getOrganisationID(), assets.get(6).getAssetID(), "200"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(4).getOrganisationID(), assets.get(7).getAssetID(), "50"));
-        inventoryDatabase.create(new Inventory( "", organisations.get(4).getOrganisationID(), assets.get(8).getAssetID(), "200"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(1).getOrganisationID(), assets.get(1).getAssetID(), "200"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(1).getOrganisationID(), assets.get(2).getAssetID(), "444"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(1).getOrganisationID(), assets.get(3).getAssetID(), "543"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(2).getOrganisationID(), assets.get(1).getAssetID(), "98"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(2).getOrganisationID(), assets.get(2).getAssetID(), "21"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(2).getOrganisationID(), assets.get(3).getAssetID(), "53"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(3).getOrganisationID(), assets.get(4).getAssetID(), "68"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(3).getOrganisationID(), assets.get(5).getAssetID(), "123"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(3).getOrganisationID(), assets.get(6).getAssetID(), "456"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(4).getOrganisationID(), assets.get(7).getAssetID(), "90"));
+        inventoryDatabase.create(new Inventory( "", organisations.get(4).getOrganisationID(), assets.get(8).getAssetID(), "123213"));
     }
 
     private static void GenerateListings() {

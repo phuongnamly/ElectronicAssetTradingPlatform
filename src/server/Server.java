@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * This is the Server which listens to specific commands from NetworkDataSource in the clientData
+ * package from the client side
+ */
 public class Server {
     private static int PORT;
 

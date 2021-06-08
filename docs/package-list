@@ -1,0 +1,15 @@
+client.gui
+client.gui.clientData
+client.model.UnitTest.exceptionTest
+client.model.UnitTest.mockTest
+client.model.entity
+client.model.entity.Enum
+client.model.exception
+client.model.mockDatabase
+client.model.mockInterface
+server
+server.database.schema
+utils.arrayListToArray
+utils.hash
+utils.mariadDB
+utils.tryParse

@@ -7,6 +7,10 @@ import client.model.mockInterface.ListingDataSource;
 
 import java.util.ArrayList;
 
+/**
+ * This is the class for creating mock user data
+ * Creates ArrayList<Listing> users instead of database
+ */
 public class ListingData implements ListingDataSource {
     ArrayList<Listing> listings;
     int id;

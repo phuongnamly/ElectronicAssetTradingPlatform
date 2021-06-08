@@ -6,6 +6,10 @@ import client.model.mockInterface.AssetDataSource;
 
 import java.util.ArrayList;
 
+/**
+ * This is the class for testing mock asset exception
+ * Creates ArrayList<Asset> users instead of database
+ */
 public class AssetData implements AssetDataSource {
     ArrayList<Asset> assets;
     int id;

@@ -8,6 +8,9 @@ import client.model.mockInterface.InventoryDataSource;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * This is the JBDC class for inventory table
+ */
 public class JBDCInventoryDataSource implements InventoryDataSource {
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS `inventory` (\n" +

@@ -4,6 +4,9 @@ import client.model.entity.Asset;
 
 import static utils.tryParse.TryParse.TryParseInt;
 
+/**
+ * This is the class for creating specific exceptions for asset
+ */
 public class AssetException extends Exception{
     public AssetException(){super();}
     public AssetException(String message){super(message);}

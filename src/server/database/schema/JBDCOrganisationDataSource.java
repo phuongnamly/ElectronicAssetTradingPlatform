@@ -6,6 +6,9 @@ import client.model.mockInterface.OrganisationDataSource;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * This is the JBDC class for organisation table
+ */
 public class JBDCOrganisationDataSource implements OrganisationDataSource {
 
     public static final String CREATE_TABLE =

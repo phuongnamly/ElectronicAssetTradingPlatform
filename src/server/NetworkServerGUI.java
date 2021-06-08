@@ -6,6 +6,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 
+/**
+ * This is the GUI for showing the port of server connection
+ */
 public class NetworkServerGUI {
     public static void main(String[] args) throws IOException {
         Server server = new Server();

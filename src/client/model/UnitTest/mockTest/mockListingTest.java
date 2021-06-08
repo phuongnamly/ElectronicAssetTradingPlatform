@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * This is the class for testing mock list CRUD functions
+ */
 public class mockListingTest {
     ListingData listingdata;
 

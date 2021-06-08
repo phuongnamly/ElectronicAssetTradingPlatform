@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * This is the class for testing mock inventory exception
+ */
 public class mockInventoryException {
     InventoryData inventorydata;
     @BeforeEach

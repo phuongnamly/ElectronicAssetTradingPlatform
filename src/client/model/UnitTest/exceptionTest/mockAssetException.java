@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * This is the class for testing mock asset exception
+ */
 public class mockAssetException {
     AssetData assetdata;
 

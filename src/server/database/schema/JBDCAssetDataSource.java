@@ -7,6 +7,9 @@ import client.model.mockInterface.AssetDataSource;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * This is the JBDC class for asset table
+ */
 public class JBDCAssetDataSource implements AssetDataSource {
 
     public static final String CREATE_TABLE =

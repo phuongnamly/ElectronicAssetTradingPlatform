@@ -10,6 +10,10 @@ import client.model.mockDatabase.OrganisationData;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
+
+/**
+ * This is the class for testing mock organisation CRUD functions
+ */
 public class mockOrganisationTest {
     OrganisationData organisationdata;
 

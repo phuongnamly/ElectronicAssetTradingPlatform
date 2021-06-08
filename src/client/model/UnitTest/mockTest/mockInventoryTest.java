@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * This is the class for testing mock inventory CRUD functions
+ */
 public class mockInventoryTest {
     InventoryData inventorydata;
 

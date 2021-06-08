@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * This is the class for testing mock organisation exception
+ */
 public class mockOrganisationException {
     OrganisationData organisationdata;
 

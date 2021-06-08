@@ -51,7 +51,7 @@ public class addUser extends JFrame{
             JFrameTile = "Register User";
         }else{
             userField = "Change existing details, if a field is left blank, details will not be changed";
-            JFrameTile = "Edit User";
+            JFrameTile = "Register User";
             user = data.getUser(currentUsername).get(0);
         }
 
@@ -270,8 +270,8 @@ public class addUser extends JFrame{
                         {
                             password = getHashedPassword(password);
                         }
-                        if(data.editUser(new User(user.getUserID(), organisationIDText,username, password, accountTypeText,emailTextField.getText(), phoneTextField.getText(), addressTextField.getText()))){
-                            JOptionPane.showMessageDialog(this,"Current user has been edited", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
+                        if(data.addUser(new User(user.getUserID(), organisationIDText,username, password, accountTypeText,emailTextField.getText(), phoneTextField.getText(), addressTextField.getText()))){
+                            JOptionPane.showMessageDialog(this,"New user has been added", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
                             if(!username.isEmpty())
                             {
                                 login.setCurrentUsernameUsername(username);

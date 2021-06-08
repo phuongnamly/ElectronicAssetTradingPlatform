@@ -7,6 +7,10 @@ import client.model.mockInterface.OrganisationDataSource;
 
 import java.util.ArrayList;
 
+/**
+ * This is the class for creating mock user data
+ * Creates ArrayList<Organisation> users instead of database
+ */
 public class OrganisationData implements OrganisationDataSource {
     ArrayList<Organisation> organisations;
     int id;

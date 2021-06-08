@@ -5,6 +5,9 @@ import client.model.entity.Organisation;
 
 import static utils.tryParse.TryParse.TryParseInt;
 
+/**
+ * This is the class for creating specific exceptions for organisation
+ */
 public class OrganisationException extends Exception{
     public OrganisationException(){super();}
     public OrganisationException(String message){super(message);}

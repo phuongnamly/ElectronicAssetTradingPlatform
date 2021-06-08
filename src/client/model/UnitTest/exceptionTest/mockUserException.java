@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * This is the class for testing mock user exception
+ */
 public class mockUserException {
     UserData userdata;
     @BeforeEach

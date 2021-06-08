@@ -6,6 +6,9 @@ import client.model.mockInterface.ListingDataSource;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * This is the JBDC class for listing table
+ */
 public class JBDCListingDataSource implements ListingDataSource {
 
     public static final String CREATE_TABLE_LISTING =

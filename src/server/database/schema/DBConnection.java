@@ -8,6 +8,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+/**
+ * This is the class for creating connection for MariaDB tables
+ */
 public class DBConnection {
 
    /**
