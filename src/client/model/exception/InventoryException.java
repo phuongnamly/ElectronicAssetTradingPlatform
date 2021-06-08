@@ -9,15 +9,28 @@ public class InventoryException extends Exception {
     public static boolean validate(String func, Inventory inventory) throws InventoryException{
         boolean success = false;
 
+        if (inventory.getQuantity() == null || TryParseInt(inventory.getQuantity()) != null){
+            success = true;
+        }
+        else{
+            throw new InventoryException("quantity needs to be an int and within integer limit");
+        }
+        if (inventory.getAssetID() == null || TryParseInt(inventory.getAssetID()) != null){
+            success = true;
+        }
+        else{
+            throw new InventoryException("AssetID needs to be an int and within integer limit");
+        }
+        if (inventory.getOrganisationID() == null || TryParseInt(inventory.getOrganisationID()) != null){
+            success = true;
+        }
+        else{
+            throw new InventoryException("Org ID needs to be an int and within integer limit");
+        }
         switch(func) {
 //            case("create"):{
 //                /*Test out of range/ non integer Credit*/
-//                if (TryParseInt(organisation.getCredits()) != null){
-//                    success = true;
-//                }
-//                else{
-//                    throw new OrganisationException("Credits needs to be an int and within integer limit");
-//                }
+
 //            }
 //            break;
 

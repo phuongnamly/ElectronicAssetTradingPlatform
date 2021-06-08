@@ -19,20 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-database and server setup">
-      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/mockTest/mockInventoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/model/mockDatabase/InventoryData.java" afterDir="false" />
+    <list default="true" id="09e09d48-0ef6-494a-8615-664359b39808" name="Default Changelist" comment="-add mockInventory, Inventory Data and exception - Thomas">
+      <change afterPath="$PROJECT_DIR$/src/client/model/UnitTest/exceptionTest/mockInventoryException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/gui/addUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/exception/InventoryException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Electronic Asset Trading Platform/client/model/mockInterface/InventoryDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/addUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/addUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/exception/InventoryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/mockInterface/InventoryDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,17 +75,17 @@
       <recent name="C:\Users\lyphu\OneDrive - Queensland University of Technology\Bachelor\Sem 1 2021\CAB302\Assignment\Electronic Asset Trading Platform\src\server\properties" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.mockInventoryTest">
-    <configuration name="mockAssetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.mockInventoryException">
+    <configuration name="mockInventoryException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Electronic Asset Trading Platform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.model.UnitTest.mockTest.*" />
+          <option name="PATTERN" value="client.model.UnitTest.exceptionTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="client.model.UnitTest.mockTest" />
-      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.mockTest.mockAssetTest" />
+      <option name="PACKAGE_NAME" value="client.model.UnitTest.exceptionTest" />
+      <option name="MAIN_CLASS_NAME" value="client.model.UnitTest.exceptionTest.mockInventoryException" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.mockInventoryException" />
         <item itemvalue="JUnit.mockInventoryTest" />
         <item itemvalue="JUnit.mockInventoryTest.TestGetInventoryFromGetInventory" />
         <item itemvalue="JUnit.mockListingTest" />
         <item itemvalue="JUnit.mockListingException" />
-        <item itemvalue="JUnit.mockAssetTest" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +174,14 @@
       <option name="presentableId" value="Default" />
       <updated>1622552900130</updated>
     </task>
+    <task id="LOCAL-00001" summary="-add mockInventory, Inventory Data and exception - Thomas">
+      <created>1623135399592</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623135399592</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +195,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-add mockInventory, Inventory Data and exception - Thomas" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add mockInventory, Inventory Data and exception - Thomas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
